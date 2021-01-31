@@ -1,0 +1,1075 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Vim · xjliang 的技术专栏</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xjliang">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Languages/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"xjliang","repo":"auto-export-gitbook","type":"star","count":true,"size":"small"},{"user":"xjliang","type":"follow","width":"120","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://gnulxj.netlify.app" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../PART I/">
+            
+                <a href="../../PART I/">
+            
+                    
+                    PART I
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../PART II/">
+            
+                <a href="../../PART II/">
+            
+                    
+                    PART II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    PART III
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Editors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1.1" data-path="Vim.html">
+            
+                <a href="Vim.html">
+            
+                    
+                    Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Languages/">
+            
+                <a href="../Languages/">
+            
+                    
+                    Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Languages/Bash.html">
+            
+                <a href="../Languages/Bash.html">
+            
+                    
+                    Bash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Languages/Python.html">
+            
+                <a href="../Languages/Python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Tools/">
+            
+                <a href="../Tools/">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Tools/Gdb.html">
+            
+                <a href="../Tools/Gdb.html">
+            
+                    
+                    Gdb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Tools/Git.html">
+            
+                <a href="../Tools/Git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Vim</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vim-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;"><b>1. </b>Vim &#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5149;&#x6807;&#x79FB;&#x52A8;"><b>1.1. </b>&#x5149;&#x6807;&#x79FB;&#x52A8;</a></li><li><span class="title-icon "></span><a href="#&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x8FDB;&#x5165;&#x9000;&#x51FA;"><b>1.2. </b>&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x8FDB;&#x5165;&#x9000;&#x51FA;</a></li><li><span class="title-icon "></span><a href="#insert-mode---&#x7531;-i-i-a-a-o-o-&#x7B49;&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x540E;"><b>1.3. </b>INSERT MODE - &#x7531; i, I, a, A, o, O &#x7B49;&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x540E;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x672C;&#x7F16;&#x8F91;"><b>1.4. </b>&#x6587;&#x672C;&#x7F16;&#x8F91;</a></li><li><span class="title-icon "></span><a href="#&#x590D;&#x5236;&#x7C98;&#x8D34;"><b>1.5. </b>&#x590D;&#x5236;&#x7C98;&#x8D34;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x672C;&#x5BF9;&#x8C61;---cdvy-&#x7B49;&#x547D;&#x4EE4;&#x540E;&#x63A5;&#x6587;&#x672C;&#x5BF9;&#x8C61;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;&#x8303;&#x56F4;-ia&#x7C7B;&#x578B;"><b>1.6. </b>&#x6587;&#x672C;&#x5BF9;&#x8C61; - c,d,v,y &#x7B49;&#x547D;&#x4EE4;&#x540E;&#x63A5;&#x6587;&#x672C;&#x5BF9;&#x8C61;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;<范围 i="" a=""><类型></类型></范围></a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x627E;&#x66FF;&#x6362;"><b>1.7. </b>&#x67E5;&#x627E;&#x66FF;&#x6362;</a></li><li><span class="title-icon "></span><a href="#visual-mode---&#x7531;-v-v-ctrl-v-&#x8FDB;&#x5165;&#x7684;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;"><b>1.8. </b>VISUAL MODE - &#x7531; v, V, CTRL-V &#x8FDB;&#x5165;&#x7684;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x4F4D;&#x7F6E;&#x8DF3;&#x8F6C;"><b>1.9. </b>&#x4F4D;&#x7F6E;&#x8DF3;&#x8F6C;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><b>1.10. </b>&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x5DF2;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><b>1.11. </b>&#x5DF2;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x7A97;&#x53E3;&#x64CD;&#x4F5C;"><b>1.12. </b>&#x7A97;&#x53E3;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x6807;&#x7B7E;&#x9875;"><b>1.13. </b>&#x6807;&#x7B7E;&#x9875;</a></li><li><span class="title-icon "></span><a href="#&#x4E66;&#x7B7E;"><b>1.14. </b>&#x4E66;&#x7B7E;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x8BBE;&#x7F6E;"><b>1.15. </b>&#x5E38;&#x7528;&#x8BBE;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x5E2E;&#x52A9;&#x4FE1;&#x606F;"><b>1.16. </b>&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x5916;&#x90E8;&#x547D;&#x4EE4;"><b>1.17. </b>&#x5916;&#x90E8;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#quickfix-&#x7A97;&#x53E3;"><b>1.18. </b>Quickfix &#x7A97;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#&#x62FC;&#x5199;&#x68C0;&#x67E5;"><b>1.19. </b>&#x62FC;&#x5199;&#x68C0;&#x67E5;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x6298;&#x53E0;"><b>1.20. </b>&#x4EE3;&#x7801;&#x6298;&#x53E0;</a></li><li><span class="title-icon "></span><a href="#&#x5B8F;&#x5F55;&#x5236;"><b>1.21. </b>&#x5B8F;&#x5F55;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x547D;&#x4EE4;"><b>1.22. </b>&#x5176;&#x4ED6;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#plugin---httpsgithubcomtpopevim-commentary"><b>1.23. </b>Plugin - https://github.com/tpope/vim-commentary</a></li><li><span class="title-icon "></span><a href="#plugin---httpsgithubcomjunegunnvim-easy-align"><b>1.24. </b>Plugin - https://github.com/junegunn/vim-easy-align</a></li><li><span class="title-icon "></span><a href="#plugin---httpsgithubcomtpopevim-unimpaired"><b>1.25. </b>Plugin - https://github.com/tpope/vim-unimpaired</a></li><li><span class="title-icon "></span><a href="#plugin---httpsgithubcomskywind3000asyncrunvim"><b>1.26. </b>Plugin - https://github.com/skywind3000/asyncrun.vim</a></li><li><span class="title-icon "></span><a href="#plugin---httpsgithubcomgavingvim-textobj-argument"><b>1.27. </b>Plugin - https://github.com/gaving/vim-textobj-argument</a></li><li><span class="title-icon "></span><a href="#&#x7F51;&#x7EDC;&#x8D44;&#x6E90;"><b>1.28. </b>&#x7F51;&#x7EDC;&#x8D44;&#x6E90;</a></li><li><span class="title-icon "></span><a href="#tips"><b>1.29. </b>TIPS</a></li><li><span class="title-icon "></span><a href="#references"><b>1.30. </b>References</a></li></ul></ul></div><a href="#vim-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vim-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;"><a name="vim-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;" class="anchor-navigation-ex-anchor" href="#vim-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Vim &#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;</h1>
+<h2 id="&#x5149;&#x6807;&#x79FB;&#x52A8;"><a name="&#x5149;&#x6807;&#x79FB;&#x52A8;" class="anchor-navigation-ex-anchor" href="#&#x5149;&#x6807;&#x79FB;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x5149;&#x6807;&#x79FB;&#x52A8;</h2>
+<pre><code>h                   &#x5149;&#x6807;&#x5DE6;&#x79FB;&#xFF0C;&#x540C; &lt;Left&gt; &#x952E;
+j                   &#x5149;&#x6807;&#x4E0B;&#x79FB;&#xFF0C;&#x540C; &lt;Down&gt; &#x952E;
+k                   &#x5149;&#x6807;&#x4E0A;&#x79FB;&#xFF0C;&#x540C; &lt;Up&gt; &#x952E;
+l                   &#x5149;&#x6807;&#x53F3;&#x79FB;&#xFF0C;&#x540C; &lt;Right&gt; &#x952E;
+CTRL-F              &#x4E0B;&#x4E00;&#x9875;
+CTRL-B              &#x4E0A;&#x4E00;&#x9875;
+CTRL-U              &#x4E0A;&#x79FB;&#x534A;&#x5C4F;
+CTRL-D              &#x4E0B;&#x79FB;&#x534A;&#x5C4F;
+0                   &#x8DF3;&#x5230;&#x884C;&#x9996;&#xFF08;&#x662F;&#x6570;&#x5B57;&#x96F6;&#xFF0C;&#x4E0D;&#x662F;&#x5B57;&#x6BCD;O&#xFF09;&#xFF0C;&#x6548;&#x7528;&#x7B49;&#x540C;&#x4E8E; &lt;Home&gt; &#x952E;
+^                   &#x8DF3;&#x5230;&#x4ECE;&#x884C;&#x9996;&#x5F00;&#x59CB;&#x7B2C;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x767D;&#x5B57;&#x7B26;
+$                   &#x8DF3;&#x5230;&#x884C;&#x5C3E;&#xFF0C;&#x6548;&#x7528;&#x7B49;&#x540C;&#x4E8E; &lt;End&gt; &#x952E;
+gg                  &#x8DF3;&#x5230;&#x7B2C;&#x4E00;&#x884C;&#xFF0C;&#x6548;&#x7528;&#x7B49;&#x540C;&#x4E8E; CTRL+&lt;Home&gt;
+G                   &#x8DF3;&#x5230;&#x6700;&#x540E;&#x4E00;&#x884C;&#xFF0C;&#x6548;&#x7528;&#x7B49;&#x540C;&#x4E8E; CTRL+&lt;End&gt;
+nG                  &#x8DF3;&#x5230;&#x7B2C;n&#x884C;&#xFF0C;&#x6BD4;&#x5982; 10G &#x662F;&#x79FB;&#x52A8;&#x5230;&#x7B2C;&#x5341;&#x884C;
+:n                  &#x8DF3;&#x5230;&#x7B2C;n&#x884C;&#xFF0C;&#x6BD4;&#x5982; :10&lt;&#x56DE;&#x8F66;&gt; &#x662F;&#x79FB;&#x52A8;&#x5230;&#x7B2C;&#x5341;&#x884C;
+10%                 &#x79FB;&#x52A8;&#x5230;&#x6587;&#x4EF6; 10% &#x5904;
+15|                 &#x79FB;&#x52A8;&#x5230;&#x5F53;&#x524D;&#x884C;&#x7684; 15&#x5217;
+w                   &#x8DF3;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5F00;&#x5934; (word: &#x6807;&#x70B9;&#x6216;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x7684;&#x5355;&#x8BCD;)
+W                   &#x8DF3;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5F00;&#x5934; (WORD: &#x7A7A;&#x683C;&#x5206;&#x9694;&#x7684;&#x5355;&#x8BCD;)
+e                   &#x8DF3;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5C3E;&#x90E8; (word: &#x6807;&#x70B9;&#x6216;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x7684;&#x5355;&#x8BCD;)
+E                   &#x8DF3;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5C3E;&#x90E8; (WORD: &#x7A7A;&#x683C;&#x5206;&#x9694;&#x7684;&#x5355;&#x8BCD;)
+b                   &#x4E0A;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5934; (word: &#x6807;&#x70B9;&#x6216;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x7684;&#x5355;&#x8BCD;)
+B                   &#x4E0A;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5934; (WORD: &#x7A7A;&#x683C;&#x5206;&#x9694;&#x7684;&#x5355;&#x8BCD;)
+ge                  &#x4E0A;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5C3E;
+)                   &#x5411;&#x524D;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x53E5;&#x5B50;&#xFF08;&#x53E5;&#x53F7;&#x5206;&#x9694;&#xFF09;
+(                   &#x5411;&#x540E;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x53E5;&#x5B50;&#xFF08;&#x53E5;&#x53F7;&#x5206;&#x9694;&#xFF09;
+}                   &#x5411;&#x524D;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x6BB5;&#x843D;&#xFF08;&#x7A7A;&#x884C;&#x5206;&#x9694;&#xFF09;
+{                   &#x5411;&#x540E;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x6BB5;&#x843D;&#xFF08;&#x7A7A;&#x884C;&#x5206;&#x9694;&#xFF09;
+&lt;enter&gt;             &#x79FB;&#x52A8;&#x5230;&#x4E0B;&#x4E00;&#x884C;&#x9996;&#x4E2A;&#x975E;&#x7A7A;&#x5B57;&#x7B26;
++                   &#x79FB;&#x52A8;&#x5230;&#x4E0B;&#x4E00;&#x884C;&#x9996;&#x4E2A;&#x975E;&#x7A7A;&#x5B57;&#x7B26;&#xFF08;&#x540C;&#x56DE;&#x8F66;&#x952E;&#xFF09;
+-                   &#x79FB;&#x52A8;&#x5230;&#x4E0A;&#x4E00;&#x884C;&#x9996;&#x4E2A;&#x975E;&#x7A7A;&#x5B57;&#x7B26;
+H                   &#x79FB;&#x52A8;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x90E8;
+M                   &#x79FB;&#x52A8;&#x5230;&#x5C4F;&#x5E55;&#x4E2D;&#x90E8;
+L                   &#x79FB;&#x52A8;&#x5230;&#x5C4F;&#x5E55;&#x4E0B;&#x90E8;
+fx                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x4E3A; x &#x7684;&#x5B57;&#x7B26;&#xFF0C;2f/ &#x53EF;&#x4EE5;&#x627E;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;&#x659C;&#x6746;
+Fx                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x4E3A; x &#x7684;&#x5B57;&#x7B26;
+tx                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x4E3A; x &#x7684;&#x5B57;&#x7B26;&#x524D;
+Tx                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x4E3A; x &#x7684;&#x5B57;&#x7B26;&#x524D;
+;                   &#x8DF3;&#x5230;&#x4E0B;&#x4E00;&#x4E2A; f/t &#x641C;&#x7D22;&#x7684;&#x7ED3;&#x679C;
+,                   &#x8DF3;&#x5230;&#x4E0A;&#x4E00;&#x4E2A; f/t &#x641C;&#x7D22;&#x7684;&#x7ED3;&#x679C;
+&lt;S-Left&gt;            &#x6309;&#x4F4F; SHIFT &#x6309;&#x5DE6;&#x952E;&#xFF0C;&#x5411;&#x5DE6;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;
+&lt;S-Right&gt;           &#x6309;&#x4F4F; SHIFT &#x6309;&#x53F3;&#x952E;&#xFF0C;&#x5411;&#x53F3;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;
+&lt;S-Up&gt;              &#x6309;&#x4F4F; SHIFT &#x6309;&#x4E0A;&#x952E;&#xFF0C;&#x5411;&#x4E0A;&#x7FFB;&#x9875;
+&lt;S-Down&gt;            &#x6309;&#x4F4F; SHIFT &#x6309;&#x4E0B;&#x952E;&#xFF0C;&#x5411;&#x4E0B;&#x7FFB;&#x9875;
+gm                  &#x79FB;&#x52A8;&#x5230;&#x884C;&#x4E2D;
+gj                  &#x5149;&#x6807;&#x4E0B;&#x79FB;&#x4E00;&#x884C;&#xFF08;&#x5FFD;&#x7565;&#x81EA;&#x52A8;&#x6362;&#x884C;&#xFF09;
+gk                  &#x5149;&#x6807;&#x4E0A;&#x79FB;&#x4E00;&#x884C;&#xFF08;&#x5FFD;&#x7565;&#x81EA;&#x52A8;&#x6362;&#x884C;&#xFF09;
+</code></pre><h2 id="&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x8FDB;&#x5165;&#x9000;&#x51FA;"><a name="&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x8FDB;&#x5165;&#x9000;&#x51FA;" class="anchor-navigation-ex-anchor" href="#&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x8FDB;&#x5165;&#x9000;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF1A;&#x8FDB;&#x5165;&#x9000;&#x51FA;</h2>
+<pre><code>i                   &#x5728;&#x5149;&#x6807;&#x5904;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+I                   &#x5728;&#x884C;&#x9996;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+a                   &#x5728;&#x5149;&#x6807;&#x540E;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+A                   &#x5728;&#x884C;&#x5C3E;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+o                   &#x5728;&#x4E0B;&#x4E00;&#x884C;&#x63D2;&#x5165;&#x65B0;&#x884C;&#x5E76;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+O                   &#x5728;&#x4E0A;&#x4E00;&#x884C;&#x63D2;&#x5165;&#x65B0;&#x884C;&#x5E76;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+gi                  &#x8FDB;&#x5165;&#x5230;&#x4E0A;&#x4E00;&#x6B21;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x7684;&#x4F4D;&#x7F6E;
+&lt;ESC&gt;               &#x9000;&#x51FA;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+CTRL-[              &#x9000;&#x51FA;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF08;&#x540C; ESC &#x7B49;&#x4EF7;&#xFF0C;&#x4F46;&#x66F4;&#x987A;&#x624B;&#xFF09;
+</code></pre><h2 id="insert-mode---&#x7531;-i-i-a-a-o-o-&#x7B49;&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x540E;"><a name="insert-mode---&#x7531;-i-i-a-a-o-o-&#x7B49;&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x540E;" class="anchor-navigation-ex-anchor" href="#insert-mode---&#x7531;-i-i-a-a-o-o-&#x7B49;&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x540E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. INSERT MODE - &#x7531; i, I, a, A, o, O &#x7B49;&#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x540E;</h2>
+<pre><code>&lt;Up&gt;                &#x5149;&#x6807;&#x5411;&#x4E0A;&#x79FB;&#x52A8;
+&lt;Down&gt;              &#x5149;&#x6807;&#x5411;&#x4E0B;&#x79FB;&#x52A8;
+&lt;Left&gt;              &#x5149;&#x6807;&#x5411;&#x5DE6;&#x79FB;&#x52A8;
+&lt;Right&gt;             &#x5149;&#x6807;&#x5411;&#x53F3;&#x79FB;&#x52A8;
+&lt;S-Left&gt;            &#x6309;&#x4F4F; SHIFT &#x6309;&#x5DE6;&#x952E;&#xFF0C;&#x5411;&#x5DE6;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;
+&lt;S-Right&gt;           &#x6309;&#x4F4F; SHIFT &#x6309;&#x53F3;&#x952E;&#xFF0C;&#x5411;&#x53F3;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;
+&lt;S-Up&gt;              &#x6309;&#x4F4F; SHIFT &#x6309;&#x4E0A;&#x952E;&#xFF0C;&#x5411;&#x4E0A;&#x7FFB;&#x9875;
+&lt;S-Down&gt;            &#x6309;&#x4F4F; SHIFT &#x6309;&#x4E0B;&#x952E;&#xFF0C;&#x5411;&#x4E0B;&#x7FFB;&#x9875;
+&lt;PageUp&gt;            &#x4E0A;&#x7FFB;&#x9875;
+&lt;PageDown&gt;          &#x4E0B;&#x7FFB;&#x9875;
+&lt;Delete&gt;            &#x5220;&#x9664;&#x5149;&#x6807;&#x5904;&#x5B57;&#x7B26;
+&lt;BS&gt;                Backspace &#x5411;&#x540E;&#x5220;&#x9664;&#x5B57;&#x7B26;
+&lt;Home&gt;              &#x5149;&#x6807;&#x8DF3;&#x8F6C;&#x884C;&#x9996;
+&lt;End&gt;               &#x5149;&#x6807;&#x8DF3;&#x8F6C;&#x884C;&#x5C3E;
+CTRL-W              &#x5411;&#x540E;&#x5220;&#x9664;&#x5355;&#x8BCD;
+CTRL-O              &#x4E34;&#x65F6;&#x9000;&#x51FA;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x6267;&#x884C;&#x5355;&#x6761;&#x547D;&#x4EE4;&#x53C8;&#x8FD4;&#x56DE;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+CTRL-\ CTRL-O       &#x4E34;&#x65F6;&#x9000;&#x51FA;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF08;&#x5149;&#x6807;&#x4FDD;&#x6301;&#xFF09;&#xFF0C;&#x6267;&#x884C;&#x5355;&#x6761;&#x547D;&#x4EE4;&#x53C8;&#x8FD4;&#x56DE;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+CTRL-R 0            &#x63D2;&#x5165;&#x5BC4;&#x5B58;&#x5668;&#xFF08;&#x5185;&#x90E8; 0&#x53F7;&#x526A;&#x8D34;&#x677F;&#xFF09;&#x5185;&#x5BB9;&#xFF0C;CTRL-R &#x540E;&#x53EF;&#x8DDF;&#x5BC4;&#x5B58;&#x5668;&#x540D;
+CTRL-R &quot;            &#x63D2;&#x5165;&#x533F;&#x540D;&#x5BC4;&#x5B58;&#x5668;&#x5185;&#x5BB9;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x4E0B; p&#x7C98;&#x8D34;
+CTRL-R =            &#x63D2;&#x5165;&#x8868;&#x8FBE;&#x5F0F;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#xFF0C;&#x7B49;&#x53F7;&#x540E;&#x9762;&#x8DDF;&#x8868;&#x8FBE;&#x5F0F;
+CTRL-R :            &#x63D2;&#x5165;&#x4E0A;&#x4E00;&#x6B21;&#x547D;&#x4EE4;&#x884C;&#x547D;&#x4EE4;
+CTRL-R /            &#x63D2;&#x5165;&#x4E0A;&#x4E00;&#x6B21;&#x641C;&#x7D22;&#x7684;&#x5173;&#x952E;&#x5B57;
+CTRL-F              &#x81EA;&#x52A8;&#x7F29;&#x8FDB;
+CTRL-U              &#x5220;&#x9664;&#x5F53;&#x524D;&#x884C;&#x6240;&#x6709;&#x5B57;&#x7B26;
+CTRL-V {char}       &#x63D2;&#x5165;&#x975E;&#x6570;&#x5B57;&#x7684;&#x5B57;&#x9762;&#x91CF;
+CTRL-V {number}     &#x63D2;&#x5165;&#x4E09;&#x4E2A;&#x6570;&#x5B57;&#x4EE3;&#x8868;&#x7684; ascii/unicode &#x5B57;&#x7B26;
+CTRL-V 065          &#x63D2;&#x5165; 10&#x8FDB;&#x5236; ascii &#x5B57;&#x7B26;&#xFF08;&#x4E24;&#x6570;&#x5B57;&#xFF09; 065 &#x5373; A&#x5B57;&#x7B26;
+CTRL-V x41          &#x63D2;&#x5165; 16&#x8FDB;&#x5236; ascii &#x5B57;&#x7B26;&#xFF08;&#x4E09;&#x6570;&#x5B57;&#xFF09; x41 &#x5373; A&#x5B57;&#x7B26;
+CTRL-V o101         &#x63D2;&#x5165;  8&#x8FDB;&#x5236; ascii &#x5B57;&#x7B26;&#xFF08;&#x4E09;&#x6570;&#x5B57;&#xFF09; o101 &#x5373; A&#x5B57;&#x7B26;
+CTRL-V u1234        &#x63D2;&#x5165; 16&#x8FDB;&#x5236; unicode &#x5B57;&#x7B26;&#xFF08;&#x56DB;&#x6570;&#x5B57;&#xFF09;
+CTRL-V U12345678    &#x63D2;&#x5165; 16&#x8FDB;&#x5236; unicode &#x5B57;&#x7B26;&#xFF08;&#x516B;&#x6570;&#x5B57;&#xFF09;
+CTRL-K {ch1} {ch2}  &#x63D2;&#x5165; digraph&#xFF08;&#x89C1; :h digraph&#xFF09;&#xFF0C;&#x5FEB;&#x901F;&#x8F93;&#x5165;&#x65E5;&#x6587;&#x6216;&#x7B26;&#x53F7;&#x7B49;
+CTRL-D              &#x6587;&#x5B57;&#x5411;&#x524D;&#x7F29;&#x8FDB;
+CTRL-T              &#x6587;&#x5B57;&#x5411;&#x540E;&#x7F29;&#x8FDB;
+</code></pre><h2 id="&#x6587;&#x672C;&#x7F16;&#x8F91;"><a name="&#x6587;&#x672C;&#x7F16;&#x8F91;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x672C;&#x7F16;&#x8F91;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x6587;&#x672C;&#x7F16;&#x8F91;</h2>
+<pre><code>r                   &#x66FF;&#x6362;&#x5F53;&#x524D;&#x5B57;&#x7B26;
+R                   &#x8FDB;&#x5165;&#x66FF;&#x6362;&#x6A21;&#x5F0F;&#xFF0C;&#x76F4;&#x81F3; ESC &#x79BB;&#x5F00;
+s                   &#x66FF;&#x6362;&#x5B57;&#x7B26;&#xFF08;&#x5220;&#x9664;&#x5149;&#x6807;&#x5904;&#x5B57;&#x7B26;&#xFF0C;&#x5E76;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x524D;&#x53EF;&#x63A5;&#x6570;&#x91CF;&#xFF09;
+S                   &#x66FF;&#x6362;&#x884C;&#xFF08;&#x5220;&#x9664;&#x5F53;&#x524D;&#x884C;&#xFF0C;&#x5E76;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF0C;&#x524D;&#x53EF;&#x63A5;&#x6570;&#x91CF;&#xFF09;
+cc                  &#x6539;&#x5199;&#x5F53;&#x524D;&#x884C;&#xFF08;&#x5220;&#x9664;&#x5F53;&#x524D;&#x884C;&#x5E76;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#xFF09;&#xFF0C;&#x540C; S
+cw                  &#x6539;&#x5199;&#x5149;&#x6807;&#x5F00;&#x59CB;&#x5904;&#x7684;&#x5F53;&#x524D;&#x5355;&#x8BCD;
+ciw                 &#x6539;&#x5199;&#x5149;&#x6807;&#x6240;&#x5904;&#x7684;&#x5355;&#x8BCD;
+caw                 &#x6539;&#x5199;&#x5149;&#x6807;&#x6240;&#x5904;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x5E76;&#x4E14;&#x5305;&#x62EC;&#x524D;&#x540E;&#x7A7A;&#x683C;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;
+c0                  &#x6539;&#x5199;&#x5230;&#x884C;&#x9996;
+c^                  &#x6539;&#x5199;&#x5230;&#x884C;&#x9996;&#xFF08;&#x7B2C;&#x4E00;&#x4E2A;&#x975E;&#x96F6;&#x5B57;&#x7B26;&#xFF09;
+c$                  &#x6539;&#x5199;&#x5230;&#x884C;&#x672B;
+C                   &#x6539;&#x5199;&#x5230;&#x884C;&#x5C3E;&#xFF08;&#x540C;c$&#xFF09;
+ci&quot;                 &#x6539;&#x5199;&#x53CC;&#x5F15;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+ci&apos;                 &#x6539;&#x5199;&#x5355;&#x5F15;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+cib                 &#x6539;&#x5199;&#x5C0F;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+cab                 &#x6539;&#x5199;&#x5C0F;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x5305;&#x542B;&#x5C0F;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+ci)                 &#x6539;&#x5199;&#x5C0F;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+ci]                 &#x6539;&#x5199;&#x4E2D;&#x62EC;&#x53F7;&#x4E2D;&#x5185;&#x5BB9;
+ciB                 &#x6539;&#x5199;&#x5927;&#x62EC;&#x53F7;&#x4E2D;&#x5185;&#x5BB9;
+caB                 &#x6539;&#x5199;&#x5927;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x5305;&#x542B;&#x5927;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+ci}                 &#x6539;&#x5199;&#x5927;&#x62EC;&#x53F7;&#x4E2D;&#x5185;&#x5BB9;
+cit                 &#x6539;&#x5199; xml tag &#x4E2D;&#x7684;&#x5185;&#x5BB9;
+cis                 &#x6539;&#x5199;&#x5F53;&#x524D;&#x53E5;&#x5B50;
+c2w                 &#x6539;&#x5199;&#x4E0B;&#x4E24;&#x4E2A;&#x5355;&#x8BCD;
+ct(                 &#x6539;&#x5199;&#x5230;&#x5C0F;&#x62EC;&#x53F7;&#x524D;
+c/apple             &#x6539;&#x5199;&#x5230;&#x5149;&#x6807;&#x540E;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;apple&#x524D;
+x                   &#x5220;&#x9664;&#x5F53;&#x524D;&#x5B57;&#x7B26;&#xFF0C;&#x524D;&#x9762;&#x53EF;&#x4EE5;&#x63A5;&#x6570;&#x5B57;&#xFF0C;3x&#x4EE3;&#x8868;&#x5220;&#x9664;&#x4E09;&#x4E2A;&#x5B57;&#x7B26;
+X                   &#x5411;&#x524D;&#x5220;&#x9664;&#x5B57;&#x7B26;
+dd                  &#x5220;&#x9664;&#x5F53;&#x524D;&#x884C;
+d0                  &#x5220;&#x9664;&#x5230;&#x884C;&#x9996;
+d^                  &#x5220;&#x9664;&#x5230;&#x884C;&#x9996;&#xFF08;&#x7B2C;&#x4E00;&#x4E2A;&#x975E;&#x96F6;&#x5B57;&#x7B26;&#xFF09;
+d$                  &#x5220;&#x9664;&#x5230;&#x884C;&#x672B;
+D                   &#x5220;&#x9664;&#x5230;&#x884C;&#x672B;&#xFF08;&#x540C; d$&#xFF09;
+dw                  &#x5220;&#x9664;&#x5F53;&#x524D;&#x5355;&#x8BCD;
+diw                 &#x5220;&#x9664;&#x5149;&#x6807;&#x6240;&#x5904;&#x7684;&#x5355;&#x8BCD;
+daw                 &#x5220;&#x9664;&#x5149;&#x6807;&#x6240;&#x5904;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x5E76;&#x5305;&#x542B;&#x524D;&#x540E;&#x7A7A;&#x683C;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;
+di&quot;                 &#x5220;&#x9664;&#x53CC;&#x5F15;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+di&apos;                 &#x5220;&#x9664;&#x5355;&#x5F15;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+dib                 &#x5220;&#x9664;&#x5C0F;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+di)                 &#x5220;&#x9664;&#x5C0F;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+dab                 &#x5220;&#x9664;&#x5C0F;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x5305;&#x542B;&#x5C0F;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+di]                 &#x5220;&#x9664;&#x4E2D;&#x62EC;&#x53F7;&#x4E2D;&#x5185;&#x5BB9;
+diB                 &#x5220;&#x9664;&#x5927;&#x62EC;&#x53F7;&#x4E2D;&#x5185;&#x5BB9;
+di}                 &#x5220;&#x9664;&#x5927;&#x62EC;&#x53F7;&#x4E2D;&#x5185;&#x5BB9;
+daB                 &#x5220;&#x9664;&#x5927;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x5305;&#x542B;&#x5927;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+dit                 &#x5220;&#x9664; xml tag &#x4E2D;&#x7684;&#x5185;&#x5BB9;
+dis                 &#x5220;&#x9664;&#x5F53;&#x524D;&#x53E5;&#x5B50;
+dip                 &#x5220;&#x9664;&#x5F53;&#x524D;&#x6BB5;&#x843D;(&#x524D;&#x540E;&#x6709;&#x7A7A;&#x767D;&#x884C;&#x7684;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x6BB5;&#x843D;)
+dap                 &#x5220;&#x9664;&#x5F53;&#x524D;&#x6BB5;&#x843D;(&#x5305;&#x62EC;&#x524D;&#x540E;&#x7A7A;&#x767D;&#x884C;)
+d2w                 &#x5220;&#x9664;&#x4E0B;&#x4E24;&#x4E2A;&#x5355;&#x8BCD;
+dt(                 &#x5220;&#x9664;&#x5230;&#x5C0F;&#x62EC;&#x53F7;&#x524D;
+d/apple             &#x5220;&#x9664;&#x5230;&#x5149;&#x6807;&#x540E;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;apple&#x524D;
+dgg                 &#x5220;&#x9664;&#x5230;&#x6587;&#x4EF6;&#x5934;&#x90E8;
+dG                  &#x5220;&#x9664;&#x5230;&#x6587;&#x4EF6;&#x5C3E;&#x90E8;
+d}                  &#x5220;&#x9664;&#x4E0B;&#x4E00;&#x6BB5;
+d{                  &#x5220;&#x9664;&#x4E0A;&#x4E00;&#x6BB5;
+u                   &#x64A4;&#x9500;
+U                   &#x64A4;&#x9500;&#x6574;&#x884C;&#x64CD;&#x4F5C;
+CTRL-R              &#x64A4;&#x9500;&#x4E0A;&#x4E00;&#x6B21; u &#x547D;&#x4EE4;
+J                   &#x94FE;&#x63A5;&#x591A;&#x884C;&#x4E3A;&#x4E00;&#x884C;
+.                   &#x91CD;&#x590D;&#x4E0A;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;
+~                   &#x66FF;&#x6362;&#x5927;&#x5C0F;&#x5199;
+g~iw                &#x66FF;&#x6362;&#x5F53;&#x524D;&#x5355;&#x8BCD;&#x7684;&#x5927;&#x5C0F;&#x5199;
+gUiw                &#x5C06;&#x5355;&#x8BCD;&#x8F6C;&#x6210;&#x5927;&#x5199;
+guiw                &#x5C06;&#x5F53;&#x524D;&#x5355;&#x8BCD;&#x8F6C;&#x6210;&#x5C0F;&#x5199;
+guu                 &#x5168;&#x884C;&#x8F6C;&#x4E3A;&#x5C0F;&#x5199;
+gUU                 &#x5168;&#x884C;&#x8F6C;&#x4E3A;&#x5927;&#x5199;
+&lt;&lt;                  &#x51CF;&#x5C11;&#x7F29;&#x8FDB;
+&gt;&gt;                  &#x589E;&#x52A0;&#x7F29;&#x8FDB;
+&gt;&gt;                  ==                  &#x81EA;&#x52A8;&#x7F29;&#x8FDB;
+&gt;&gt;                  CTRL-A              &#x589E;&#x52A0;&#x6570;&#x5B57;
+&gt;&gt;                  CTRL-X              &#x51CF;&#x5C11;&#x6570;&#x5B57;
+</code></pre><h2 id="&#x590D;&#x5236;&#x7C98;&#x8D34;"><a name="&#x590D;&#x5236;&#x7C98;&#x8D34;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x5236;&#x7C98;&#x8D34;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x590D;&#x5236;&#x7C98;&#x8D34;</h2>
+<pre><code>p                   &#x7C98;&#x8D34;&#x5230;&#x5149;&#x6807;&#x540E;
+P                   &#x7C98;&#x8D34;&#x5230;&#x5149;&#x6807;&#x524D;
+v                   &#x5F00;&#x59CB;&#x6807;&#x8BB0;
+y                   &#x590D;&#x5236;&#x6807;&#x8BB0;&#x5185;&#x5BB9;
+V                   &#x5F00;&#x59CB;&#x6309;&#x884C;&#x6807;&#x8BB0;
+CTRL-V              &#x5F00;&#x59CB;&#x5217;&#x6807;&#x8BB0;
+y$                  &#x590D;&#x5236;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x5230;&#x672C;&#x884C;&#x7ED3;&#x675F;&#x7684;&#x5185;&#x5BB9;
+yy                  &#x590D;&#x5236;&#x5F53;&#x524D;&#x884C;
+Y                   &#x590D;&#x5236;&#x5F53;&#x524D;&#x884C;&#xFF0C;&#x540C; yy
+yiw                 &#x590D;&#x5236;&#x5F53;&#x524D;&#x5355;&#x8BCD;
+3yy                 &#x590D;&#x5236;&#x5149;&#x6807;&#x4E0B;&#x4E09;&#x884C;&#x5185;&#x5BB9;
+v0                  &#x9009;&#x4E2D;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x5230;&#x884C;&#x9996;
+v$                  &#x9009;&#x4E2D;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x5230;&#x884C;&#x672B;
+viw                 &#x9009;&#x4E2D;&#x5F53;&#x524D;&#x5355;&#x8BCD;
+vib                 &#x9009;&#x4E2D;&#x5C0F;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;
+vi)                 &#x9009;&#x4E2D;&#x5C0F;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;
+vi]                 &#x9009;&#x4E2D;&#x4E2D;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;
+viB                 &#x9009;&#x4E2D;&#x5927;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;
+vi}                 &#x9009;&#x4E2D;&#x5927;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;
+vis                 &#x9009;&#x4E2D;&#x53E5;&#x5B50;&#x4E2D;&#x7684;&#x4E1C;&#x897F;
+vip                 &#x9009;&#x4E2D;&#x5F53;&#x524D;&#x6BB5;&#x843D;(&#x524D;&#x540E;&#x6709;&#x7A7A;&#x767D;&#x884C;&#x7684;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x6BB5;&#x843D;)
+vap                 &#x9009;&#x4E2D;&#x5F53;&#x524D;&#x6BB5;&#x843D;(&#x5305;&#x62EC;&#x524D;&#x540E;&#x7A7A;&#x767D;&#x884C;)
+vab                 &#x9009;&#x4E2D;&#x5C0F;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;&#xFF08;&#x5305;&#x542B;&#x5C0F;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+va)                 &#x9009;&#x4E2D;&#x5C0F;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;&#xFF08;&#x5305;&#x542B;&#x5C0F;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+va]                 &#x9009;&#x4E2D;&#x4E2D;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;&#xFF08;&#x5305;&#x542B;&#x4E2D;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+vaB                 &#x9009;&#x4E2D;&#x5927;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;&#xFF08;&#x5305;&#x542B;&#x5927;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+va}                 &#x9009;&#x4E2D;&#x5927;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4E1C;&#x897F;&#xFF08;&#x5305;&#x542B;&#x5927;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+gv                  &#x91CD;&#x65B0;&#x9009;&#x62E9;&#x4E0A;&#x4E00;&#x6B21;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x5B57;
+:set paste          &#x5141;&#x8BB8;&#x7C98;&#x8D34;&#x6A21;&#x5F0F;&#xFF08;&#x907F;&#x514D;&#x7C98;&#x8D34;&#x65F6;&#x81EA;&#x52A8;&#x7F29;&#x8FDB;&#x5F71;&#x54CD;&#x683C;&#x5F0F;&#xFF09;
+:set nopaste        &#x7981;&#x6B62;&#x7C98;&#x8D34;&#x6A21;&#x5F0F;
+&quot;?yy                &#x590D;&#x5236;&#x5F53;&#x524D;&#x884C;&#x5230;&#x5BC4;&#x5B58;&#x5668; ? &#xFF0C;&#x95EE;&#x53F7;&#x4EE3;&#x8868; 0-9 &#x7684;&#x5BC4;&#x5B58;&#x5668;&#x540D;&#x79F0;
+&quot;?d3j               &#x5220;&#x9664;&#x5149;&#x6807;&#x4E0B;&#x4E09;&#x884C;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x653E;&#x5230;&#x5BC4;&#x5B58;&#x5668; ? &#xFF0C;&#x95EE;&#x53F7;&#x4EE3;&#x8868; 0-9 &#x7684;&#x5BC4;&#x5B58;&#x5668;&#x540D;&#x79F0;
+&quot;?p                 &#x5C06;&#x5BC4;&#x5B58;&#x5668; ? &#x7684;&#x5185;&#x5BB9;&#x7C98;&#x8D34;&#x5230;&#x5149;&#x6807;&#x540E;
+&quot;?P                 &#x5C06;&#x5BC4;&#x5B58;&#x5668; ? &#x7684;&#x5185;&#x5BB9;&#x7C98;&#x8D34;&#x5230;&#x5149;&#x6807;&#x524D;
+:registers          &#x663E;&#x793A;&#x6240;&#x6709;&#x5BC4;&#x5B58;&#x5668;&#x5185;&#x5BB9;
+:[range]y           &#x590D;&#x5236;&#x8303;&#x56F4;&#xFF0C;&#x6BD4;&#x5982; :20,30y &#x662F;&#x590D;&#x5236;20&#x5230;30&#x884C;&#xFF0C;:10y &#x662F;&#x590D;&#x5236;&#x7B2C;&#x5341;&#x884C;
+:[range]d           &#x5220;&#x9664;&#x8303;&#x56F4;&#xFF0C;&#x6BD4;&#x5982; :20,30d &#x662F;&#x5220;&#x9664;20&#x5230;30&#x884C;&#xFF0C;:10d &#x662F;&#x5220;&#x9664;&#x7B2C;&#x5341;&#x884C;
+ddp                 &#x4EA4;&#x6362;&#x4E24;&#x884C;&#x5185;&#x5BB9;&#xFF1A;&#x5148;&#x5220;&#x9664;&#x5F53;&#x524D;&#x884C;&#x590D;&#x5236;&#x5230;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5E76;&#x7C98;&#x8D34;
+&quot;_[command]         &#x4F7F;&#x7528;[command]&#x5220;&#x9664;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x8FDB;&#x884C;&#x590D;&#x5236;&#xFF08;&#x4E0D;&#x4F1A;&#x6C61;&#x67D3;&#x5BC4;&#x5B58;&#x5668;&#xFF09;
+&quot;*[command]         &#x4F7F;&#x7528;[command]&#x590D;&#x5236;&#x5185;&#x5BB9;&#x5230;&#x7CFB;&#x7EDF;&#x526A;&#x8D34;&#x677F;&#xFF08;&#x9700;&#x8981;vim&#x7248;&#x672C;&#x6709;clipboard&#x652F;&#x6301;&#xFF09;
+</code></pre><h2 id="&#x6587;&#x672C;&#x5BF9;&#x8C61;---cdvy-&#x7B49;&#x547D;&#x4EE4;&#x540E;&#x63A5;&#x6587;&#x672C;&#x5BF9;&#x8C61;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;&#x8303;&#x56F4;-ia&#x7C7B;&#x578B;"><a name="&#x6587;&#x672C;&#x5BF9;&#x8C61;---cdvy-&#x7B49;&#x547D;&#x4EE4;&#x540E;&#x63A5;&#x6587;&#x672C;&#x5BF9;&#x8C61;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;&#x8303;&#x56F4;-ia&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x672C;&#x5BF9;&#x8C61;---cdvy-&#x7B49;&#x547D;&#x4EE4;&#x540E;&#x63A5;&#x6587;&#x672C;&#x5BF9;&#x8C61;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;&#x8303;&#x56F4;-ia&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x6587;&#x672C;&#x5BF9;&#x8C61; - c,d,v,y &#x7B49;&#x547D;&#x4EE4;&#x540E;&#x63A5;&#x6587;&#x672C;&#x5BF9;&#x8C61;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;&lt;&#x8303;&#x56F4; i/a&gt;&lt;&#x7C7B;&#x578B;&gt;</h2>
+<pre><code>$                   &#x5230;&#x884C;&#x672B;
+0                   &#x5230;&#x884C;&#x9996;
+^                   &#x5230;&#x884C;&#x9996;&#x975E;&#x7A7A;&#x5B57;&#x7B26;
+tx                  &#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x5230;&#x5B57;&#x7B26; x &#x4E4B;&#x524D;
+fx                  &#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x5230;&#x5B57;&#x7B26; x &#x4E4B;&#x5904;
+iw                  &#x6574;&#x4E2A;&#x5355;&#x8BCD;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x5206;&#x9694;&#x7B26;&#xFF09;
+aw                  &#x6574;&#x4E2A;&#x5355;&#x8BCD;&#xFF08;&#x5305;&#x62EC;&#x5206;&#x9694;&#x7B26;&#xFF09;
+iW                  &#x6574;&#x4E2A; WORD&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x5206;&#x9694;&#x7B26;&#xFF09;
+aW                  &#x6574;&#x4E2A; WORD&#xFF08;&#x5305;&#x62EC;&#x5206;&#x9694;&#x7B26;&#xFF09;
+is                  &#x6574;&#x4E2A;&#x53E5;&#x5B50;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x5206;&#x9694;&#x7B26;&#xFF09;
+as                  &#x6574;&#x4E2A;&#x53E5;&#x5B50;&#xFF08;&#x5305;&#x62EC;&#x5206;&#x9694;&#x7B26;&#xFF09;
+ip                  &#x6574;&#x4E2A;&#x6BB5;&#x843D;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x524D;&#x540E;&#x7A7A;&#x767D;&#x884C;&#xFF09;
+ap                  &#x6574;&#x4E2A;&#x6BB5;&#x843D;&#xFF08;&#x5305;&#x62EC;&#x524D;&#x540E;&#x7A7A;&#x767D;&#x884C;&#xFF09;
+ib                  &#x5C0F;&#x62EC;&#x53F7;&#x5185;
+ab                  &#x5C0F;&#x62EC;&#x53F7;&#x5185;&#xFF08;&#x5305;&#x542B;&#x5C0F;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+iB                  &#x5927;&#x62EC;&#x53F7;&#x5185;
+aB                  &#x5927;&#x62EC;&#x53F7;&#x5185;&#xFF08;&#x5305;&#x542B;&#x5927;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+i)                  &#x5C0F;&#x62EC;&#x53F7;&#x5185;
+a)                  &#x5C0F;&#x62EC;&#x53F7;&#x5185;&#xFF08;&#x5305;&#x542B;&#x5C0F;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+i]                  &#x4E2D;&#x62EC;&#x53F7;&#x5185;
+a]                  &#x4E2D;&#x62EC;&#x53F7;&#x5185;&#xFF08;&#x5305;&#x542B;&#x4E2D;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+i}                  &#x5927;&#x62EC;&#x53F7;&#x5185;
+a}                  &#x5927;&#x62EC;&#x53F7;&#x5185;&#xFF08;&#x5305;&#x542B;&#x5927;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+i&apos;                  &#x5355;&#x5F15;&#x53F7;&#x5185;
+a&apos;                  &#x5355;&#x5F15;&#x53F7;&#x5185;&#xFF08;&#x5305;&#x542B;&#x5355;&#x5F15;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+i&quot;                  &#x53CC;&#x5F15;&#x53F7;&#x5185;
+a&quot;                  &#x53CC;&#x5F15;&#x53F7;&#x5185;&#xFF08;&#x5305;&#x542B;&#x53CC;&#x5F15;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+2i)                 &#x5F80;&#x5916;&#x4E24;&#x5C42;&#x5C0F;&#x62EC;&#x53F7;&#x5185;
+2a)                 &#x5F80;&#x5916;&#x4E24;&#x5C42;&#x5C0F;&#x62EC;&#x53F7;&#x5185;&#xFF08;&#x5305;&#x542B;&#x5C0F;&#x62EC;&#x53F7;&#x672C;&#x8EAB;&#xFF09;
+2f)                 &#x5230;&#x7B2C;&#x4E8C;&#x4E2A;&#x5C0F;&#x62EC;&#x53F7;&#x5904;
+2t)                 &#x5230;&#x7B2C;&#x4E8C;&#x4E2A;&#x5C0F;&#x62EC;&#x53F7;&#x524D;
+</code></pre><h2 id="&#x67E5;&#x627E;&#x66FF;&#x6362;"><a name="&#x67E5;&#x627E;&#x66FF;&#x6362;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x627E;&#x66FF;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x67E5;&#x627E;&#x66FF;&#x6362;</h2>
+<pre><code>/pattern            &#x4ECE;&#x5149;&#x6807;&#x5904;&#x5411;&#x6587;&#x4EF6;&#x5C3E;&#x641C;&#x7D22; pattern
+?pattern            &#x4ECE;&#x5149;&#x6807;&#x5904;&#x5411;&#x6587;&#x4EF6;&#x5934;&#x641C;&#x7D22; pattern
+n                   &#x5411;&#x540C;&#x4E00;&#x65B9;&#x5411;&#x6267;&#x884C;&#x4E0A;&#x4E00;&#x6B21;&#x641C;&#x7D22;
+N                   &#x5411;&#x76F8;&#x53CD;&#x65B9;&#x5411;&#x6267;&#x884C;&#x4E0A;&#x4E00;&#x6B21;&#x641C;&#x7D22;
+*                   &#x5411;&#x524D;&#x641C;&#x7D22;&#x5149;&#x6807;&#x4E0B;&#x7684;&#x5355;&#x8BCD;
+##                   &#x5411;&#x540E;&#x641C;&#x7D22;&#x5149;&#x6807;&#x4E0B;&#x7684;&#x5355;&#x8BCD;
+:s/p1/p2/g          &#x5C06;&#x5F53;&#x524D;&#x884C;&#x4E2D;&#x5168;&#x66FF;&#x6362;p1&#x4E3A;p2
+:%s/p1/p2/g         &#x5C06;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x4E2D;&#x5168;&#x66FF;&#x6362;p1&#x4E3A;p2
+:%s/p1/p2/gc        &#x5C06;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x4E2D;&#x5168;&#x66FF;&#x6362;p1&#x4E3A;p2&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x5904;&#x8BE2;&#x95EE;&#x4F60;&#x662F;&#x5426;&#x66FF;&#x6362;
+:10,20s/p1/p2/g     &#x5C06;&#x7B2C;10&#x5230;20&#x884C;&#x4E2D;&#x6240;&#x6709;p1&#x66FF;&#x6362;&#x4E3A;p2
+:., ns/p1/p2/g      &#x5C06;&#x5F53;&#x524D;&#x884C;&#x5230;n&#x884C;&#x4E2D;&#x6240;&#x6709;p1&#x66FF;&#x6362;&#x4E3A;p2
+:., +10s/p1/p2/g    &#x5C06;&#x5F53;&#x524D;&#x884C;&#x5230;&#x76F8;&#x5BF9;&#x5F53;&#x524D;&#x884C;&#x52A0;10&#x884C;&#x7684;&#x533A;&#x95F4;&#x4E2D;&#x6240;&#x6709;p1&#x66FF;&#x6362;&#x4E3A;p2
+:., $s/p1/p2/g      &#x5C06;&#x5F53;&#x524D;&#x884C;&#x5230;&#x6700;&#x540E;&#x4E00;&#x884C;&#x4E2D;&#x6240;&#x6709;p1&#x66FF;&#x6362;&#x4E3A;p2
+:%s/1\\2\/3/123/g   &#x5C06;&#x201C;1\2/3&#x201D; &#x66FF;&#x6362;&#x4E3A; &#x201C;123&#x201D;&#xFF08;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x4F7F;&#x7528;&#x53CD;&#x659C;&#x6760;&#x6807;&#x6CE8;&#xFF09;
+:%s/\r//g           &#x5220;&#x9664; DOS &#x6362;&#x884C;&#x7B26; ^M
+</code></pre><h2 id="visual-mode---&#x7531;-v-v-ctrl-v-&#x8FDB;&#x5165;&#x7684;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;"><a name="visual-mode---&#x7531;-v-v-ctrl-v-&#x8FDB;&#x5165;&#x7684;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#visual-mode---&#x7531;-v-v-ctrl-v-&#x8FDB;&#x5165;&#x7684;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. VISUAL MODE - &#x7531; v, V, CTRL-V &#x8FDB;&#x5165;&#x7684;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;</h2>
+<pre><code>&gt;                   &#x589E;&#x52A0;&#x7F29;&#x8FDB;
+&gt;                   &lt;                   &#x51CF;&#x5C11;&#x7F29;&#x8FDB;
+&gt;                   d                   &#x5220;&#x9664;&#x9AD8;&#x4EAE;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x5B57;
+&gt;                   x                   &#x5220;&#x9664;&#x9AD8;&#x4EAE;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x5B57;
+&gt;                   c                   &#x6539;&#x5199;&#x6587;&#x5B57;&#xFF0C;&#x5373;&#x5220;&#x9664;&#x9AD8;&#x4EAE;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x5B57;&#x5E76;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+&gt;                   s                   &#x6539;&#x5199;&#x6587;&#x5B57;&#xFF0C;&#x5373;&#x5220;&#x9664;&#x9AD8;&#x4EAE;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x5B57;&#x5E76;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+&gt;                   y                   &#x62F7;&#x8D1D;&#x6587;&#x5B57;
+&gt;                   ~                   &#x8F6C;&#x6362;&#x5927;&#x5C0F;&#x5199;
+&gt;                   o                   &#x8DF3;&#x8F6C;&#x5230;&#x6807;&#x8BB0;&#x533A;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x7AEF;
+&gt;                   O                   &#x8DF3;&#x8F6C;&#x5230;&#x6807;&#x8BB0;&#x5757;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x7AEF;
+&gt;                   u                   &#x6807;&#x8BB0;&#x533A;&#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x5199;
+&gt;                   U                   &#x6807;&#x8BB0;&#x533A;&#x8F6C;&#x6362;&#x4E3A;&#x5927;&#x5199;
+&gt;                   g CTRL-G            &#x663E;&#x793A;&#x6240;&#x9009;&#x62E9;&#x533A;&#x57DF;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;
+&gt;                   &lt;Esc&gt;               &#x9000;&#x51FA;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;
+</code></pre><h2 id="&#x4F4D;&#x7F6E;&#x8DF3;&#x8F6C;"><a name="&#x4F4D;&#x7F6E;&#x8DF3;&#x8F6C;" class="anchor-navigation-ex-anchor" href="#&#x4F4D;&#x7F6E;&#x8DF3;&#x8F6C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. &#x4F4D;&#x7F6E;&#x8DF3;&#x8F6C;</h2>
+<pre><code>CTRL-O              &#x8DF3;&#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;
+CTRL-I              &#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;
+CTRL-^              &#x8DF3;&#x8F6C;&#x5230; alternate file (&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x4E0A;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF09;
+%                   &#x8DF3;&#x8F6C;&#x5230; {} () [] &#x7684;&#x5339;&#x914D;
+gd                  &#x8DF3;&#x8F6C;&#x5230;&#x5C40;&#x90E8;&#x5B9A;&#x4E49;&#xFF08;&#x5149;&#x6807;&#x4E0B;&#x7684;&#x5355;&#x8BCD;&#x7684;&#x5B9A;&#x4E49;&#xFF09;
+gD                  &#x8DF3;&#x8F6C;&#x5230;&#x5168;&#x5C40;&#x5B9A;&#x4E49;&#xFF08;&#x5149;&#x6807;&#x4E0B;&#x7684;&#x5355;&#x8BCD;&#x7684;&#x5B9A;&#x4E49;&#xFF09;
+gf                  &#x6253;&#x5F00;&#x540D;&#x79F0;&#x4E3A;&#x5149;&#x6807;&#x4E0B;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x6587;&#x4EF6;
+[[                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x9876;&#x5C42;&#x51FD;&#x6570;&#xFF08;&#x6BD4;&#x5982;C&#x8BED;&#x8A00;&#x4EE5;&#x5927;&#x62EC;&#x53F7;&#x5206;&#x9694;&#xFF09;
+]]                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x9876;&#x5C42;&#x51FD;&#x6570;&#xFF08;&#x6BD4;&#x5982;C&#x8BED;&#x8A00;&#x4EE5;&#x5927;&#x62EC;&#x53F7;&#x5206;&#x9694;&#xFF09;
+[m                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#x51FD;&#x6570;
+]m                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#x51FD;&#x6570;
+[{                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x5904;&#x672A;&#x5339;&#x914D;&#x7684; {
+]}                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x5904;&#x672A;&#x5339;&#x914D;&#x7684; }
+[(                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x5904;&#x672A;&#x5339;&#x914D;&#x7684; (
+])                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x5904;&#x672A;&#x5339;&#x914D;&#x7684; )
+[c                  &#x4E0A;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x5904;&#xFF08;diff&#x65F6;&#xFF09;
+]c                  &#x4E0B;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x5904;&#xFF08;diff&#x65F6;&#xFF09;
+[/                  &#x8DF3;&#x8F6C;&#x5230; C&#x6CE8;&#x91CA;&#x5F00;&#x5934;
+]/                  &#x8DF3;&#x8F6C;&#x5230; C&#x6CE8;&#x91CA;&#x7ED3;&#x5C3E;
+``                  &#x56DE;&#x5230;&#x4E0A;&#x6B21;&#x8DF3;&#x8F6C;&#x7684;&#x4F4D;&#x7F6E;
+&apos;&apos;                  &#x56DE;&#x5230;&#x4E0A;&#x6B21;&#x8DF3;&#x8F6C;&#x7684;&#x4F4D;&#x7F6E;
+`.                  &#x56DE;&#x5230;&#x4E0A;&#x6B21;&#x7F16;&#x8F91;&#x7684;&#x4F4D;&#x7F6E;
+&apos;.                  &#x56DE;&#x5230;&#x4E0A;&#x6B21;&#x7F16;&#x8F91;&#x7684;&#x4F4D;&#x7F6E;
+</code></pre><h2 id="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><a name="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. &#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h2>
+<pre><code>:w                  &#x4FDD;&#x5B58;&#x6587;&#x4EF6;
+:w &lt;filename&gt;       &#x6309;&#x540D;&#x79F0;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;
+:e &lt;filename&gt;       &#x6253;&#x5F00;&#x6587;&#x4EF6;&#x5E76;&#x7F16;&#x8F91;
+:saveas &lt;filename&gt;  &#x53E6;&#x5B58;&#x4E3A;&#x6587;&#x4EF6;
+:r &lt;filename&gt;       &#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x5E76;&#x5C06;&#x5185;&#x5BB9;&#x63D2;&#x5165;&#x5230;&#x5149;&#x6807;&#x540E;
+:r !dir             &#x5C06; dir &#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x6355;&#x83B7;&#x5E76;&#x63D2;&#x5165;&#x5230;&#x5149;&#x6807;&#x540E;
+:close              &#x5173;&#x95ED;&#x6587;&#x4EF6;
+:q                  &#x9000;&#x51FA;
+:q!                 &#x5F3A;&#x5236;&#x9000;&#x51FA;
+:wa                 &#x4FDD;&#x5B58;&#x6240;&#x6709;&#x6587;&#x4EF6;
+:cd &lt;path&gt;          &#x5207;&#x6362; Vim &#x5F53;&#x524D;&#x8DEF;&#x5F84;
+:pwd                &#x663E;&#x793A; Vim &#x5F53;&#x524D;&#x8DEF;&#x5F84;
+:new                &#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7A97;&#x53E3;&#x7F16;&#x8F91;&#x65B0;&#x6587;&#x4EF6;
+:enew               &#x5728;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;
+:vnew               &#x5728;&#x5DE6;&#x53F3;&#x5207;&#x5206;&#x7684;&#x65B0;&#x7A97;&#x53E3;&#x4E2D;&#x7F16;&#x8F91;&#x65B0;&#x6587;&#x4EF6;
+:tabnew             &#x5728;&#x65B0;&#x7684;&#x6807;&#x7B7E;&#x9875;&#x4E2D;&#x7F16;&#x8F91;&#x65B0;&#x6587;&#x4EF6;
+</code></pre><h2 id="&#x5DF2;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><a name="&#x5DF2;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x5DF2;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. &#x5DF2;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h2>
+<pre><code>:ls                 &#x67E5;&#x6848;&#x7F13;&#x5B58;&#x5217;&#x8868;
+:bn                 &#x5207;&#x6362;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;
+:bp                 &#x5207;&#x6362;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;
+:bd                 &#x5220;&#x9664;&#x7F13;&#x5B58;
+:b 1                &#x5207;&#x6362;&#x5230;1&#x53F7;&#x7F13;&#x5B58;
+:b abc              &#x5207;&#x6362;&#x5230;&#x6587;&#x4EF6;&#x540D;&#x4E3A; abc &#x5F00;&#x5934;&#x7684;&#x7F13;&#x5B58;
+:badd &lt;filename&gt;    &#x5C06;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x7F13;&#x5B58;&#x5217;&#x8868;
+:set hidden         &#x8BBE;&#x7F6E;&#x9690;&#x85CF;&#x6A21;&#x5F0F;&#xFF08;&#x672A;&#x4FDD;&#x5B58;&#x7684;&#x7F13;&#x5B58;&#x53EF;&#x4EE5;&#x88AB;&#x5207;&#x6362;&#x8D70;&#xFF0C;&#x6216;&#x8005;&#x5173;&#x95ED;&#xFF09;
+:set nohidden       &#x5173;&#x95ED;&#x9690;&#x85CF;&#x6A21;&#x5F0F;&#xFF08;&#x672A;&#x4FDD;&#x5B58;&#x7684;&#x7F13;&#x5B58;&#x4E0D;&#x80FD;&#x88AB;&#x5207;&#x6362;&#x8D70;&#xFF0C;&#x6216;&#x8005;&#x5173;&#x95ED;&#xFF09;
+n CTRL-^            &#x5207;&#x6362;&#x7F13;&#x5B58;&#xFF0C;&#x5148;&#x8F93;&#x5165;&#x6570;&#x5B57;&#x7684;&#x7F13;&#x5B58;&#x7F16;&#x53F7;&#xFF0C;&#x518D;&#x6309; CTRL + 6
+</code></pre><h2 id="&#x7A97;&#x53E3;&#x64CD;&#x4F5C;"><a name="&#x7A97;&#x53E3;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x7A97;&#x53E3;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. &#x7A97;&#x53E3;&#x64CD;&#x4F5C;</h2>
+<pre><code>:sp &lt;filename&gt;      &#x4E0A;&#x4E0B;&#x5207;&#x5206;&#x7A97;&#x53E3;&#x5E76;&#x5728;&#x65B0;&#x7A97;&#x53E3;&#x6253;&#x5F00;&#x6587;&#x4EF6; filename
+:vs &lt;filename&gt;      &#x5DE6;&#x53F3;&#x5207;&#x5206;&#x7A97;&#x53E3;&#x5E76;&#x5728;&#x65B0;&#x7A97;&#x53E3;&#x6253;&#x5F00;&#x6587;&#x4EF6; filename
+CTRL-W s            &#x4E0A;&#x4E0B;&#x5207;&#x5206;&#x7A97;&#x53E3;
+CTRL-W v            &#x5DE6;&#x53F3;&#x5207;&#x5206;&#x7A97;&#x53E3;
+CTRL-W w            &#x5FAA;&#x73AF;&#x5207;&#x6362;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;
+CTRL-W W            &#x5FAA;&#x73AF;&#x5207;&#x6362;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;
+CTRL-W p            &#x8DF3;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x7A97;&#x53E3;
+CTRL-W c            &#x5173;&#x95ED;&#x5F53;&#x524D;&#x7A97;&#x53E3;
+CTRL-W o            &#x5173;&#x95ED;&#x5176;&#x4ED6;&#x7A97;&#x53E3;
+CTRL-W h            &#x8DF3;&#x5230;&#x5DE6;&#x8FB9;&#x7684;&#x7A97;&#x53E3;
+CTRL-W j            &#x8DF3;&#x5230;&#x4E0B;&#x8FB9;&#x7684;&#x7A97;&#x53E3;
+CTRL-W k            &#x8DF3;&#x5230;&#x4E0A;&#x8FB9;&#x7684;&#x7A97;&#x53E3;
+CTRL-W l            &#x8DF3;&#x5230;&#x53F3;&#x8FB9;&#x7684;&#x7A97;&#x53E3;
+CTRL-W +            &#x589E;&#x52A0;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x884C;&#x9AD8;&#xFF0C;&#x524D;&#x9762;&#x53EF;&#x4EE5;&#x52A0;&#x6570;&#x5B57;
+CTRL-W -            &#x51CF;&#x5C11;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x884C;&#x9AD8;&#xFF0C;&#x524D;&#x9762;&#x53EF;&#x4EE5;&#x52A0;&#x6570;&#x5B57;
+CTRL-W &lt;            &#x51CF;&#x5C11;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x5217;&#x5BBD;&#xFF0C;&#x524D;&#x9762;&#x53EF;&#x4EE5;&#x52A0;&#x6570;&#x5B57;
+CTRL-W &gt;            &#x589E;&#x52A0;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x5217;&#x5BBD;&#xFF0C;&#x524D;&#x9762;&#x53EF;&#x4EE5;&#x52A0;&#x6570;&#x5B57;
+CTRL-W =            &#x8BA9;&#x6240;&#x6709;&#x7A97;&#x53E3;&#x5BBD;&#x9AD8;&#x76F8;&#x540C;
+CTRL-W H            &#x5C06;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x5230;&#x6700;&#x5DE6;&#x8FB9;
+CTRL-W J            &#x5C06;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x5230;&#x6700;&#x4E0B;&#x8FB9;
+CTRL-W K            &#x5C06;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x5230;&#x6700;&#x4E0A;&#x8FB9;
+CTRL-W L            &#x5C06;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x5230;&#x6700;&#x53F3;&#x8FB9;
+CTRL-W x            &#x4EA4;&#x6362;&#x7A97;&#x53E3;
+CTRL-W f            &#x5728;&#x65B0;&#x7A97;&#x53E3;&#x4E2D;&#x6253;&#x5F00;&#x540D;&#x4E3A;&#x5149;&#x6807;&#x4E0B;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x6587;&#x4EF6;
+CTRL-W gf           &#x5728;&#x65B0;&#x6807;&#x7B7E;&#x9875;&#x4E2D;&#x6253;&#x5F00;&#x540D;&#x4E3A;&#x5149;&#x6807;&#x4E0B;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x6587;&#x4EF6;
+CTRL-W R            &#x65CB;&#x8F6C;&#x7A97;&#x53E3;
+CTRL-W T            &#x5C06;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x79FB;&#x5230;&#x65B0;&#x7684;&#x6807;&#x7B7E;&#x9875;&#x4E2D;
+CTRL-W P            &#x8DF3;&#x8F6C;&#x5230;&#x9884;&#x89C8;&#x7A97;&#x53E3;
+CTRL-W z            &#x5173;&#x95ED;&#x9884;&#x89C8;&#x7A97;&#x53E3;
+CTRL-W _            &#x7EB5;&#x5411;&#x6700;&#x5927;&#x5316;&#x5F53;&#x524D;&#x7A97;&#x53E3;
+CTRL-W |            &#x6A2A;&#x5411;&#x6700;&#x5927;&#x5316;&#x5F53;&#x524D;&#x7A97;&#x53E3;
+</code></pre><h2 id="&#x6807;&#x7B7E;&#x9875;"><a name="&#x6807;&#x7B7E;&#x9875;" class="anchor-navigation-ex-anchor" href="#&#x6807;&#x7B7E;&#x9875;"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. &#x6807;&#x7B7E;&#x9875;</h2>
+<pre><code>:tabs               &#x663E;&#x793A;&#x6240;&#x6709;&#x6807;&#x7B7E;&#x9875;
+:tabe &lt;filename&gt;    &#x5728;&#x65B0;&#x6807;&#x7B7E;&#x9875;&#x4E2D;&#x6253;&#x5F00;&#x6587;&#x4EF6; filename
+:tabn               &#x4E0B;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x9875;
+:tabp               &#x4E0A;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x9875;
+:tabc               &#x5173;&#x95ED;&#x5F53;&#x524D;&#x6807;&#x7B7E;&#x9875;
+:tabo               &#x5173;&#x95ED;&#x5176;&#x4ED6;&#x6807;&#x7B7E;&#x9875;
+:tabn n             &#x5207;&#x6362;&#x5230;&#x7B2C;n&#x4E2A;&#x6807;&#x7B7E;&#x9875;&#xFF0C;&#x6BD4;&#x5982; :tabn 3 &#x5207;&#x6362;&#x5230;&#x7B2C;&#x4E09;&#x4E2A;&#x6807;&#x7B7E;&#x9875;
+:tabm n             &#x6807;&#x7B7E;&#x79FB;&#x52A8;
+:tabfirst           &#x5207;&#x6362;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x9875;
+:tablast            &#x5207;&#x6362;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x9875;
+:tab help           &#x5728;&#x6807;&#x7B7E;&#x9875;&#x6253;&#x5F00;&#x5E2E;&#x52A9;
+:tab drop &lt;file&gt;    &#x5982;&#x679C;&#x6587;&#x4EF6;&#x5DF2;&#x88AB;&#x5176;&#x4ED6;&#x6807;&#x7B7E;&#x9875;&#x548C;&#x7A97;&#x53E3;&#x6253;&#x5F00;&#x5219;&#x8DF3;&#x8FC7;&#x53BB;&#xFF0C;&#x5426;&#x5219;&#x65B0;&#x6807;&#x7B7E;&#x6253;&#x5F00;
+:tab split          &#x5728;&#x65B0;&#x7684;&#x6807;&#x7B7E;&#x9875;&#x4E2D;&#x6253;&#x5F00;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x91CC;&#x7684;&#x6587;&#x4EF6;
+:tab ball           &#x5C06;&#x7F13;&#x5B58;&#x4E2D;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7528;&#x6807;&#x7B7E;&#x9875;&#x6253;&#x5F00;
+:set showtabline=?  &#x8BBE;&#x7F6E;&#x4E3A; 0 &#x5C31;&#x4E0D;&#x663E;&#x793A;&#x6807;&#x7B7E;&#x9875;&#x6807;&#x7B7E;&#xFF0C;1&#x4F1A;&#x6309;&#x9700;&#x663E;&#x793A;&#xFF0C;2&#x4F1A;&#x6C38;&#x4E45;&#x663E;&#x793A;
+ngt                 &#x5207;&#x6362;&#x5230;&#x7B2C;n&#x4E2A;&#x6807;&#x7B7E;&#x9875;&#xFF0C;&#x6BD4;&#x5982; 2gt &#x5C06;&#x4F1A;&#x5207;&#x6362;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;&#x6807;&#x7B7E;&#x9875;
+gt                  &#x4E0B;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x9875;
+gT                  &#x4E0A;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#x9875;
+</code></pre><h2 id="&#x4E66;&#x7B7E;"><a name="&#x4E66;&#x7B7E;" class="anchor-navigation-ex-anchor" href="#&#x4E66;&#x7B7E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.14. &#x4E66;&#x7B7E;</h2>
+<pre><code>:marks              &#x663E;&#x793A;&#x6240;&#x6709;&#x4E66;&#x7B7E;
+ma                  &#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x5230;&#x4E66;&#x7B7E; a &#xFF0C;&#x4E66;&#x7B7E;&#x540D;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x4E3A;&#x6587;&#x4EF6;&#x5185;&#xFF0C;&#x5927;&#x5199;&#x5168;&#x5C40;
+&apos;a                  &#x8DF3;&#x8F6C;&#x5230;&#x4E66;&#x7B7E; a&#x6240;&#x5728;&#x7684;&#x884C;
+`a                  &#x8DF3;&#x8F6C;&#x5230;&#x4E66;&#x7B7E; a&#x6240;&#x5728;&#x4F4D;&#x7F6E;
+`.                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x6B21;&#x7F16;&#x8F91;&#x7684;&#x884C;
+&apos;A                  &#x8DF3;&#x8F6C;&#x5230;&#x5168;&#x6587;&#x4E66;&#x7B7E; A
+[&apos;                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x4E66;&#x7B7E;
+]&apos;                  &#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x4E66;&#x7B7E;
+&apos;&lt;                  &#x8DF3;&#x5230;&#x4E0A;&#x6B21;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;&#x9009;&#x62E9;&#x533A;&#x57DF;&#x7684;&#x5F00;&#x59CB;
+&apos;&gt;                  &#x8DF3;&#x5230;&#x4E0A;&#x6B21;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;&#x9009;&#x62E9;&#x533A;&#x57DF;&#x7684;&#x7ED3;&#x675F;
+:delm a             &#x5220;&#x9664;&#x7F13;&#x51B2;&#x533A;&#x6807;&#x7B7E;a
+:delm A             &#x5220;&#x9664;&#x6587;&#x4EF6;&#x6807;&#x7B7E;A
+:delm!              &#x5220;&#x9664;&#x6240;&#x6709;&#x7F13;&#x51B2;&#x533A;&#x6807;&#x7B7E;(&#x5C0F;&#x5199;&#x5B57;&#x6BCD;), &#x4E0D;&#x80FD;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x6807;&#x7B7E;&#x548C;&#x6570;&#x5B57;&#x6807;&#x7B7E;
+:delm A-Z           &#x5220;&#x9664;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x6807;&#x7B7E;(&#x5927;&#x5199;&#x5B57;&#x6BCD;)
+:delm 0-9           &#x5220;&#x9664;&#x6240;&#x6709;&#x6570;&#x5B57;&#x6807;&#x7B7E;(.viminfo)
+:delm A-Z0-9        &#x5220;&#x9664;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x6807;&#x7B7E;&#x548C;&#x6570;&#x5B57;&#x6807;&#x7B7E;
+</code></pre><h2 id="&#x5E38;&#x7528;&#x8BBE;&#x7F6E;"><a name="&#x5E38;&#x7528;&#x8BBE;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x8BBE;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.15. &#x5E38;&#x7528;&#x8BBE;&#x7F6E;</h2>
+<pre><code>:set nocompatible   &#x8BBE;&#x7F6E;&#x4E0D;&#x517C;&#x5BB9;&#x539F;&#x59CB; vi &#x6A21;&#x5F0F;&#xFF08;&#x5FC5;&#x987B;&#x8BBE;&#x7F6E;&#x5728;&#x6700;&#x5F00;&#x5934;&#xFF09;
+:set bs=?           &#x8BBE;&#x7F6E;BS&#x952E;&#x6A21;&#x5F0F;&#xFF0C;&#x73B0;&#x4EE3;&#x7F16;&#x8F91;&#x5668;&#x4E3A; :set bs=eol,start,indent
+:set sw=4           &#x8BBE;&#x7F6E;&#x7F29;&#x8FDB;&#x5BBD;&#x5EA6;&#x4E3A; 4
+:set ts=4           &#x8BBE;&#x7F6E;&#x5236;&#x8868;&#x7B26;&#x5BBD;&#x5EA6;&#x4E3A; 4
+:set noet           &#x8BBE;&#x7F6E;&#x4E0D;&#x5C55;&#x5F00; tab &#x6210;&#x7A7A;&#x683C;
+:set et             &#x8BBE;&#x7F6E;&#x5C55;&#x5F00; tab &#x6210;&#x7A7A;&#x683C;
+:set winaltkeys=no  &#x8BBE;&#x7F6E; GVim &#x4E0B;&#x6B63;&#x5E38;&#x6355;&#x83B7; ALT &#x952E;
+:set nowrap         &#x5173;&#x95ED;&#x81EA;&#x52A8;&#x6362;&#x884C;
+:set ttimeout       &#x5141;&#x8BB8;&#x7EC8;&#x7AEF;&#x6309;&#x952E;&#x68C0;&#x6D4B;&#x8D85;&#x65F6;&#xFF08;&#x7EC8;&#x7AEF;&#x4E0B;&#x529F;&#x80FD;&#x952E;&#x4E3A;&#x4E00;&#x4E32;ESC&#x5F00;&#x5934;&#x7684;&#x626B;&#x63CF;&#x7801;&#xFF09;
+:set ttm=100        &#x8BBE;&#x7F6E;&#x7EC8;&#x7AEF;&#x6309;&#x952E;&#x68C0;&#x6D4B;&#x8D85;&#x65F6;&#x4E3A;100&#x6BEB;&#x79D2;
+:set term=?         &#x8BBE;&#x7F6E;&#x7EC8;&#x7AEF;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;&#x5E38;&#x89C1;&#x7684; xterm
+:set ignorecase     &#x8BBE;&#x7F6E;&#x641C;&#x7D22;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;(&#x53EF;&#x7F29;&#x5199;&#x4E3A; :set ic)
+:set noignorecase   &#x8BBE;&#x7F6E;&#x641C;&#x7D22;&#x4E0D;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;(&#x53EF;&#x7F29;&#x5199;&#x4E3A; :set noic)
+:set smartcase      &#x667A;&#x80FD;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x9ED8;&#x8BA4;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x9664;&#x975E;&#x641C;&#x7D22;&#x5185;&#x5BB9;&#x91CC;&#x5305;&#x542B;&#x5927;&#x5199;&#x5B57;&#x6BCD;
+:set list           &#x8BBE;&#x7F6E;&#x663E;&#x793A;&#x5236;&#x8868;&#x7B26;&#x548C;&#x6362;&#x884C;&#x7B26;
+:set number         &#x8BBE;&#x7F6E;&#x663E;&#x793A;&#x884C;&#x53F7;&#xFF0C;&#x7981;&#x6B62;&#x663E;&#x793A;&#x884C;&#x53F7;&#x53EF;&#x4EE5;&#x7528; :set nonumber
+:set relativenumber &#x8BBE;&#x7F6E;&#x663E;&#x793A;&#x76F8;&#x5BF9;&#x884C;&#x53F7;&#xFF08;&#x5176;&#x4ED6;&#x884C;&#x4E0E;&#x5F53;&#x524D;&#x884C;&#x7684;&#x8DDD;&#x79BB;&#xFF09;
+:set paste          &#x8FDB;&#x5165;&#x7C98;&#x8D34;&#x6A21;&#x5F0F;&#xFF08;&#x7C98;&#x8D34;&#x65F6;&#x7981;&#x7528;&#x7F29;&#x8FDB;&#x7B49;&#x5F71;&#x54CD;&#x683C;&#x5F0F;&#x7684;&#x4E1C;&#x897F;&#xFF09;
+:set nopaste        &#x7ED3;&#x675F;&#x7C98;&#x8D34;&#x6A21;&#x5F0F;
+:set spell          &#x5141;&#x8BB8;&#x62FC;&#x5199;&#x68C0;&#x67E5;
+:set hlsearch       &#x8BBE;&#x7F6E;&#x9AD8;&#x4EAE;&#x67E5;&#x627E;
+:set ruler          &#x603B;&#x662F;&#x663E;&#x793A;&#x5149;&#x6807;&#x4F4D;&#x7F6E;
+:set incsearch      &#x67E5;&#x627E;&#x8F93;&#x5165;&#x65F6;&#x52A8;&#x6001;&#x589E;&#x91CF;&#x663E;&#x793A;&#x67E5;&#x627E;&#x7ED3;&#x679C;
+:set insertmode     Vim &#x59CB;&#x7EC8;&#x5904;&#x4E8E;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528; ctrl-o &#x4E34;&#x65F6;&#x6267;&#x884C;&#x547D;&#x4EE4;
+:set all            &#x5217;&#x51FA;&#x6240;&#x6709;&#x9009;&#x9879;&#x8BBE;&#x7F6E;&#x60C5;&#x51B5;
+:syntax on          &#x5141;&#x8BB8;&#x8BED;&#x6CD5;&#x9AD8;&#x4EAE;
+:syntax off         &#x7981;&#x6B62;&#x8BED;&#x6CD5;&#x9AD8;&#x4EAE;
+</code></pre><h2 id="&#x5E2E;&#x52A9;&#x4FE1;&#x606F;"><a name="&#x5E2E;&#x52A9;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x5E2E;&#x52A9;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.16. &#x5E2E;&#x52A9;&#x4FE1;&#x606F;</h2>
+<pre><code>:h tutor            &#x5165;&#x95E8;&#x6587;&#x6863;
+:h quickref         &#x5FEB;&#x901F;&#x5E2E;&#x52A9;
+:h index            &#x67E5;&#x8BE2; Vim &#x6240;&#x6709;&#x952E;&#x76D8;&#x547D;&#x4EE4;&#x5B9A;&#x4E49;
+:h summary          &#x5E2E;&#x52A9;&#x4F60;&#x66F4;&#x597D;&#x7684;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x5E2E;&#x52A9;&#x7CFB;&#x7EDF;
+:h CTRL-H           &#x67E5;&#x8BE2;&#x666E;&#x901A;&#x6A21;&#x5F0F;&#x4E0B; CTRL-H &#x662F;&#x5E72;&#x4EC0;&#x4E48;&#x7684;
+:h i_CTRL-H         &#x67E5;&#x8BE2;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x4E0B; CTRL-H &#x662F;&#x5E72;&#x4EC0;&#x4E48;&#x7684;
+:h i_&lt;Up&gt;           &#x67E5;&#x8BE2;&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x4E0B;&#x65B9;&#x5411;&#x952E;&#x4E0A;&#x662F;&#x5E72;&#x4EC0;&#x4E48;&#x7684;
+:h pattern.txt      &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5E2E;&#x52A9;
+:h eval             &#x811A;&#x672C;&#x7F16;&#x5199;&#x5E2E;&#x52A9;
+:h function-list    &#x67E5;&#x770B; VimScript &#x7684;&#x51FD;&#x6570;&#x5217;&#x8868; 
+:h windows.txt      &#x7A97;&#x53E3;&#x4F7F;&#x7528;&#x5E2E;&#x52A9;
+:h tabpage.txt      &#x6807;&#x7B7E;&#x9875;&#x4F7F;&#x7528;&#x5E2E;&#x52A9;
+:h +timers          &#x663E;&#x793A;&#x5BF9; +timers &#x7279;&#x6027;&#x7684;&#x5E2E;&#x52A9;
+:h :!               &#x67E5;&#x770B;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x5916;&#x90E8;&#x547D;&#x4EE4;
+:h tips             &#x67E5;&#x770B; Vim &#x5185;&#x7F6E;&#x7684;&#x5E38;&#x7528;&#x6280;&#x5DE7;&#x6587;&#x6863;
+:h set-termcap      &#x67E5;&#x770B;&#x5982;&#x4F55;&#x8BBE;&#x7F6E;&#x6309;&#x952E;&#x626B;&#x63CF;&#x7801;
+:viusage            NORMAL &#x6A21;&#x5F0F;&#x5E2E;&#x52A9;
+:exusage            EX &#x547D;&#x4EE4;&#x5E2E;&#x52A9;
+:version            &#x663E;&#x793A;&#x5F53;&#x524D; Vim &#x7684;&#x7248;&#x672C;&#x53F7;&#x548C;&#x7279;&#x6027;
+</code></pre><h2 id="&#x5916;&#x90E8;&#x547D;&#x4EE4;"><a name="&#x5916;&#x90E8;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5916;&#x90E8;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.17. &#x5916;&#x90E8;&#x547D;&#x4EE4;</h2>
+<pre><code>:!ls                &#x8FD0;&#x884C;&#x5916;&#x90E8;&#x547D;&#x4EE4; ls&#xFF0C;&#x5E76;&#x7B49;&#x5F85;&#x8FD4;&#x56DE;
+:r !ls              &#x5C06;&#x5916;&#x90E8;&#x547D;&#x4EE4; ls &#x7684;&#x8F93;&#x51FA;&#x6355;&#x83B7;&#xFF0C;&#x5E76;&#x63D2;&#x5165;&#x5230;&#x5149;&#x6807;&#x540E;
+:w !sudo tee %      sudo&#x4EE5;&#x540E;&#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x6587;&#x4EF6;
+:call system(&apos;ls&apos;)  &#x8C03;&#x7528; ls &#x547D;&#x4EE4;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x663E;&#x793A;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;
+:!start notepad     Windows &#x4E0B;&#x542F;&#x52A8; notepad&#xFF0C;&#x6700;&#x524D;&#x9762;&#x53EF;&#x4EE5;&#x52A0; silent
+:sil !start cmd     Windows &#x4E0B;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x6253;&#x5F00; cmd
+:%!prog             &#x8FD0;&#x884C;&#x6587;&#x5B57;&#x8FC7;&#x6EE4;&#x7A0B;&#x5E8F;&#xFF0C;&#x5982;&#x6574;&#x7406; json&#x683C;&#x5F0F; :%!python -m json.tool
+</code></pre><h2 id="quickfix-&#x7A97;&#x53E3;"><a name="quickfix-&#x7A97;&#x53E3;" class="anchor-navigation-ex-anchor" href="#quickfix-&#x7A97;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.18. Quickfix &#x7A97;&#x53E3;</h2>
+<pre><code>:copen              &#x6253;&#x5F00; quickfix &#x7A97;&#x53E3;&#xFF08;&#x67E5;&#x770B;&#x7F16;&#x8BD1;&#xFF0C;grep&#x7B49;&#x4FE1;&#x606F;&#xFF09;
+:copen 10           &#x6253;&#x5F00; quickfix &#x7A97;&#x53E3;&#xFF0C;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;&#x9AD8;&#x5EA6;&#x4E3A; 10
+:cclose             &#x5173;&#x95ED; quickfix &#x7A97;&#x53E3;
+:cfirst             &#x8DF3;&#x5230; quickfix &#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;
+:clast              &#x8DF3;&#x5230; quickfix &#x4E2D;&#x6700;&#x540E;&#x4E00;&#x6761;&#x9519;&#x8BEF;&#x4FE1;&#x606F;
+:cc [nr]            &#x67E5;&#x770B;&#x9519;&#x8BEF; [nr]
+:cnext              &#x8DF3;&#x5230; quickfix &#x4E2D;&#x4E0B;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;
+:cprev              &#x8DF3;&#x5230; quickfix &#x4E2D;&#x4E0A;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;
+</code></pre><h2 id="&#x62FC;&#x5199;&#x68C0;&#x67E5;"><a name="&#x62FC;&#x5199;&#x68C0;&#x67E5;" class="anchor-navigation-ex-anchor" href="#&#x62FC;&#x5199;&#x68C0;&#x67E5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.19. &#x62FC;&#x5199;&#x68C0;&#x67E5;</h2>
+<pre><code>:set spell          &#x6253;&#x5F00;&#x62FC;&#x5199;&#x68C0;&#x67E5;
+:set nospell        &#x5173;&#x95ED;&#x62FC;&#x5199;&#x68C0;&#x67E5;
+]s                  &#x4E0B;&#x4E00;&#x5904;&#x9519;&#x8BEF;&#x62FC;&#x5199;&#x7684;&#x5355;&#x8BCD;
+[s                  &#x4E0A;&#x4E00;&#x5904;&#x9519;&#x8BEF;&#x62FC;&#x5199;&#x7684;&#x5355;&#x8BCD;
+zg                  &#x52A0;&#x5165;&#x5355;&#x8BCD;&#x5230;&#x62FC;&#x5199;&#x8BCD;&#x8868;&#x4E2D;
+zug                 &#x64A4;&#x9500;&#x4E0A;&#x4E00;&#x6B21;&#x52A0;&#x5165;&#x7684;&#x5355;&#x8BCD;
+z=                  &#x62FC;&#x5199;&#x5EFA;&#x8BAE;
+</code></pre><h2 id="&#x4EE3;&#x7801;&#x6298;&#x53E0;"><a name="&#x4EE3;&#x7801;&#x6298;&#x53E0;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x6298;&#x53E0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.20. &#x4EE3;&#x7801;&#x6298;&#x53E0;</h2>
+<pre><code>za                  &#x5207;&#x6362;&#x6298;&#x53E0;
+zA                  &#x9012;&#x5F52;&#x5207;&#x6362;&#x6298;&#x53E0;
+zc                  &#x6298;&#x53E0;&#x5149;&#x6807;&#x4E0B;&#x4EE3;&#x7801;
+zC                  &#x6298;&#x53E0;&#x5149;&#x6807;&#x4E0B;&#x6240;&#x6709;&#x4EE3;&#x7801;
+zd                  &#x5220;&#x9664;&#x5149;&#x6807;&#x4E0B;&#x6298;&#x53E0;
+zD                  &#x9012;&#x5F52;&#x5220;&#x9664;&#x6240;&#x6709;&#x6298;&#x53E0;
+zE                  &#x5220;&#x9664;&#x6240;&#x6709;&#x6298;&#x53E0;
+zf                  &#x521B;&#x5EFA;&#x4EE3;&#x7801;&#x6298;&#x53E0;
+zF                  &#x6307;&#x5B9A;&#x884C;&#x6570;&#x521B;&#x5EFA;&#x6298;&#x53E0;
+zi                  &#x5207;&#x6362;&#x6298;&#x53E0;
+zm                  &#x6240;&#x6709;&#x4EE3;&#x7801;&#x6298;&#x53E0;&#x4E00;&#x5C42;
+zr                  &#x6240;&#x6709;&#x4EE3;&#x7801;&#x6253;&#x5F00;&#x4E00;&#x5C42;
+zM                  &#x6298;&#x53E0;&#x6240;&#x6709;&#x4EE3;&#x7801;&#xFF0C;&#x8BBE;&#x7F6E; foldlevel=0&#xFF0C;&#x8BBE;&#x7F6E; foldenable
+zR                  &#x6253;&#x5F00;&#x6240;&#x6709;&#x4EE3;&#x7801;&#xFF0C;&#x8BBE;&#x7F6E; foldlevel &#x4E3A;&#x6700;&#x5927;&#x503C;
+zn                  &#x6298;&#x53E0; none&#xFF0C;&#x91CD;&#x7F6E; foldenable &#x5E76;&#x6253;&#x5F00;&#x6240;&#x6709;&#x4EE3;&#x7801;
+zN                  &#x6298;&#x53E0; normal&#xFF0C;&#x91CD;&#x7F6E; foldenable &#x5E76;&#x6062;&#x590D;&#x6240;&#x6709;&#x6298;&#x53E0;
+zo                  &#x6253;&#x5F00;&#x4E00;&#x5C42;&#x4EE3;&#x7801;
+zO                  &#x6253;&#x5F00;&#x5149;&#x6807;&#x4E0B;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x6298;&#x53E0;
+</code></pre><h2 id="&#x5B8F;&#x5F55;&#x5236;"><a name="&#x5B8F;&#x5F55;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x5B8F;&#x5F55;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>1.21. &#x5B8F;&#x5F55;&#x5236;</h2>
+<pre><code>qa                  &#x5F00;&#x59CB;&#x5F55;&#x5236;&#x540D;&#x5B57;&#x4E3A; a &#x7684;&#x5B8F;
+q                   &#x7ED3;&#x675F;&#x5F55;&#x5236;&#x5B8F;
+@a                  &#x64AD;&#x653E;&#x540D;&#x5B57;&#x4E3A; a &#x7684;&#x5B8F;
+@@                  &#x64AD;&#x653E;&#x4E0A;&#x4E00;&#x4E2A;&#x5B8F;
+@:                  &#x91CD;&#x590D;&#x4E0A;&#x4E00;&#x4E2A;ex&#x547D;&#x4EE4;&#xFF08;&#x5373;&#x5192;&#x53F7;&#x547D;&#x4EE4;&#xFF09;
+</code></pre><h2 id="&#x5176;&#x4ED6;&#x547D;&#x4EE4;"><a name="&#x5176;&#x4ED6;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.22. &#x5176;&#x4ED6;&#x547D;&#x4EE4;</h2>
+<pre><code>CTRL-X CTRL-F       &#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x4E0B;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x8865;&#x5168;
+CTRL-X CTRL-O       &#x63D2;&#x5165;&#x4E0B; Omnifunc &#x8865;&#x5168;
+CTRL-X CTRL-N       &#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x4E0B;&#x5173;&#x952E;&#x5B57;&#x8865;&#x5168;
+CTRL-X CTRL-E       &#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x4E0B;&#x5411;&#x4E0A;&#x6EDA;&#x5C4F;
+CTRL-X CTRL-Y       &#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x4E0B;&#x5411;&#x4E0B;&#x6EDA;&#x5C4F;
+CTRL-E              &#x5411;&#x4E0A;&#x6EDA;&#x5C4F;
+CTRL-Y              &#x5411;&#x4E0B;&#x6EDA;&#x5C4F;
+CTRL-G              &#x663E;&#x793A;&#x6B63;&#x5728;&#x7F16;&#x8F91;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4EE5;&#x53CA;&#x5927;&#x5C0F;&#x548C;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;
+g CTRL-G            &#x663E;&#x793A;&#x6587;&#x4EF6;&#x7684;&#xFF1A;&#x5927;&#x5C0F;&#xFF0C;&#x5B57;&#x7B26;&#x6570;&#xFF0C;&#x5355;&#x8BCD;&#x6570;&#x548C;&#x884C;&#x6570;&#xFF0C;&#x53EF;&#x89C6;&#x6A21;&#x5F0F;&#x4E0B;&#x4E5F;&#x53EF;&#x7528;
+zz                  &#x8C03;&#x6574;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;&#x5230;&#x5C4F;&#x5E55;&#x4E2D;&#x592E;
+zt                  &#x8C03;&#x6574;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x90E8;
+zb                  &#x8C03;&#x6574;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;&#x5230;&#x5C4F;&#x5E55;&#x4E0B;&#x90E8;
+ga                  &#x663E;&#x793A;&#x5149;&#x6807;&#x4E0B;&#x5B57;&#x7B26;&#x7684; ascii &#x7801;&#x6216;&#x8005; unicode &#x7F16;&#x7801;
+g8                  &#x663E;&#x793A;&#x5149;&#x6807;&#x4E0B;&#x5B57;&#x7B26;&#x7684; utf-8 &#x7F16;&#x7801;&#x5B57;&#x8282;&#x5E8F;
+gi                  &#x56DE;&#x5230;&#x4E0A;&#x6B21;&#x8FDB;&#x5165;&#x63D2;&#x5165;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5E76;&#x5207;&#x6362;&#x5230;&#x63D2;&#x5165;&#x6A21;&#x5F0F;
+K                   &#x67E5;&#x8BE2;&#x5149;&#x6807;&#x4E0B;&#x5355;&#x8BCD;&#x7684;&#x5E2E;&#x52A9;
+ZZ                  &#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#xFF08;&#x5982;&#x679C;&#x6709;&#x6539;&#x52A8;&#x7684;&#x8BDD;&#xFF09;&#xFF0C;&#x5E76;&#x5173;&#x95ED;&#x7A97;&#x53E3;
+ZQ                  &#x4E0D;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x5173;&#x95ED;&#x7A97;&#x53E3;
+CTRL-PgUp           &#x4E0A;&#x4E2A;&#x6807;&#x7B7E;&#x9875;&#xFF0C;GVim OK&#xFF0C;&#x90E8;&#x5206;&#x7EC8;&#x7AEF;&#x8F6F;&#x4EF6;&#x9700;&#x8BBE;&#x7F6E;&#x5BF9;&#x5E94;&#x952E;&#x76D8;&#x7801;
+CTRL-PgDown         &#x4E0B;&#x4E2A;&#x6807;&#x7B7E;&#x9875;&#xFF0C;GVim OK&#xFF0C;&#x90E8;&#x5206;&#x7EC8;&#x7AEF;&#x8F6F;&#x4EF6;&#x9700;&#x8BBE;&#x7F6E;&#x5BF9;&#x5E94;&#x952E;&#x76D8;&#x7801;
+CTRL-R CTRL-W       &#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x4E0B;&#x63D2;&#x5165;&#x5149;&#x6807;&#x4E0B;&#x5355;&#x8BCD;
+CTRL-INSERT         &#x590D;&#x5236;&#x5230;&#x7CFB;&#x7EDF;&#x526A;&#x8D34;&#x677F;&#xFF08;GVIM&#xFF09;
+SHIFT-INSERT        &#x7C98;&#x8D34;&#x7CFB;&#x7EDF;&#x526A;&#x8D34;&#x677F;&#x7684;&#x5185;&#x5BB9;&#xFF08;GVIM&#xFF09;
+:set ff=unix        &#x8BBE;&#x7F6E;&#x6362;&#x884C;&#x4E3A; unix
+:set ff=dos         &#x8BBE;&#x7F6E;&#x6362;&#x884C;&#x4E3A; dos
+:set ff?            &#x67E5;&#x770B;&#x6362;&#x884C;&#x8BBE;&#x7F6E;
+:set nohl           &#x6E05;&#x9664;&#x641C;&#x7D22;&#x9AD8;&#x4EAE;
+:set termcap        &#x67E5;&#x770B;&#x4F1A;&#x4ECE;&#x7EC8;&#x7AEF;&#x63A5;&#x6536;&#x4EC0;&#x4E48;&#x4EE5;&#x53CA;&#x4F1A;&#x53D1;&#x9001;&#x7ED9;&#x7EC8;&#x7AEF;&#x4EC0;&#x4E48;&#x547D;&#x4EE4;
+:set guicursor=     &#x89E3;&#x51B3; SecureCRT/PenguiNet &#x4E2D; NeoVim &#x5C40;&#x90E8;&#x5947;&#x602A;&#x5B57;&#x7B26;&#x95EE;&#x9898;
+:set t_RS= t_SH=    &#x89E3;&#x51B3; SecureCRT/PenguiNet &#x4E2D; Vim8.0 &#x7EC8;&#x7AEF;&#x529F;&#x80FD;&#x5947;&#x602A;&#x5B57;&#x7B26;
+:set fo+=a          &#x5F00;&#x542F;&#x6587;&#x672C;&#x6BB5;&#x7684;&#x5B9E;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;
+:earlier 15m        &#x56DE;&#x9000;&#x5230;15&#x5206;&#x949F;&#x524D;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;
+:.!date             &#x5728;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x63D2;&#x5165;&#x65F6;&#x95F4;
+:%!xxd              &#x5F00;&#x59CB;&#x4E8C;&#x8FDB;&#x5236;&#x7F16;&#x8F91;
+:%!xxd -r           &#x4FDD;&#x5B58;&#x4E8C;&#x8FDB;&#x5236;&#x7F16;&#x8F91;
+:r !curl -sL {URL}  &#x8BFB;&#x53D6; url &#x5185;&#x5BB9;&#x6DFB;&#x52A0;&#x5230;&#x5149;&#x6807;&#x540E;
+:g/^\s*$/d          &#x5220;&#x9664;&#x7A7A;&#x884C;
+:g/green/d          &#x5220;&#x9664;&#x6240;&#x6709;&#x5305;&#x542B; green &#x7684;&#x884C;
+:v/green/d          &#x5220;&#x9664;&#x6240;&#x6709;&#x4E0D;&#x5305;&#x542B; green &#x7684;&#x884C;
+:g/gladiolli/##      &#x641C;&#x7D22;&#x5355;&#x8BCD;&#x6253;&#x5370;&#x7ED3;&#x679C;&#xFF0C;&#x5E76;&#x5728;&#x7ED3;&#x679C;&#x524D;&#x52A0;&#x4E0A;&#x884C;&#x53F7;
+:g/ab.*cd.*efg/##    &#x641C;&#x7D22;&#x5305;&#x542B; ab,cd &#x548C; efg &#x7684;&#x884C;&#xFF0C;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x4EE5;&#x53CA;&#x884C;&#x53F7;
+:v/./,/./-j         &#x538B;&#x7F29;&#x7A7A;&#x884C;
+:Man bash           &#x5728; Vim &#x4E2D;&#x67E5;&#x770B; man&#xFF0C;&#x5148;&#x8C03;&#x7528; :runtime! ftplugin/man.vim &#x6FC0;&#x6D3B;
+/fred\|joe          &#x641C;&#x7D22; fred &#x6216;&#x8005; joe
+/\&lt;\d\d\d\d\&gt;       &#x7CBE;&#x786E;&#x641C;&#x7D22;&#x56DB;&#x4E2A;&#x6570;&#x5B57;
+/^\n\{3}            &#x641C;&#x7D22;&#x8FDE;&#x7EED;&#x4E09;&#x4E2A;&#x7A7A;&#x884C;
+</code></pre><h2 id="plugin---httpsgithubcomtpopevim-commentary"><a name="plugin---httpsgithubcomtpopevim-commentary" class="anchor-navigation-ex-anchor" href="#plugin---httpsgithubcomtpopevim-commentary"><i class="fa fa-link" aria-hidden="true"></i></a>1.23. Plugin - https://github.com/tpope/vim-commentary</h2>
+<pre><code>gcc                 &#x6CE8;&#x91CA;&#x5F53;&#x524D;&#x884C;
+gc{motion}          &#x6CE8;&#x91CA; {motion} &#x6240;&#x6807;&#x6CE8;&#x7684;&#x533A;&#x57DF;&#xFF0C;&#x6BD4;&#x5982; gcap &#x6CE8;&#x91CA;&#x6574;&#x6BB5;
+gci{                &#x6CE8;&#x91CA;&#x5927;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x5185;&#x5BB9;
+gc                  &#x5728; Visual Mode &#x4E0B;&#x9762;&#x6309; gc &#x6CE8;&#x91CA;&#x9009;&#x4E2D;&#x533A;&#x57DF;
+:7,17Commentary     &#x6CE8;&#x91CA; 7 &#x5230; 17 &#x884C;
+</code></pre><h2 id="plugin---httpsgithubcomjunegunnvim-easy-align"><a name="plugin---httpsgithubcomjunegunnvim-easy-align" class="anchor-navigation-ex-anchor" href="#plugin---httpsgithubcomjunegunnvim-easy-align"><i class="fa fa-link" aria-hidden="true"></i></a>1.24. Plugin - https://github.com/junegunn/vim-easy-align</h2>
+<pre><code>:EasyAlign =        &#x4EE5;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;=&#x4E3A;&#x4E2D;&#x5FC3;&#x5BF9;&#x9F50;
+:EasyAlign *=       &#x5339;&#x914D;&#x5E76;&#x4E14;&#x5BF9;&#x9F50;&#x6240;&#x6709;=
+</code></pre><h2 id="plugin---httpsgithubcomtpopevim-unimpaired"><a name="plugin---httpsgithubcomtpopevim-unimpaired" class="anchor-navigation-ex-anchor" href="#plugin---httpsgithubcomtpopevim-unimpaired"><i class="fa fa-link" aria-hidden="true"></i></a>1.25. Plugin - https://github.com/tpope/vim-unimpaired</h2>
+<pre><code>[space              &#x5411;&#x4E0A;&#x63D2;&#x5165;&#x7A7A;&#x884C;
+]space              &#x5411;&#x4E0B;&#x63D2;&#x5165;&#x7A7A;&#x884C;
+[e                  &#x66FF;&#x6362;&#x5F53;&#x524D;&#x884C;&#x548C;&#x4E0A;&#x4E00;&#x884C;
+]e                  &#x66FF;&#x6362;&#x5F53;&#x524D;&#x884C;&#x548C;&#x4E0B;&#x4E00;&#x884C;
+[x                  XML &#x7F16;&#x7801;
+]x                  XML &#x89E3;&#x7801;
+[u                  URL &#x7F16;&#x7801;
+]u                  URL &#x89E3;&#x7801;
+[y                  C &#x5B57;&#x7B26;&#x4E32;&#x7F16;&#x7801;
+]y                  C &#x5B57;&#x7B26;&#x4E32;&#x89E3;&#x7801;
+[q                  &#x4E0A;&#x4E00;&#x4E2A; quickfix &#x9519;&#x8BEF;
+]q                  &#x4E0B;&#x4E00;&#x4E2A; quickfix &#x9519;&#x8BEF;
+[Q                  &#x7B2C;&#x4E00;&#x4E2A; quickfix &#x9519;&#x8BEF;
+]Q                  &#x6700;&#x540E;&#x4E00;&#x4E2A; quickfix &#x9519;&#x8BEF;
+[f                  &#x5207;&#x6362;&#x540C;&#x76EE;&#x5F55;&#x91CC;&#x4E0A;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;
+]f                  &#x5207;&#x6362;&#x540C;&#x76EE;&#x5F55;&#x91CC;&#x4E0B;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;
+[os                 &#x8BBE;&#x7F6E; :set spell
+]os                 &#x8BBE;&#x7F6E; :set nospell
+=os                 &#x8BBE;&#x7F6E; :set invspell
+[on                 &#x663E;&#x793A;&#x884C;&#x53F7;
+]on                 &#x5173;&#x95ED;&#x884C;&#x53F7;
+[ol                 &#x663E;&#x793A;&#x56DE;&#x8F66;&#x548C;&#x5236;&#x8868;&#x7B26; :set list
+]ol                 &#x4E0D;&#x663E;&#x793A;&#x56DE;&#x8F66;&#x548C;&#x5236;&#x8868;&#x7B26; :set nolist
+[b                  &#x7F13;&#x5B58;&#x5207;&#x6362;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5373; :bp
+]b                  &#x7F13;&#x5B58;&#x5207;&#x6362;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5373; :bn
+[B                  &#x7F13;&#x5B58;&#x5207;&#x6362;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5373; :bfirst
+]B                  &#x7F13;&#x5B58;&#x5207;&#x6362;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5373; :blast
+</code></pre><h2 id="plugin---httpsgithubcomskywind3000asyncrunvim"><a name="plugin---httpsgithubcomskywind3000asyncrunvim" class="anchor-navigation-ex-anchor" href="#plugin---httpsgithubcomskywind3000asyncrunvim"><i class="fa fa-link" aria-hidden="true"></i></a>1.26. Plugin - https://github.com/skywind3000/asyncrun.vim</h2>
+<pre><code>:AsyncRun ls        &#x5F02;&#x6B65;&#x8FD0;&#x884C;&#x547D;&#x4EE4; ls &#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230; quickfix &#x4F7F;&#x7528; :copen &#x67E5;&#x770B;
+:AsyncRun -raw ls   &#x5F02;&#x6B65;&#x8FD0;&#x884C;&#x547D;&#x4EE4; ls &#x7ED3;&#x679C;&#x4E0D;&#x5339;&#x914D; errorformat
+</code></pre><h2 id="plugin---httpsgithubcomgavingvim-textobj-argument"><a name="plugin---httpsgithubcomgavingvim-textobj-argument" class="anchor-navigation-ex-anchor" href="#plugin---httpsgithubcomgavingvim-textobj-argument"><i class="fa fa-link" aria-hidden="true"></i></a>1.27. Plugin - https://github.com/gaving/vim-textobj-argument</h2>
+<pre><code>cia                 &#x6539;&#x5199;&#x51FD;&#x6570;&#x53C2;&#x6570;
+caa                 &#x6539;&#x5199;&#x51FD;&#x6570;&#x53C2;&#x6570;&#xFF08;&#x5305;&#x62EC;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF09;
+dia                 &#x5220;&#x9664;&#x51FD;&#x6570;&#x53C2;&#x6570;
+daa                 &#x5220;&#x9664;&#x51FD;&#x6570;&#x53C2;&#x6570;&#xFF08;&#x5305;&#x62EC;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF09;
+via                 &#x9009;&#x53D6;&#x51FD;&#x6570;&#x53C2;&#x6570;
+vaa                 &#x9009;&#x53D6;&#x51FD;&#x6570;&#x53C2;&#x6570;&#xFF08;&#x5305;&#x62EC;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF09;
+yia                 &#x590D;&#x5236;&#x51FD;&#x6570;&#x53C2;&#x6570;
+yaa                 &#x590D;&#x5236;&#x51FD;&#x6570;&#x53C2;&#x6570;&#xFF08;&#x5305;&#x62EC;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF09;
+</code></pre><h2 id="&#x7F51;&#x7EDC;&#x8D44;&#x6E90;"><a name="&#x7F51;&#x7EDC;&#x8D44;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x7F51;&#x7EDC;&#x8D44;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>1.28. &#x7F51;&#x7EDC;&#x8D44;&#x6E90;</h2>
+<ul>
+<li><a href="https://github.com/vim/vim" target="_blank">&#x6700;&#x65B0;&#x7248;&#x672C;</a></li>
+<li><a href="https://github.com/vim/vim-win32-installer/releases" target="_blank">Windows &#x6700;&#x65B0;&#x7248;</a></li>
+<li><a href="http://vimawesome.com" target="_blank">&#x63D2;&#x4EF6;&#x6D4F;&#x89C8;</a></li>
+<li><a href="https://www.reddit.com/r/vim/" target="_blank">reddit</a></li>
+<li><a href="http://www.skywind.me/blog/archives/2021" target="_blank">&#x6B63;&#x786E;&#x8BBE;&#x7F6E; ALT/BS &#x952E;</a></li>
+<li><a href="http://vimcasts.org/" target="_blank">&#x89C6;&#x9891;&#x6559;&#x7A0B;</a></li>
+<li><a href="http://vimcdoc.sourceforge.net/doc/help.html" target="_blank">&#x4E2D;&#x6587;&#x5E2E;&#x52A9;</a></li>
+<li><a href="https://github.com/wsdjeg/vim-galore-zh_cn" target="_blank">&#x4E2D;&#x6587;&#x7248;&#x5165;&#x95E8;&#x5230;&#x7CBE;&#x901A;</a></li>
+<li><a href="http://www.skywind.me/blog/archives/2193" target="_blank">&#x4E94;&#x5206;&#x949F;&#x811A;&#x672C;&#x5165;&#x95E8;</a></li>
+<li><a href="http://learnvimscriptthehardway.stevelosh.com/" target="_blank">&#x811A;&#x672C;&#x7CBE;&#x901A;</a></li>
+<li><a href="vimcdoc.sourceforge.net/doc/eval.html">&#x4E2D;&#x6587;&#x811A;&#x672C;&#x5E2E;&#x52A9;</a></li>
+<li><a href="http://zzapper.co.uk/vimtips.html" target="_blank">&#x5341;&#x516D;&#x5E74;&#x4F7F;&#x7528;&#x7ECF;&#x9A8C;</a></li>
+<li><a href="http://vimcolors.com/" target="_blank">&#x914D;&#x8272;&#x65B9;&#x6848;</a></li>
+</ul>
+<h2 id="tips"><a name="tips" class="anchor-navigation-ex-anchor" href="#tips"><i class="fa fa-link" aria-hidden="true"></i></a>1.29. TIPS</h2>
+<ul>
+<li>&#x6C38;&#x8FDC;&#x4E0D;&#x8981;&#x7528; CTRL-C &#x4EE3;&#x66FF; <esc> &#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#x542B;&#x4E49;&#xFF0C;&#x5BB9;&#x6613;&#x9519;&#x8BEF;&#x4E2D;&#x65AD;&#x8FD0;&#x884C;&#x7684;&#x540E;&#x53F0;&#x811A;&#x672C;</esc></li>
+<li>&#x5F88;&#x591A;&#x4EBA;&#x4F7F;&#x7528; CTRL-[ &#x4EE3;&#x66FF; <esc>&#xFF0C;&#x5DE6;&#x624B;&#x5C0F;&#x6307; CTRL&#xFF0C;&#x53F3;&#x624B;&#x5C0F;&#x6307; [ &#x719F;&#x7EC3;&#x540E;&#x5F88;&#x65B9;&#x4FBF;</esc></li>
+<li>&#x67D0;&#x4E9B;&#x7EC8;&#x7AEF;&#x4E2D;&#x4F7F;&#x7528; Vim 8 &#x5185;&#x5D4C;&#x7EC8;&#x7AEF;&#x5982;&#x770B;&#x5230;&#x5947;&#x602A;&#x5B57;&#x7B26;&#xFF0C;&#x4F7F;&#x7528; :set t_RS= t_SH= &#x89E3;&#x51B3;</li>
+<li>&#x67D0;&#x4E9B;&#x7EC8;&#x7AEF;&#x4E2D;&#x4F7F;&#x7528; Vim 8.2+ &#x4F1A;&#x770B;&#x5230;&#x4E00;&#x4E9B;&#x5947;&#x602A;&#x5B57;&#x7B26;&#xFF0C;&#x4F7F;&#x7528; :set t_TI= t_TE= &#x89E3;&#x51B3;</li>
+<li>&#x67D0;&#x4E9B;&#x7EC8;&#x7AEF;&#x4E2D;&#x4F7F;&#x7528; NeoVim &#x5982;&#x770B;&#x5230;&#x5947;&#x602A;&#x5B57;&#x7B26;&#xFF0C;&#x4F7F;&#x7528; :set guicursor= &#x89E3;&#x51B3;</li>
+<li>&#x4F7F;&#x7528; MS-Terminal &#x5982;&#x679C;&#x8FDB;&#x5165; Vim/NVim &#x4F1A;&#x9ED8;&#x8BA4;&#x66FF;&#x6362;&#x6A21;&#x5F0F;&#x8BBE;&#x7F6E; :set t_u7= &#x89E3;&#x51B3;</li>
+<li>&#x591A;&#x4F7F;&#x7528; ciw, ci[, ci&quot;, ci( &#x4EE5;&#x53CA; diw, di[, di&quot;, di( &#x547D;&#x4EE4;&#x6765;&#x5FEB;&#x901F;&#x6539;&#x5199;/&#x5220;&#x9664;&#x6587;&#x672C;</li>
+<li>&#x5728;&#x884C;&#x5185;&#x5DE6;&#x53F3;&#x79FB;&#x52A8;&#x5149;&#x6807;&#x65F6;&#xFF0C;&#x591A;&#x4F7F;&#x7528;w b e&#x6216;W B E&#xFF0C;&#x800C;&#x4E0D;&#x662F;h l&#x6216;&#x65B9;&#x5411;&#x952E;&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x5FEB;&#x5F88;&#x591A;</li>
+<li>SHIFT &#x76F8;&#x5F53;&#x4E8E;&#x79FB;&#x52A8;&#x52A0;&#x901F;&#x952E;&#xFF0C; w b e &#x79FB;&#x52A8;&#x5149;&#x6807;&#x5F88;&#x6162;&#xFF0C;&#x4F46;&#x662F; W B E &#x8D70;&#x7684;&#x5F88;&#x5FEB;</li>
+<li>&#x81EA;&#x5DF1;&#x8981;&#x5584;&#x4E8E;&#x603B;&#x7ED3;&#x65B0;&#x6280;&#x5DE7;&#xFF0C;&#x6BD4;&#x5982;&#x79FB;&#x52A8;&#x5230;&#x884C;&#x9996;&#x975E;&#x7A7A;&#x5B57;&#x7B26;&#x65F6;&#x7528; 0w &#x547D;&#x4EE4;&#x6BD4; ^ &#x547D;&#x4EE4;&#x66F4;&#x5BB9;&#x6613;&#x8F93;&#x5165;</li>
+<li>&#x5728;&#x7A7A;&#x767D;&#x884C;&#x4F7F;&#x7528; dip &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x6240;&#x6709;&#x4E34;&#x8FD1;&#x7684;&#x7A7A;&#x767D;&#x884C;&#xFF0C;viw &#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x8FDE;&#x7EED;&#x7A7A;&#x767D;</li>
+<li>&#x7F29;&#x8FDB;&#x65F6;&#x4F7F;&#x7528; &gt;8j  &gt;}  <ap>ap  =i}  == &#x4F1A;&#x65B9;&#x4FBF;&#x5F88;&#x591A;</ap></li>
+<li>&#x63D2;&#x5165;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x5F53;&#x4F60;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x5199;&#x9519;&#x4E86;&#xFF0C;&#x5E94;&#x8BE5;&#x591A;&#x7528; CTRL-W &#x8FD9;&#x6BD4; <backspace> &#x5FEB;</backspace></li>
+<li>y d c &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x7ED3;&#x5408; f t &#x548C; /X &#x6BD4;&#x5982; dt) &#x548C; y/end<cr></cr></li>
+<li>c d x &#x547D;&#x4EE4;&#x4F1A;&#x81EA;&#x52A8;&#x586B;&#x5145;&#x5BC4;&#x5B58;&#x5668; &quot;1 &#x5230; &quot;9 , y &#x547D;&#x4EE4;&#x4F1A;&#x81EA;&#x52A8;&#x586B;&#x5145; &quot;0 &#x5BC4;&#x5B58;&#x5668;</li>
+<li>&#x7528; v &#x547D;&#x4EE4;&#x9009;&#x62E9;&#x6587;&#x672C;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; o &#x6389;&#x5934;&#x9009;&#x62E9;&#xFF0C;&#x6709;&#x65F6;&#x5F88;&#x6709;&#x7528;</li>
+<li>&#x5199;&#x6587;&#x7AE0;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5199;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x4E2D;&#x540E;&#x6267;&#x884C; :!python &#x4EE3;&#x7801;&#x5757;&#x5C31;&#x4F1A;&#x88AB;&#x66FF;&#x6362;&#x6210;&#x7ED3;&#x679C;</li>
+<li>&#x641C;&#x7D22;&#x540E;&#x7ECF;&#x5E38;&#x4F7F;&#x7528; :nohl &#x6765;&#x6D88;&#x9664;&#x9AD8;&#x4EAE;&#xFF0C;&#x4F7F;&#x7528;&#x5F88;&#x9891;&#x7E41;&#xFF0C;&#x53EF;&#x4EE5; map &#x5230; <backspace> &#x4E0A;</backspace></li>
+<li>&#x641C;&#x7D22;&#x65F6;&#x53EF;&#x4EE5;&#x7528; CTRL-R CTRL-W &#x63D2;&#x5165;&#x5149;&#x6807;&#x4E0B;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x4E5F;&#x80FD;&#x8FD9;&#x4E48;&#x7528;</li>
+<li>&#x6620;&#x5C04;&#x6309;&#x952E;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; noremap &#xFF0C;&#x53EA;&#x6709;&#x7279;&#x522B;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528; map</li>
+<li>&#x5F53;&#x4F60;&#x89C9;&#x5F97;&#x505A;&#x67D0;&#x4E8B;&#x5F88;&#x4F4E;&#x6548;&#x65F6;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x505C;&#x4E0B;&#x6765;&#xFF0C;u u u u &#x7136;&#x540E;&#x601D;&#x8003;&#x6B63;&#x786E;&#x7684;&#x9AD8;&#x6548;&#x65B9;&#x5F0F;&#x6765;&#x5B8C;&#x6210;</li>
+<li>&#x7528; y&#x590D;&#x5236;&#x6587;&#x672C;&#x540E;&#xFF0C;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x4E2D; CTRL-R &#x7136;&#x540E;&#x6309;&#x53CC;&#x5F15;&#x53F7; 0 &#x53EF;&#x4EE5;&#x63D2;&#x5165;&#x4E4B;&#x524D;&#x590D;&#x5236;&#x5185;&#x5BB9;</li>
+<li>&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B; Vim &#x7ED8;&#x5236;&#x9AD8;&#x4EAE;&#x6162;&#xFF0C;&#x6EDA;&#x5C4F;&#x5237;&#x65B0;&#x6162;&#x53EF;&#x4EE5;&#x8BD5;&#x8BD5; set re=1 &#x4F7F;&#x7528;&#x8001;&#x7684;&#x6B63;&#x5219;&#x5F15;&#x64CE;</li>
+<li>Windows &#x4E0B;&#x7684; GVim &#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; set rop=type:directx,renmode:5 &#x589E;&#x5F3A;&#x663E;&#x793A;</li>
+</ul>
+<h2 id="references"><a name="references" class="anchor-navigation-ex-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>1.30. References</h2>
+<ul>
+<li><a href="https://github.com/groenewege/vimrc/blob/master/vim_cheat_sheet.txt" target="_blank">https://github.com/groenewege/vimrc/blob/master/vim_cheat_sheet.txt</a></li>
+<li><a href="http://blog.g-design.net/post/4789778607/vim-cheat-sheet" target="_blank">http://blog.g-design.net/post/4789778607/vim-cheat-sheet</a></li>
+<li><a href="http://www.keyxl.com/aaa8263/290/VIM-keyboard-shortcuts.htm" target="_blank">http://www.keyxl.com/aaa8263/290/VIM-keyboard-shortcuts.htm</a></li>
+<li><a href="http://jmcpherson.org/editing.html" target="_blank">http://jmcpherson.org/editing.html</a></li>
+<li><a href="http://www.fprintf.net/vimCheatSheet.html" target="_blank">http://www.fprintf.net/vimCheatSheet.html</a></li>
+<li><a href="http://www.ouyaoxiazai.com/article/24/654.html" target="_blank">http://www.ouyaoxiazai.com/article/24/654.html</a></li>
+<li><a href="http://bbs.it-home.org/thread-80794-1-1.html" target="_blank">http://bbs.it-home.org/thread-80794-1-1.html</a></li>
+<li><a href="http://www.lpfrx.com/wp-content/uploads/2008/09/vi.jpg" target="_blank">http://www.lpfrx.com/wp-content/uploads/2008/09/vi.jpg</a></li>
+<li><a href="http://michael.peopleofhonoronly.com/vim/" target="_blank">http://michael.peopleofhonoronly.com/vim/</a></li>
+<li><a href="https://github.com/hobbestigrou/vimtips-fortune/blob/master/fortunes/vimtips" target="_blank">https://github.com/hobbestigrou/vimtips-fortune/blob/master/fortunes/vimtips</a></li>
+<li><a href="https://github.com/glts/vim-cottidie/blob/master/autoload/cottidie/tips" target="_blank">https://github.com/glts/vim-cottidie/blob/master/autoload/cottidie/tips</a></li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; xjliang 2021 all right reserved&#xFF0C;powered by Gitbook </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 2021-01-31 02:13:48 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Editors">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Languages/" class="navigation navigation-next " aria-label="Next page: Languages">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Vim","level":"1.4.1.1","depth":3,"next":{"title":"Languages","level":"1.4.2","depth":2,"path":"PART III/Languages/README.md","ref":"PART III/Languages/README.md","articles":[{"title":"Bash","level":"1.4.2.1","depth":3,"path":"PART III/Languages/Bash.md","ref":"PART III/Languages/Bash.md","articles":[]},{"title":"Python","level":"1.4.2.2","depth":3,"path":"PART III/Languages/Python.md","ref":"PART III/Languages/Python.md","articles":[]}]},"previous":{"title":"Editors","level":"1.4.1","depth":2,"path":"PART III/Editors/README.md","ref":"PART III/Editors/README.md","articles":[{"title":"Vim","level":"1.4.1.1","depth":3,"path":"PART III/Editors/Vim.md","ref":"PART III/Editors/Vim.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["ace","page-footer-ex","anchor-navigation-ex","github-buttons","-lunr","-search","search-pro"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"page-footer-ex":{"copyright":"Copyright © xjliang 2021 all right reserved，powered by Gitbook","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"该文件修订时间："},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"xjliang","repo":"auto-export-gitbook","type":"star","count":true,"size":"small"},{"user":"xjliang","type":"follow","width":"120","count":false,"size":"small"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"xjliang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"xjliang 的技术专栏","language":"zh-hans","links":{"sidebar":{"Home":"https://gnulxj.netlify.app"}},"gitbook":"*","description":"CS 学习笔记"},"file":{"path":"PART III/Editors/Vim.md","mtime":"2021-01-31T02:13:48.750Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-31T02:14:46.752Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

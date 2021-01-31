@@ -1,0 +1,617 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Gdb · xjliang 的技术专栏</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xjliang">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Git.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"xjliang","repo":"auto-export-gitbook","type":"star","count":true,"size":"small"},{"user":"xjliang","type":"follow","width":"120","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://gnulxj.netlify.app" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../PART I/">
+            
+                <a href="../../PART I/">
+            
+                    
+                    PART I
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../PART II/">
+            
+                <a href="../../PART II/">
+            
+                    
+                    PART II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    PART III
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Editors/">
+            
+                <a href="../Editors/">
+            
+                    
+                    Editors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Editors/Vim.html">
+            
+                <a href="../Editors/Vim.html">
+            
+                    
+                    Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Languages/">
+            
+                <a href="../Languages/">
+            
+                    
+                    Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Languages/Bash.html">
+            
+                <a href="../Languages/Bash.html">
+            
+                    
+                    Bash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Languages/Python.html">
+            
+                <a href="../Languages/Python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.3.1" data-path="Gdb.html">
+            
+                <a href="Gdb.html">
+            
+                    
+                    Gdb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="Git.html">
+            
+                <a href="Git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Gdb</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#gdb-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;"><b>1. </b>GDB &#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;</a></li><ul><li><span class="title-icon "></span><a href="#&#x542F;&#x52A8;-gdb"><b>1.1. </b>&#x542F;&#x52A8; GDB</a></li><li><span class="title-icon "></span><a href="#&#x5E2E;&#x52A9;&#x4FE1;&#x606F;"><b>1.2. </b>&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x65AD;&#x70B9;"><b>1.3. </b>&#x65AD;&#x70B9;</a></li><li><span class="title-icon "></span><a href="#&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;"><b>1.4. </b>&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;</a></li><li><span class="title-icon "></span><a href="#&#x6808;&#x5E27;"><b>1.5. </b>&#x6808;&#x5E27;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x6D4F;&#x89C8;"><b>1.6. </b>&#x4EE3;&#x7801;&#x6D4F;&#x89C8;</a></li><li><span class="title-icon "></span><a href="#&#x6D4F;&#x89C8;&#x6570;&#x636E;"><b>1.7. </b>&#x6D4F;&#x89C8;&#x6570;&#x636E;</a></li><li><span class="title-icon "></span><a href="#&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><b>1.8. </b>&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x4FE1;&#x53F7;&#x63A7;&#x5236;"><b>1.9. </b>&#x4FE1;&#x53F7;&#x63A7;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x7EBF;&#x7A0B;&#x8C03;&#x8BD5;"><b>1.10. </b>&#x7EBF;&#x7A0B;&#x8C03;&#x8BD5;</a></li><li><span class="title-icon "></span><a href="#&#x8FDB;&#x7A0B;&#x8C03;&#x8BD5;"><b>1.11. </b>&#x8FDB;&#x7A0B;&#x8C03;&#x8BD5;</a></li><li><span class="title-icon "></span><a href="#&#x6C47;&#x7F16;&#x8C03;&#x8BD5;"><b>1.12. </b>&#x6C47;&#x7F16;&#x8C03;&#x8BD5;</a></li><li><span class="title-icon "></span><a href="#&#x5386;&#x53F2;&#x4FE1;&#x606F;"><b>1.13. </b>&#x5386;&#x53F2;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x547D;&#x4EE4;"><b>1.14. </b>&#x5176;&#x4ED6;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#gdb-&#x524D;&#x7AEF;"><b>1.15. </b>GDB &#x524D;&#x7AEF;</a></li><li><span class="title-icon "></span><a href="#references"><b>1.16. </b>References</a></li></ul></ul></div><a href="#gdb-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="gdb-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;"><a name="gdb-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;" class="anchor-navigation-ex-anchor" href="#gdb-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1. GDB &#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;</h1>
+<h2 id="&#x542F;&#x52A8;-gdb"><a name="&#x542F;&#x52A8;-gdb" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;-gdb"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x542F;&#x52A8; GDB</h2>
+<pre><code>gdb object                ## &#x6B63;&#x5E38;&#x542F;&#x52A8;&#xFF0C;&#x52A0;&#x8F7D;&#x53EF;&#x6267;&#x884C;
+gdb object core           ## &#x5BF9;&#x53EF;&#x6267;&#x884C; + core &#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;
+gdb object pid            ## &#x5BF9;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;
+gdb                       ## &#x6B63;&#x5E38;&#x542F;&#x52A8;&#xFF0C;&#x542F;&#x52A8;&#x540E;&#x9700;&#x8981; file &#x547D;&#x4EE4;&#x624B;&#x52A8;&#x52A0;&#x8F7D;
+gdb -tui                  ## &#x542F;&#x7528; gdb &#x7684;&#x6587;&#x672C;&#x754C;&#x9762;&#xFF08;&#x6216; ctrl-x ctrl-a &#x66F4;&#x6362; CLI/TUI&#xFF09;
+</code></pre><h2 id="&#x5E2E;&#x52A9;&#x4FE1;&#x606F;"><a name="&#x5E2E;&#x52A9;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x5E2E;&#x52A9;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5E2E;&#x52A9;&#x4FE1;&#x606F;</h2>
+<pre><code>help                      ## &#x5217;&#x51FA;&#x547D;&#x4EE4;&#x5206;&#x7C7B;
+help running              ## &#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x7C7B;&#x522B;&#x7684;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;
+help run                  ## &#x67E5;&#x770B;&#x547D;&#x4EE4; run &#x7684;&#x5E2E;&#x52A9;
+help info                 ## &#x5217;&#x51FA;&#x67E5;&#x770B;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x76F8;&#x5173;&#x7684;&#x547D;&#x4EE4;
+help info line            ## &#x5217;&#x51FA;&#x5177;&#x4F53;&#x7684;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;
+help show                 ## &#x5217;&#x51FA; GDB &#x72B6;&#x6001;&#x76F8;&#x5173;&#x7684;&#x547D;&#x4EE4;
+help show commands        ## &#x5217;&#x51FA; show &#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;
+</code></pre><h2 id="&#x65AD;&#x70B9;"><a name="&#x65AD;&#x70B9;" class="anchor-navigation-ex-anchor" href="#&#x65AD;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x65AD;&#x70B9;</h2>
+<pre><code>break main                ## &#x5BF9;&#x51FD;&#x6570; main &#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x65AD;&#x70B9;&#xFF0C;&#x53EF;&#x7B80;&#x5199;&#x4E3A; b main
+break 101                 ## &#x5BF9;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x884C;&#x53F7;&#x8BBE;&#x7F6E;&#x65AD;&#x70B9;&#xFF0C;&#x53EF;&#x7B80;&#x5199;&#x4E3A; b 101
+break basic.c:101         ## &#x5BF9;&#x6E90;&#x4EE3;&#x7801;&#x548C;&#x884C;&#x53F7;&#x8BBE;&#x7F6E;&#x65AD;&#x70B9;
+break basic.c:foo         ## &#x5BF9;&#x6E90;&#x4EE3;&#x7801;&#x548C;&#x51FD;&#x6570;&#x540D;&#x8BBE;&#x7F6E;&#x65AD;&#x70B9;
+break *0x00400448         ## &#x5BF9;&#x5185;&#x5B58;&#x5730;&#x5740; 0x00400448 &#x8BBE;&#x7F6E;&#x65AD;&#x70B9;
+info breakpoints          ## &#x5217;&#x51FA;&#x5F53;&#x524D;&#x7684;&#x6240;&#x6709;&#x65AD;&#x70B9;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x7B80;&#x5199;&#x4E3A; info break
+delete 1                  ## &#x6309;&#x7F16;&#x53F7;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x65AD;&#x70B9;
+delete                    ## &#x5220;&#x9664;&#x6240;&#x6709;&#x65AD;&#x70B9;
+clear                     ## &#x5220;&#x9664;&#x5728;&#x5F53;&#x524D;&#x884C;&#x7684;&#x65AD;&#x70B9;
+clear function            ## &#x5220;&#x9664;&#x51FD;&#x6570;&#x65AD;&#x70B9;
+clear line                ## &#x5220;&#x9664;&#x884C;&#x53F7;&#x65AD;&#x70B9;
+clear basic.c:101         ## &#x5220;&#x9664;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x884C;&#x53F7;&#x7684;&#x65AD;&#x70B9;
+clear basic.c:main        ## &#x5220;&#x9664;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x51FD;&#x6570;&#x540D;&#x7684;&#x65AD;&#x70B9;
+clear *0x00400448         ## &#x5220;&#x9664;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7684;&#x65AD;&#x70B9;
+disable 2                 ## &#x7981;&#x7528;&#x67D0;&#x65AD;&#x70B9;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x5220;&#x9664;
+enable 2                  ## &#x5141;&#x8BB8;&#x67D0;&#x4E2A;&#x4E4B;&#x524D;&#x88AB;&#x7981;&#x7528;&#x7684;&#x65AD;&#x70B9;&#xFF0C;&#x8BA9;&#x5B83;&#x751F;&#x6548;
+rbreak {regexpr}          ## &#x5339;&#x914D;&#x6B63;&#x5219;&#x7684;&#x51FD;&#x6570;&#x524D;&#x65AD;&#x70B9;&#xFF0C;&#x5982; ex_* &#x5C06;&#x65AD;&#x70B9; ex_ &#x5F00;&#x5934;&#x7684;&#x51FD;&#x6570;
+tbreak function|line      ## &#x4E34;&#x65F6;&#x65AD;&#x70B9;
+hbreak function|line      ## &#x786C;&#x4EF6;&#x65AD;&#x70B9;
+ignore {id} {count}       ## &#x5FFD;&#x7565;&#x67D0;&#x65AD;&#x70B9; N-1 &#x6B21;
+condition {id} {expr}     ## &#x6761;&#x4EF6;&#x65AD;&#x70B9;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x6761;&#x4EF6;&#x751F;&#x6548;&#x65F6;&#x624D;&#x53D1;&#x751F;
+condition 2 i == 20       ## 2&#x53F7;&#x65AD;&#x70B9;&#x53EA;&#x6709;&#x5728; i == 20 &#x6761;&#x4EF6;&#x4E3A;&#x771F;&#x65F6;&#x624D;&#x751F;&#x6548;
+watch {expr}              ## &#x5BF9;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x76D1;&#x89C6;&#x70B9;
+info watchpoints          ## &#x663E;&#x793A;&#x6240;&#x6709;&#x89C2;&#x5BDF;&#x70B9;
+catch exec                ## &#x65AD;&#x70B9;&#x5728; exec &#x4E8B;&#x4EF6;&#xFF0C;&#x5373;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x5165;&#x53E3;&#x5730;&#x5740;
+</code></pre><h2 id="&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;"><a name="&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x8FD0;&#x884C;&#x7A0B;&#x5E8F;</h2>
+<pre><code>run                       ## &#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+run {args}                ## &#x4EE5;&#x67D0;&#x53C2;&#x6570;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+run &lt; file                ## &#x4EE5;&#x67D0;&#x6587;&#x4EF6;&#x4E3A;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+run &lt; &lt;(cmd)              ## &#x4EE5;&#x67D0;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x4F5C;&#x4E3A;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+run &lt;&lt;&lt; $(cmd)            ## &#x4EE5;&#x67D0;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x4F5C;&#x4E3A;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;
+set args {args} ...       ## &#x8BBE;&#x7F6E;&#x8FD0;&#x884C;&#x7684;&#x53C2;&#x6570;
+show args                 ## &#x663E;&#x793A;&#x5F53;&#x524D;&#x7684;&#x8FD0;&#x884C;&#x53C2;&#x6570;
+cont                      ## &#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#xFF0C;&#x53EF;&#x7B80;&#x5199;&#x4E3A; c
+step                      ## &#x5355;&#x6B65;&#x8FDB;&#x5165;&#xFF0C;&#x78B0;&#x5230;&#x51FD;&#x6570;&#x4F1A;&#x8FDB;&#x53BB;
+step {count}              ## &#x5355;&#x6B65;&#x591A;&#x5C11;&#x6B21;
+next                      ## &#x5355;&#x6B65;&#x8DF3;&#x8FC7;&#xFF0C;&#x78B0;&#x5230;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x8FDB;&#x5165;
+next {count}              ## &#x5355;&#x6B65;&#x591A;&#x5C11;&#x6B21;
+CTRL+C                    ## &#x53D1;&#x9001; SIGINT &#x4FE1;&#x53F7;&#xFF0C;&#x4E2D;&#x6B62;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x7A0B;&#x5E8F;
+attach {process-id}       ## &#x94FE;&#x63A5;&#x4E0A;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x5F00;&#x59CB;&#x8C03;&#x8BD5;
+detach                    ## &#x65AD;&#x5F00;&#x8FDB;&#x7A0B;&#x94FE;&#x63A5;
+finish                    ## &#x7ED3;&#x675F;&#x5F53;&#x524D;&#x51FD;&#x6570;&#x7684;&#x8FD0;&#x884C;
+until                     ## &#x6301;&#x7EED;&#x6267;&#x884C;&#x76F4;&#x5230;&#x4EE3;&#x7801;&#x884C;&#x53F7;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x884C;&#x53F7;&#xFF08;&#x8DF3;&#x51FA;&#x5FAA;&#x73AF;&#xFF09;
+until {line}              ## &#x6301;&#x7EED;&#x6267;&#x884C;&#x76F4;&#x5230;&#x6267;&#x884C;&#x5230;&#x67D0;&#x884C;
+kill                      ## &#x6740;&#x6B7B;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x51FD;&#x6570;
+</code></pre><h2 id="&#x6808;&#x5E27;"><a name="&#x6808;&#x5E27;" class="anchor-navigation-ex-anchor" href="#&#x6808;&#x5E27;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x6808;&#x5E27;</h2>
+<pre><code>bt                        ## &#x6253;&#x5370; backtrace 
+frame                     ## &#x663E;&#x793A;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x6808;&#x5E27;
+up                        ## &#x5411;&#x4E0A;&#x79FB;&#x52A8;&#x6808;&#x5E27;&#xFF08;&#x5411;&#x7740; main &#x51FD;&#x6570;&#xFF09;
+down                      ## &#x5411;&#x4E0B;&#x79FB;&#x52A8;&#x6808;&#x5E27;&#xFF08;&#x8FDC;&#x79BB; main &#x51FD;&#x6570;&#xFF09;
+info locals               ## &#x6253;&#x5370;&#x5E27;&#x5185;&#x7684;&#x76F8;&#x5173;&#x53D8;&#x91CF;
+info args                 ## &#x6253;&#x5370;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;
+</code></pre><h2 id="&#x4EE3;&#x7801;&#x6D4F;&#x89C8;"><a name="&#x4EE3;&#x7801;&#x6D4F;&#x89C8;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x6D4F;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x4EE3;&#x7801;&#x6D4F;&#x89C8;</h2>
+<pre><code>list 101                  ## &#x663E;&#x793A;&#x7B2C; 101 &#x884C;&#x5468;&#x56F4; 10&#x884C;&#x4EE3;&#x7801;
+list 1,10                 ## &#x663E;&#x793A; 1 &#x5230; 10 &#x884C;&#x4EE3;&#x7801;
+list main                 ## &#x663E;&#x793A;&#x51FD;&#x6570;&#x5468;&#x56F4;&#x4EE3;&#x7801;
+list basic.c:main         ## &#x663E;&#x793A;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x6E90;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;&#x5468;&#x56F4;&#x4EE3;&#x7801;
+list -                    ## &#x91CD;&#x590D;&#x4E4B;&#x524D; 10 &#x884C;&#x4EE3;&#x7801;
+list *0x22e4              ## &#x663E;&#x793A;&#x7279;&#x5B9A;&#x5730;&#x5740;&#x7684;&#x4EE3;&#x7801;
+cd dir                    ## &#x5207;&#x6362;&#x5F53;&#x524D;&#x76EE;&#x5F55;
+pwd                       ## &#x663E;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;
+search {regexpr}          ## &#x5411;&#x524D;&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x641C;&#x7D22;
+reverse-search {regexp}   ## &#x5411;&#x540E;&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x641C;&#x7D22;
+dir {dirname}             ## &#x589E;&#x52A0;&#x6E90;&#x4EE3;&#x7801;&#x641C;&#x7D22;&#x8DEF;&#x5F84;
+dir                       ## &#x590D;&#x4F4D;&#x6E90;&#x4EE3;&#x7801;&#x641C;&#x7D22;&#x8DEF;&#x5F84;&#xFF08;&#x6E05;&#x7A7A;&#xFF09;
+show directories          ## &#x663E;&#x793A;&#x6E90;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;
+</code></pre><h2 id="&#x6D4F;&#x89C8;&#x6570;&#x636E;"><a name="&#x6D4F;&#x89C8;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x6D4F;&#x89C8;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x6D4F;&#x89C8;&#x6570;&#x636E;</h2>
+<pre><code>print {expression}        ## &#x6253;&#x5370;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5E76;&#x4E14;&#x589E;&#x52A0;&#x5230;&#x6253;&#x5370;&#x5386;&#x53F2;
+print /x {expression}     ## &#x5341;&#x516D;&#x8FDB;&#x5236;&#x8F93;&#x51FA;&#xFF0C;print &#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x4E3A; p
+print array[i]@count      ## &#x6253;&#x5370;&#x6570;&#x7EC4;&#x8303;&#x56F4;
+print $                   ## &#x6253;&#x5370;&#x4E4B;&#x524D;&#x7684;&#x53D8;&#x91CF;
+print *$-&gt;next            ## &#x6253;&#x5370; list
+print $1                  ## &#x8F93;&#x51FA;&#x6253;&#x5370;&#x5386;&#x53F2;&#x91CC;&#x7B2C;&#x4E00;&#x6761;
+print ::gx                ## &#x5C06;&#x53D8;&#x91CF;&#x53EF;&#x89C6;&#x8303;&#x56F4;&#xFF08;scope&#xFF09;&#x8BBE;&#x7F6E;&#x4E3A;&#x5168;&#x5C40;
+print &apos;basic.c&apos;::gx       ## &#x6253;&#x5370;&#x67D0;&#x6E90;&#x4EE3;&#x7801;&#x91CC;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;(gdb 4.6)
+print /x &amp;main            ## &#x6253;&#x5370;&#x51FD;&#x6570;&#x5730;&#x5740;
+x *0x11223344             ## &#x663E;&#x793A;&#x7ED9;&#x5B9A;&#x5730;&#x5740;&#x7684;&#x5185;&#x5B58;&#x6570;&#x636E;
+x /nfu {address}          ## &#x6253;&#x5370;&#x5185;&#x5B58;&#x6570;&#x636E;&#xFF0C;n&#x662F;&#x591A;&#x5C11;&#x4E2A;&#xFF0C;f&#x662F;&#x683C;&#x5F0F;&#xFF0C;u&#x662F;&#x5355;&#x4F4D;&#x5927;&#x5C0F;
+x /10xb *0x11223344       ## &#x6309;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6253;&#x5370;&#x5185;&#x5B58;&#x5730;&#x5740; 0x11223344 &#x5904;&#x7684;&#x5341;&#x4E2A;&#x5B57;&#x8282;
+x/x &amp;gx                   ## &#x6309;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6253;&#x5370;&#x53D8;&#x91CF; gx&#xFF0C;x&#x548C;&#x659C;&#x6746;&#x540E;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x8FDE;&#x5199;
+x/4wx &amp;main               ## &#x6309;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6253;&#x5370;&#x4F4D;&#x4E8E; main &#x51FD;&#x6570;&#x5F00;&#x5934;&#x7684;&#x56DB;&#x4E2A; long 
+x/gf &amp;gd1                 ## &#x6253;&#x5370; double &#x7C7B;&#x578B;
+help x                    ## &#x67E5;&#x770B;&#x5173;&#x4E8E; x &#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;
+info locals               ## &#x6253;&#x5370;&#x672C;&#x5730;&#x5C40;&#x90E8;&#x53D8;&#x91CF;
+info functions {regexp}   ## &#x6253;&#x5370;&#x51FD;&#x6570;&#x540D;&#x79F0;
+info variables {regexp}   ## &#x6253;&#x5370;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x540D;&#x79F0;
+ptype name                ## &#x67E5;&#x770B;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#xFF0C;&#x6BD4;&#x5982; ptype FILE&#xFF0C;&#x67E5;&#x770B; FILE &#x7ED3;&#x6784;&#x4F53;&#x5B9A;&#x4E49;
+whatis {expression}       ## &#x67E5;&#x770B;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7C7B;&#x578B;
+set var = {expression}    ## &#x53D8;&#x91CF;&#x8D4B;&#x503C;
+display {expression}      ## &#x5728;&#x5355;&#x6B65;&#x6307;&#x4EE4;&#x540E;&#x67E5;&#x770B;&#x67D0;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;
+undisplay                 ## &#x5220;&#x9664;&#x5355;&#x6B65;&#x540E;&#x5BF9;&#x67D0;&#x4E9B;&#x503C;&#x7684;&#x76D1;&#x63A7;
+info display              ## &#x663E;&#x793A;&#x76D1;&#x89C6;&#x7684;&#x8868;&#x8FBE;&#x5F0F;
+show values               ## &#x67E5;&#x770B;&#x8BB0;&#x5F55;&#x5230;&#x6253;&#x5370;&#x5386;&#x53F2;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x503C; (gdb 4.0)
+info history              ## &#x67E5;&#x770B;&#x6253;&#x5370;&#x5386;&#x53F2;&#x7684;&#x5E2E;&#x52A9; (gdb 3.5)
+</code></pre><h2 id="&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><a name="&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x76EE;&#x6807;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h2>
+<pre><code>file {object}             ## &#x52A0;&#x8F7D;&#x65B0;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4F9B;&#x8C03;&#x8BD5;
+file                      ## &#x653E;&#x5F03;&#x53EF;&#x6267;&#x884C;&#x548C;&#x7B26;&#x53F7;&#x8868;&#x4FE1;&#x606F;
+symbol-file {object}      ## &#x4EC5;&#x52A0;&#x8F7D;&#x7B26;&#x53F7;&#x8868;
+exec-file {object}        ## &#x6307;&#x5B9A;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x7B26;&#x53F7;&#x8868;&#xFF09;
+core-file {core}          ## &#x52A0;&#x8F7D; core &#x7528;&#x4E8E;&#x5206;&#x6790;
+</code></pre><h2 id="&#x4FE1;&#x53F7;&#x63A7;&#x5236;"><a name="&#x4FE1;&#x53F7;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x53F7;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. &#x4FE1;&#x53F7;&#x63A7;&#x5236;</h2>
+<pre><code>info signals              ## &#x6253;&#x5370;&#x4FE1;&#x53F7;&#x8BBE;&#x7F6E;
+handle {signo} {actions}  ## &#x8BBE;&#x7F6E;&#x4FE1;&#x53F7;&#x7684;&#x8C03;&#x8BD5;&#x884C;&#x4E3A;
+handle INT print          ## &#x4FE1;&#x53F7;&#x53D1;&#x751F;&#x65F6;&#x6253;&#x5370;&#x4FE1;&#x606F;
+handle INT noprint        ## &#x4FE1;&#x53F7;&#x53D1;&#x751F;&#x65F6;&#x4E0D;&#x6253;&#x5370;&#x4FE1;&#x606F;
+handle INT stop           ## &#x4FE1;&#x53F7;&#x53D1;&#x751F;&#x65F6;&#x4E2D;&#x6B62;&#x88AB;&#x8C03;&#x8BD5;&#x7A0B;&#x5E8F;
+handle INT nostop         ## &#x4FE1;&#x53F7;&#x53D1;&#x751F;&#x65F6;&#x4E0D;&#x4E2D;&#x6B62;&#x88AB;&#x8C03;&#x8BD5;&#x7A0B;&#x5E8F;
+handle INT pass           ## &#x8C03;&#x8BD5;&#x5668;&#x63A5;&#x83B7;&#x4FE1;&#x53F7;&#xFF0C;&#x4E0D;&#x8BA9;&#x7A0B;&#x5E8F;&#x77E5;&#x9053;
+handle INT nopass         ## &#x8C03;&#x8BD5;&#x5668;&#x4E0D;&#x63A5;&#x83B7;&#x4FE1;&#x53F7;
+signal signo              ## &#x7EE7;&#x7EED;&#x5E76;&#x5C06;&#x4FE1;&#x53F7;&#x8F6C;&#x79FB;&#x7ED9;&#x7A0B;&#x5E8F;
+signal 0                  ## &#x7EE7;&#x7EED;&#x4F46;&#x4E0D;&#x628A;&#x4FE1;&#x53F7;&#x7ED9;&#x7A0B;&#x5E8F;
+</code></pre><h2 id="&#x7EBF;&#x7A0B;&#x8C03;&#x8BD5;"><a name="&#x7EBF;&#x7A0B;&#x8C03;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x7EBF;&#x7A0B;&#x8C03;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. &#x7EBF;&#x7A0B;&#x8C03;&#x8BD5;</h2>
+<pre><code>info threads              ## &#x67E5;&#x770B;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x548C; id
+thread {id}               ## &#x5207;&#x6362;&#x5F53;&#x524D;&#x8C03;&#x8BD5;&#x7EBF;&#x7A0B;&#x4E3A;&#x6307;&#x5B9A; id &#x7684;&#x7EBF;&#x7A0B;
+break {line} thread all   ## &#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x5728;&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x5904;&#x8BBE;&#x7F6E;&#x65AD;&#x70B9;
+thread apply {id..} cmd   ## &#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x5171;&#x540C;&#x6267;&#x884C; gdb &#x547D;&#x4EE4;
+thread apply all cmd      ## &#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x5171;&#x540C;&#x6267;&#x884C; gdb &#x547D;&#x4EE4;
+set schedule-locking ?    ## &#x8C03;&#x8BD5;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x65F6;&#xFF0C;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x662F;&#x5426;&#x6267;&#x884C;&#xFF0C;off|on|step
+set non-stop on/off       ## &#x8C03;&#x8BD5;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x65F6;&#xFF0C;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x662F;&#x5426;&#x8FD0;&#x884C;
+set pagination on/off     ## &#x8C03;&#x8BD5;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x65F6;&#xFF0C;&#x5206;&#x9875;&#x662F;&#x5426;&#x505C;&#x6B62;
+set target-async on/off   ## &#x540C;&#x6B65;&#x6216;&#x8005;&#x5F02;&#x6B65;&#x8C03;&#x8BD5;&#xFF0C;&#x662F;&#x5426;&#x7B49;&#x5F85;&#x7EBF;&#x7A0B;&#x4E2D;&#x6B62;&#x7684;&#x4FE1;&#x606F;
+</code></pre><h2 id="&#x8FDB;&#x7A0B;&#x8C03;&#x8BD5;"><a name="&#x8FDB;&#x7A0B;&#x8C03;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x8FDB;&#x7A0B;&#x8C03;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. &#x8FDB;&#x7A0B;&#x8C03;&#x8BD5;</h2>
+<pre><code>info inferiors                       ## &#x67E5;&#x770B;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x548C; id
+inferior {id}                        ## &#x5207;&#x6362;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;
+kill inferior {id...}                ## &#x6740;&#x6B7B;&#x67D0;&#x4E2A;&#x8FDB;&#x7A0B;
+set detach-on-fork on/off            ## &#x8BBE;&#x7F6E;&#x5F53;&#x8FDB;&#x7A0B;&#x8C03;&#x7528;fork&#x65F6;gdb&#x662F;&#x5426;&#x540C;&#x65F6;&#x8C03;&#x8BD5;&#x7236;&#x5B50;&#x8FDB;&#x7A0B;
+set follow-fork-mode parent/child    ## &#x8BBE;&#x7F6E;&#x5F53;&#x8FDB;&#x7A0B;&#x8C03;&#x7528;fork&#x65F6;&#x662F;&#x5426;&#x8FDB;&#x5165;&#x5B50;&#x8FDB;&#x7A0B;
+</code></pre><h2 id="&#x6C47;&#x7F16;&#x8C03;&#x8BD5;"><a name="&#x6C47;&#x7F16;&#x8C03;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x6C47;&#x7F16;&#x8C03;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. &#x6C47;&#x7F16;&#x8C03;&#x8BD5;</h2>
+<pre><code>info registers            ## &#x6253;&#x5370;&#x666E;&#x901A;&#x5BC4;&#x5B58;&#x5668;
+info all-registers        ## &#x6253;&#x5370;&#x6240;&#x6709;&#x5BC4;&#x5B58;&#x5668;
+print/x $pc               ## &#x6253;&#x5370;&#x5355;&#x4E2A;&#x5BC4;&#x5B58;&#x5668;
+stepi                     ## &#x6307;&#x4EE4;&#x7EA7;&#x522B;&#x5355;&#x6B65;&#x8FDB;&#x5165;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x4E3A; si
+nexti                     ## &#x6307;&#x4EE4;&#x7EA7;&#x522B;&#x5355;&#x6B65;&#x8DF3;&#x8FC7;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x4E3A; ni
+display/i $pc             ## &#x76D1;&#x63A7;&#x5BC4;&#x5B58;&#x5668;&#xFF08;&#x6BCF;&#x6761;&#x5355;&#x6B65;&#x5B8C;&#x4EE5;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x6253;&#x5370;&#x503C;&#xFF09;
+x/x &amp;gx                   ## &#x5341;&#x516D;&#x8FDB;&#x5236;&#x6253;&#x5370;&#x53D8;&#x91CF;
+info line 22              ## &#x6253;&#x5370;&#x884C;&#x53F7;&#x4E3A; 22 &#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x4FE1;&#x606F;
+info line *0x2c4e         ## &#x6253;&#x5370;&#x7ED9;&#x5B9A;&#x5185;&#x5B58;&#x5730;&#x5740;&#x5BF9;&#x5E94;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x548C;&#x884C;&#x53F7;&#x4FE1;&#x606F;
+disassemble {addr}        ## &#x5BF9;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x53CD;&#x6C47;&#x7F16;&#xFF0C;&#x6BD4;&#x5982; disassemble 0x2c4e
+</code></pre><h2 id="&#x5386;&#x53F2;&#x4FE1;&#x606F;"><a name="&#x5386;&#x53F2;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x5386;&#x53F2;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. &#x5386;&#x53F2;&#x4FE1;&#x606F;</h2>
+<pre><code>show commands             ## &#x663E;&#x793A;&#x5386;&#x53F2;&#x547D;&#x4EE4; (gdb 4.0)
+info editing              ## &#x663E;&#x793A;&#x5386;&#x53F2;&#x547D;&#x4EE4; (gdb 3.5)
+ESC-CTRL-J                ## &#x5207;&#x6362;&#x5230; Vi &#x547D;&#x4EE4;&#x884C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;
+set history expansion on  ## &#x5141;&#x8BB8;&#x7C7B; c-shell &#x7684;&#x5386;&#x53F2;
+break class::member       ## &#x5728;&#x7C7B;&#x6210;&#x5458;&#x5904;&#x8BBE;&#x7F6E;&#x65AD;&#x70B9;
+list class:member         ## &#x663E;&#x793A;&#x7C7B;&#x6210;&#x5458;&#x4EE3;&#x7801;
+ptype class               ## &#x67E5;&#x770B;&#x7C7B;&#x5305;&#x542B;&#x7684;&#x6210;&#x5458;
+print *this               ## &#x67E5;&#x770B; this &#x6307;&#x9488;
+</code></pre><h2 id="&#x5176;&#x4ED6;&#x547D;&#x4EE4;"><a name="&#x5176;&#x4ED6;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.14. &#x5176;&#x4ED6;&#x547D;&#x4EE4;</h2>
+<pre><code>define command ... end    ## &#x5B9A;&#x4E49;&#x7528;&#x6237;&#x547D;&#x4EE4;
+&lt;return&gt;                  ## &#x76F4;&#x63A5;&#x6309;&#x56DE;&#x8F66;&#x6267;&#x884C;&#x4E0A;&#x4E00;&#x6761;&#x6307;&#x4EE4;
+shell {command} [args]    ## &#x6267;&#x884C; shell &#x547D;&#x4EE4;
+source {file}             ## &#x4ECE;&#x6587;&#x4EF6;&#x52A0;&#x8F7D; gdb &#x547D;&#x4EE4;
+quit                      ## &#x9000;&#x51FA; gdb
+</code></pre><h2 id="gdb-&#x524D;&#x7AEF;"><a name="gdb-&#x524D;&#x7AEF;" class="anchor-navigation-ex-anchor" href="#gdb-&#x524D;&#x7AEF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.15. GDB &#x524D;&#x7AEF;</h2>
+<pre><code>gdb-tui                   &#x4F7F;&#x7528; gdb -tui &#x542F;&#x52A8;&#xFF08;&#x6216; ctrl-x ctrl-a &#x66F4;&#x6362; CLI/TUI&#xFF09;
+cgdb                      http://cgdb.github.io/
+emacs                     http://gnu.org/software/emacs
+gdbgui                    https://github.com/cs01/gdbgui
+
+GDB &#x56FE;&#x5F62;&#x5316;&#x524D;&#x7AEF;&#x8BC4;&#x6D4B;        http://www.skywind.me/blog/archives/2036
+</code></pre><h2 id="references"><a name="references" class="anchor-navigation-ex-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>1.16. References</h2>
+<ul>
+<li><a href="https://sourceware.org/gdb/current/onlinedocs/gdb/" target="_blank">https://sourceware.org/gdb/current/onlinedocs/gdb/</a></li>
+<li><a href="https://kapeli.com/cheat_sheets/GDB.docset/Contents/Resources/Documents/index" target="_blank">https://kapeli.com/cheat_sheets/GDB.docset/Contents/Resources/Documents/index</a></li>
+<li><a href="http://www.yolinux.com/TUTORIALS/GDB-Commands.html" target="_blank">http://www.yolinux.com/TUTORIALS/GDB-Commands.html</a></li>
+<li><a href="https://gist.github.com/rkubik/b96c23bd8ed58333de37f2b8cd052c30" target="_blank">https://gist.github.com/rkubik/b96c23bd8ed58333de37f2b8cd052c30</a></li>
+<li><a href="http://security.cs.pub.ro/hexcellents/wiki/kb/toolset/gdb" target="_blank">http://security.cs.pub.ro/hexcellents/wiki/kb/toolset/gdb</a></li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; xjliang 2021 all right reserved&#xFF0C;powered by Gitbook </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 2021-01-31 02:13:48 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Tools">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Git.html" class="navigation navigation-next " aria-label="Next page: Git">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Gdb","level":"1.4.3.1","depth":3,"next":{"title":"Git","level":"1.4.3.2","depth":3,"path":"PART III/Tools/Git.md","ref":"PART III/Tools/Git.md","articles":[]},"previous":{"title":"Tools","level":"1.4.3","depth":2,"path":"PART III/Tools/README.md","ref":"PART III/Tools/README.md","articles":[{"title":"Gdb","level":"1.4.3.1","depth":3,"path":"PART III/Tools/Gdb.md","ref":"PART III/Tools/Gdb.md","articles":[]},{"title":"Git","level":"1.4.3.2","depth":3,"path":"PART III/Tools/Git.md","ref":"PART III/Tools/Git.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["ace","page-footer-ex","anchor-navigation-ex","github-buttons","-lunr","-search","search-pro"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"page-footer-ex":{"copyright":"Copyright © xjliang 2021 all right reserved，powered by Gitbook","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"该文件修订时间："},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"xjliang","repo":"auto-export-gitbook","type":"star","count":true,"size":"small"},{"user":"xjliang","type":"follow","width":"120","count":false,"size":"small"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"xjliang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"xjliang 的技术专栏","language":"zh-hans","links":{"sidebar":{"Home":"https://gnulxj.netlify.app"}},"gitbook":"*","description":"CS 学习笔记"},"file":{"path":"PART III/Tools/Gdb.md","mtime":"2021-01-31T02:13:48.750Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-31T02:14:46.752Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

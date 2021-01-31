@@ -1,0 +1,799 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Git · xjliang 的技术专栏</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="xjliang">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Gdb.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"xjliang","repo":"auto-export-gitbook","type":"star","count":true,"size":"small"},{"user":"xjliang","type":"follow","width":"120","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://gnulxj.netlify.app" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../PART I/">
+            
+                <a href="../../PART I/">
+            
+                    
+                    PART I
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../PART II/">
+            
+                <a href="../../PART II/">
+            
+                    
+                    PART II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    PART III
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Editors/">
+            
+                <a href="../Editors/">
+            
+                    
+                    Editors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Editors/Vim.html">
+            
+                <a href="../Editors/Vim.html">
+            
+                    
+                    Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Languages/">
+            
+                <a href="../Languages/">
+            
+                    
+                    Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Languages/Bash.html">
+            
+                <a href="../Languages/Bash.html">
+            
+                    
+                    Bash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Languages/Python.html">
+            
+                <a href="../Languages/Python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="Gdb.html">
+            
+                <a href="Gdb.html">
+            
+                    
+                    Gdb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3.2" data-path="Git.html">
+            
+                <a href="Git.html">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Git</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#git-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;"><b>1. </b>Git &#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;</a></li><ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;"><b>1.1. </b>&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x521D;&#x59CB;&#x5316;"><b>1.2. </b>&#x521D;&#x59CB;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x63D0;&#x4EA4;&#x4FEE;&#x6539;"><b>1.3. </b>&#x63D0;&#x4EA4;&#x4FEE;&#x6539;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x72B6;&#x6001;&#x3001;&#x6BD4;&#x5BF9;"><b>1.4. </b>&#x67E5;&#x770B;&#x72B6;&#x6001;&#x3001;&#x6BD4;&#x5BF9;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x5386;&#x53F2;&#x7248;&#x672C;&#x3001;&#x5386;&#x53F2;&#x64CD;&#x4F5C;"><b>1.5. </b>&#x67E5;&#x770B;&#x5386;&#x53F2;&#x7248;&#x672C;&#x3001;&#x5386;&#x53F2;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x7248;&#x672C;&#x56DE;&#x9000;&#x3001;&#x524D;&#x8FDB;"><b>1.6. </b>&#x7248;&#x672C;&#x56DE;&#x9000;&#x3001;&#x524D;&#x8FDB;</a></li><li><span class="title-icon "></span><a href="#&#x64A4;&#x9500;&#x4FEE;&#x6539;"><b>1.7. </b>&#x64A4;&#x9500;&#x4FEE;&#x6539;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x4E0E;&#x6062;&#x590D;"><b>1.8. </b>&#x5220;&#x9664;&#x4E0E;&#x6062;&#x590D;</a></li><li><span class="title-icon "></span><a href="#&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x533A;&#x672A;track&#x4E5F;&#x672A;ignore&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;&#x5982;&#x5404;&#x79CD;&#x4E34;&#x65F6;swp-patch&#x6587;&#x4EF6;&#x7B49;"><b>1.9. </b>&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x533A;&#x672A;track&#x4E5F;&#x672A;ignore&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;(&#x5982;&#x5404;&#x79CD;&#x4E34;&#x65F6;.swp, .patch&#x6587;&#x4EF6;&#x7B49;)</a></li><li><span class="title-icon "></span><a href="#&#x5173;&#x8054;github&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x672C;&#x5730;&#x5230;&#x8FDC;&#x7A0B;&#xFF09;"><b>1.10. </b>&#x5173;&#x8054;GitHub&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x672C;&#x5730;&#x5230;&#x8FDC;&#x7A0B;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x514B;&#x9686;github&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x8FDC;&#x7A0B;&#x5230;&#x672C;&#x5730;&#xFF09;"><b>1.11. </b>&#x514B;&#x9686;GitHub&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x8FDC;&#x7A0B;&#x5230;&#x672C;&#x5730;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x521B;&#x5EFA;&#x3001;&#x5207;&#x6362;&#x3001;&#x67E5;&#x770B;&#x3001;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;"><b>1.12. </b>&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x521B;&#x5EFA;&#x3001;&#x5207;&#x6362;&#x3001;&#x67E5;&#x770B;&#x3001;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x51B3;&#x5408;&#x5E76;&#x51B2;&#x7A81;"><b>1.13. </b>&#x89E3;&#x51B3;&#x5408;&#x5E76;&#x51B2;&#x7A81;</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x5408;&#x5E76;&#x540E;&#x5220;&#x9664;&#x5206;&#x652F;&#x4E5F;&#x5728;-log-&#x4E2D;&#x4FDD;&#x7559;&#x5206;&#x652F;&#x8BB0;&#x5F55;"><b>1.14. </b>&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x5408;&#x5E76;&#x540E;&#x5220;&#x9664;&#x5206;&#x652F;&#x4E5F;&#x5728; log &#x4E2D;&#x4FDD;&#x7559;&#x5206;&#x652F;&#x8BB0;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x5F00;&#x53D1;&#x6D41;&#x7A0B;"><b>1.15. </b>&#x5F00;&#x53D1;&#x6D41;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#bug-&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x8FDB;&#x884C;-bug-&#x4FEE;&#x590D;&#xFF09;"><b>1.16. </b>Bug &#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x8FDB;&#x884C; bug &#x4FEE;&#x590D;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#feature-&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;&#xFF09;"><b>1.17. </b>Feature &#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x534F;&#x4F5C;&#x4E0E;&#x5206;&#x652F;&#x63A8;&#x9001;"><b>1.18. </b>&#x534F;&#x4F5C;&#x4E0E;&#x5206;&#x652F;&#x63A8;&#x9001;</a></li><li><span class="title-icon "></span><a href="#&#x6807;&#x7B7E;&#x7BA1;&#x7406;&#xFF08;&#x5E38;&#x7528;&#x4E8E;&#x7248;&#x672C;&#x7BA1;&#x7406;&#xFF09;&#xFF1A;&#x67E5;&#x770B;&#x3001;&#x521B;&#x5EFA;&#x3001;&#x64CD;&#x4F5C;"><b>1.19. </b>&#x6807;&#x7B7E;&#x7BA1;&#x7406;&#xFF08;&#x5E38;&#x7528;&#x4E8E;&#x7248;&#x672C;&#x7BA1;&#x7406;&#xFF09;&#xFF1A;&#x67E5;&#x770B;&#x3001;&#x521B;&#x5EFA;&#x3001;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#rebase-&#x6362;&#x57FA;"><b>1.20. </b>rebase (&#x6362;&#x57FA;)</a></li><ul><li><span class="title-icon "></span><a href="#&#x6253;-patch-&#x8865;&#x4E01;"><b>1.20.1. </b>&#x6253; patch (&#x8865;&#x4E01;)</a></li></ul><li><span class="title-icon "></span><a href="#bundle-&#x6253;&#x5305;"><b>1.21. </b>bundle (&#x6253;&#x5305;)</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-github"><b>1.22. </b>&#x4F7F;&#x7528; GitHub</a></li><li><span class="title-icon "></span><a href="#&#x5176;&#x4ED6;&#x914D;&#x7F6E;"><b>1.23. </b>&#x5176;&#x4ED6;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;-gitignore-&#x6587;&#x4EF6;"><b>1.24. </b>&#x914D;&#x7F6E; .gitignore &#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;-gitignore-&#x751F;&#x6548;&#x540E;"><b>1.25. </b>&#x6587;&#x4EF6; .gitignore &#x751F;&#x6548;&#x540E;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x522B;&#x540D;"><b>1.26. </b>&#x914D;&#x7F6E;&#x522B;&#x540D;</a></li><li><span class="title-icon "></span><a href="#references"><b>1.27. </b>References</a></li><li><span class="title-icon "></span><a href="#&#x5B50;&#x6A21;&#x5757;"><b>1.28. </b>&#x5B50;&#x6A21;&#x5757;</a></li></ul></ul></div><a href="#git-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="git-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;"><a name="git-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;" class="anchor-navigation-ex-anchor" href="#git-&#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Git &#x4E2D;&#x6587;&#x624B;&#x518C;&#x901F;&#x67E5;&#x8868;</h1>
+<h2 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x914D;&#x7F6E;</h2>
+<pre><code class="lang-sh">git config --global <span class="hljs-string">&quot;Your Name&quot;</span>
+git config --global <span class="hljs-string">&quot;Email Address&quot;</span>
+git config --global credential.helper store    &#x4FDD;&#x5B58;&#x5BC6;&#x7801;(&#x6BCF;&#x6B21;&#x8981;&#x8F93;&#x5BC6;&#x7801;/&#x91CD;&#x590D;&#x8F93;&#x5BC6;&#x7801;)
+</code></pre>
+<h2 id="&#x521D;&#x59CB;&#x5316;"><a name="&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x521D;&#x59CB;&#x5316;</h2>
+<pre><code class="lang-sh">git init
+</code></pre>
+<h2 id="&#x63D0;&#x4EA4;&#x4FEE;&#x6539;"><a name="&#x63D0;&#x4EA4;&#x4FEE;&#x6539;" class="anchor-navigation-ex-anchor" href="#&#x63D0;&#x4EA4;&#x4FEE;&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x63D0;&#x4EA4;&#x4FEE;&#x6539;</h2>
+<pre><code class="lang-sh">git add &lt;file&gt;
+git add -u &#x63D0;&#x4EA4; work directory &#x4E2D;&#x6240;&#x6709;&#x5DF2; track &#x7684;&#x6587;&#x4EF6;&#x81F3; staging area
+git commit -m <span class="hljs-string">&quot;descriptions&quot;</span>
+git commit --amend &#x5BF9;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x7684;&#x63D0;&#x4EA4;&#x505A;&#x5185;&#x5BB9;&#x4FEE;&#x6539;
+git commit --amend --author <span class="hljs-string">&quot;user_name &lt;user_email&gt;&quot;</span> &#x4FEE;&#x6539;&#x6700;&#x8FD1;&#x63D0;&#x4EA4;&#x7528;&#x6237;&#x540D;&#x548C;&#x90AE;&#x7BB1;
+</code></pre>
+<h2 id="&#x67E5;&#x770B;&#x72B6;&#x6001;&#x3001;&#x6BD4;&#x5BF9;"><a name="&#x67E5;&#x770B;&#x72B6;&#x6001;&#x3001;&#x6BD4;&#x5BF9;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x72B6;&#x6001;&#x3001;&#x6BD4;&#x5BF9;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x67E5;&#x770B;&#x72B6;&#x6001;&#x3001;&#x6BD4;&#x5BF9;</h2>
+<pre><code class="lang-sh">git status
+git status <span class="hljs-_">-s</span> &#x6587;&#x4EF6;&#x72B6;&#x6001;&#x7F29;&#x7565;&#x4FE1;&#x606F;, &#x5E38;&#x89C1; A: &#x65B0;&#x589E;; M: &#x6587;&#x4EF6;&#x53D8;&#x66F4;; ?: &#x672A; track; D: &#x5220;&#x9664;
+git diff &lt;file&gt;
+git diff HEAD -- &lt;file&gt;                 &#x67E5;&#x770B;&#x5DE5;&#x4F5C;&#x533A;&#x548C;&#x7248;&#x672C;&#x5E93;&#x91CC;&#x9762;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;&#x533A;&#x522B;
+git diff --check &lt;file&gt;                 &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x7A7A;&#x767D;&#x9519;&#x8BEF;(regex:<span class="hljs-string">&apos; \{1,\}$&apos;</span>)
+git diff --cached &lt;file&gt;                &#x67E5;&#x770B;&#x5DF2;add&#x7684;&#x5185;&#x5BB9;(&#x7EFF;M)
+git diff branch1 branch2 --stat         &#x67E5;&#x770B;&#x4E24;&#x4E2A;&#x5206;&#x652F;&#x5DEE;&#x5F02;
+git diff branch1 branch2 &lt;file...&gt;      &#x67E5;&#x770B;&#x5206;&#x652F;&#x6587;&#x4EF6;&#x5177;&#x4F53;&#x5DEE;&#x5F02;
+</code></pre>
+<h2 id="&#x67E5;&#x770B;&#x5386;&#x53F2;&#x7248;&#x672C;&#x3001;&#x5386;&#x53F2;&#x64CD;&#x4F5C;"><a name="&#x67E5;&#x770B;&#x5386;&#x53F2;&#x7248;&#x672C;&#x3001;&#x5386;&#x53F2;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x5386;&#x53F2;&#x7248;&#x672C;&#x3001;&#x5386;&#x53F2;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x67E5;&#x770B;&#x5386;&#x53F2;&#x7248;&#x672C;&#x3001;&#x5386;&#x53F2;&#x64CD;&#x4F5C;</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">log</span>
+git reflog
+git <span class="hljs-built_in">log</span> -n                  &#x6700;&#x8FD1; n &#x6761;&#x7684;&#x63D0;&#x4EA4;&#x5386;&#x53F2;
+git <span class="hljs-built_in">log</span> &lt;branch_name&gt; -n    &#x5206;&#x652F; branch_name &#x6700;&#x8FD1; n &#x6761;&#x7684;&#x63D0;&#x4EA4;&#x5386;&#x53F2;
+git <span class="hljs-built_in">log</span> --stat              &#x5386;&#x6B21; commit &#x7684;&#x6587;&#x4EF6;&#x53D8;&#x5316;
+git <span class="hljs-built_in">log</span> --shortstat         &#x5BF9;&#x6BD4; --stat &#x53EA;&#x663E;&#x793A;&#x6700;&#x540E;&#x7684;&#x603B;&#x6587;&#x4EF6;&#x548C;&#x884C;&#x6570;&#x53D8;&#x5316;&#x7EDF;&#x8BA1;(n file changed, n insertions(+), n deletion(-))
+git <span class="hljs-built_in">log</span> --name-status       &#x663E;&#x793A;&#x65B0;&#x589E;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664;&#x7684;&#x6587;&#x4EF6;&#x6E05;&#x5355;
+git <span class="hljs-built_in">log</span> lhs_hash..rhs_<span class="hljs-built_in">hash</span>  &#x5BF9;&#x6BD4;&#x4E24;&#x6B21; commit &#x7684;&#x53D8;&#x5316;(&#x589E;&#x5220;&#x7684;&#x4E3B;&#x8BED;&#x4E3A; lhs, &#x5982; git <span class="hljs-built_in">log</span> HEAD~2..HEAD == git <span class="hljs-built_in">log</span> HEAD -3)
+git <span class="hljs-built_in">log</span> -p                  &#x5386;&#x6B21; commit &#x7684;&#x5185;&#x5BB9;&#x589E;&#x5220;
+git <span class="hljs-built_in">log</span> -p -W               &#x5386;&#x6B21; commit &#x7684;&#x5185;&#x5BB9;&#x589E;&#x5220;, &#x540C;&#x65F6;&#x663E;&#x793A;&#x53D8;&#x66F4;&#x5185;&#x5BB9;&#x7684;&#x4E0A;&#x4E0B;&#x6587;
+git <span class="hljs-built_in">log</span> origin/EI-1024 -1 --stat -p -W &#x67E5;&#x770B;&#x8FDC;&#x7AEF;&#x5206;&#x652F; EI-1024 &#x524D;&#x4E00;&#x6B21;&#x4FEE;&#x6539;&#x7684;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;
+git <span class="hljs-built_in">log</span> origin/master..dev --stat -p -W &#x67E5;&#x770B;&#x672C;&#x5730; dev &#x5206;&#x652F;&#x6BD4;&#x8FDC;&#x7AEF; master &#x5206;&#x652F;&#x53D8;&#x5316;(&#x4FEE;&#x6539;)&#x7684;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;
+
+git <span class="hljs-built_in">log</span> &lt;branch_name&gt; --oneline   &#x5BF9;&#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x5355;&#x884C;&#x6392;&#x5217;
+git <span class="hljs-built_in">log</span> &lt;branch_name&gt; --graph     &#x5BF9;&#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x56FE;&#x5F62;&#x5316;&#x6392;&#x5217;
+git <span class="hljs-built_in">log</span> &lt;branch_name&gt; --decorate  &#x5BF9;&#x63D0;&#x4EA4;&#x5386;&#x53F2;&#x5173;&#x8054;&#x76F8;&#x5173;&#x5F15;&#x7528;, &#x5982; tag, &#x672C;&#x5730;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x7B49;
+git <span class="hljs-built_in">log</span> &lt;branch_name&gt; --oneline --graph --decorate &#x62FC;&#x63A5;&#x4E00;&#x4E0B;, &#x6811;&#x5F62;&#x5316;&#x663E;&#x793A;&#x5386;&#x53F2;
+git <span class="hljs-built_in">log</span> --graph --pretty=format:<span class="hljs-string">&apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%ai(%cr) %C(bold blue)&lt;%an&gt;%Creset&apos;</span> --abbrev-commit &#x540C;&#x4E0A;, &#x5EFA;&#x8BAE;alais&#x4FDD;&#x5B58;
+
+git <span class="hljs-built_in">log</span> --pretty=format &#x5E38;&#x7528;&#x7684;&#x9009;&#x9879;(&#x6458;&#x81EA;progit_v2.1.9)
+%H &#x63D0;&#x4EA4;&#x5BF9;&#x8C61;&#xFF08;commit&#xFF09;&#x7684;&#x5B8C;&#x6574;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;
+%h &#x63D0;&#x4EA4;&#x5BF9;&#x8C61;&#x7684;&#x7B80;&#x77ED;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;
+%T &#x6811;&#x5BF9;&#x8C61;&#xFF08;tree&#xFF09;&#x7684;&#x5B8C;&#x6574;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;
+%t &#x6811;&#x5BF9;&#x8C61;&#x7684;&#x7B80;&#x77ED;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;
+%P &#x7236;&#x5BF9;&#x8C61;&#xFF08;parent&#xFF09;&#x7684;&#x5B8C;&#x6574;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;
+%p &#x7236;&#x5BF9;&#x8C61;&#x7684;&#x7B80;&#x77ED;&#x54C8;&#x5E0C;&#x5B57;&#x4E32;
+%an &#x4F5C;&#x8005;&#xFF08;author&#xFF09;&#x7684;&#x540D;&#x5B57;
+%ae &#x4F5C;&#x8005;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;
+%ad &#x4F5C;&#x8005;&#x4FEE;&#x8BA2;&#x65E5;&#x671F;&#xFF08;&#x53EF;&#x4EE5;&#x7528; --date= &#x9009;&#x9879;&#x5B9A;&#x5236;&#x683C;&#x5F0F;&#xFF09;
+%ar &#x4F5C;&#x8005;&#x4FEE;&#x8BA2;&#x65E5;&#x671F;&#xFF0C;&#x6309;&#x591A;&#x4E45;&#x4EE5;&#x524D;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;
+%cn &#x63D0;&#x4EA4;&#x8005;&#xFF08;committer&#xFF09;&#x7684;&#x540D;&#x5B57;
+%ce &#x63D0;&#x4EA4;&#x8005;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x5730;&#x5740;
+%<span class="hljs-built_in">cd</span> &#x63D0;&#x4EA4;&#x65E5;&#x671F;
+%cr &#x63D0;&#x4EA4;&#x65E5;&#x671F;&#xFF0C;&#x6309;&#x591A;&#x4E45;&#x4EE5;&#x524D;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;
+%s &#x63D0;&#x4EA4;&#x8BF4;&#x660E;
+
+git <span class="hljs-built_in">log</span> --since --after     &#x663E;&#x793A;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x7684;&#x63D0;&#x4EA4;
+git <span class="hljs-built_in">log</span> --until --before    &#x663E;&#x793A;&#x65F6;&#x95F4;&#x4E4B;&#x524D;&#x7684;&#x63D0;&#x4EA4;
+git --author                &#x663E;&#x793A;&#x6307;&#x5B9A;&#x4F5C;&#x8005;&#x7684;&#x63D0;&#x4EA4;
+git --committer             &#x663E;&#x793A;&#x6307;&#x5B9A; committer &#x7684;&#x63D0;&#x4EA4;(&#x6CE8;: committer &#x4E0D;&#x4E00;&#x5B9A;&#x662F; author)
+git <span class="hljs-built_in">log</span> -S [keyword]        &#x4EC5;&#x663E;&#x793A;&#x6DFB;&#x52A0;&#x6216;&#x79FB;&#x9664;&#x4E86;&#x67D0;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x7684;&#x63D0;&#x4EA4;(&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x6BD4;&#x5355;&#x72EC; git <span class="hljs-built_in">log</span> -p | grep [keyword] &#x597D;&#x7528;&#x5F88;&#x591A;)
+git <span class="hljs-built_in">log</span> origin/b3.3/master --author=yx-ren --since=<span class="hljs-string">&quot;2019-10-01&quot;</span> --before=<span class="hljs-string">&quot;2019-11-01&quot;</span> &#x67E5;&#x770B;&#x67D0;&#x4F5C;&#x8005;&#x5728;&#x67D0;&#x53D1;&#x5E03;&#x7248;&#x672C;&#x6700;&#x8FD1;&#x4E00;&#x4E2A;&#x6708;&#x7684;&#x63D0;&#x4EA4;, &#x5E38;&#x89C1;&#x4E8E;&#x7EBF;&#x4E0A;&#x80CC;&#x9505;
+git <span class="hljs-built_in">log</span> origin/b3.0/master --author=some_leave --since=<span class="hljs-string">&quot;1 month ago&quot;</span> &#x67E5;&#x770B;&#x67D0;&#x521A;&#x79BB;&#x804C;&#x540C;&#x4E8B;&#x8FC7;&#x53BB;&#x4E00;&#x4E2A;&#x6708;&#x7684;&#x63D0;&#x4EA4;, &#x5E38;&#x89C1;&#x4E8E;&#x80CC;&#x9505;
+git <span class="hljs-built_in">log</span> --since=1.weeks     &#x8FC7;&#x53BB;&#x4E00;&#x5468;&#x7684;&#x63D0;&#x4EA4;(&#x5199;&#x5468;&#x62A5;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x6211;&#x8FD9;&#x4E00;&#x5468;&#x5E72;&#x4E86;&#x5565;)
+git <span class="hljs-built_in">log</span> --since=1.days      &#x8FC7;&#x53BB;&#x4E00;&#x5929;&#x7684;&#x63D0;&#x4EA4;(&#x4E0B;&#x73ED;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x6211;&#x8FD9;&#x4E00;&#x5929;&#x5E72;&#x4E86;&#x5565;)
+git <span class="hljs-built_in">log</span> --since=<span class="hljs-string">&quot;1 weeks 2 days 3 hours 40 minutes 50 seconds ago&quot;</span> &#x8FC7;&#x53BB; 1 &#x5468; 2 &#x5929; 3 &#x5C0F;&#x65F6; 40 &#x5206; 50 &#x79D2;&#x4E4B;&#x5185;&#x7684;&#x63D0;&#x4EA4;
+</code></pre>
+<h2 id="&#x7248;&#x672C;&#x56DE;&#x9000;&#x3001;&#x524D;&#x8FDB;"><a name="&#x7248;&#x672C;&#x56DE;&#x9000;&#x3001;&#x524D;&#x8FDB;" class="anchor-navigation-ex-anchor" href="#&#x7248;&#x672C;&#x56DE;&#x9000;&#x3001;&#x524D;&#x8FDB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x7248;&#x672C;&#x56DE;&#x9000;&#x3001;&#x524D;&#x8FDB;</h2>
+<pre><code class="lang-sh">git reset --hard HEAD^      &#x56DE;&#x9000;&#x5230;&#x4E0A; 1 &#x7248;&#x672C;
+git reset --hard HEAD~5     &#x56DE;&#x9000;&#x5230;&#x4E0A; 5 &#x4E2A;&#x7248;&#x672C;
+git reset --hard id         &#x56DE;&#x9000;&#x5230;&#x6307;&#x5B9A;&#x7248;&#x672C;
+</code></pre>
+<h2 id="&#x64A4;&#x9500;&#x4FEE;&#x6539;"><a name="&#x64A4;&#x9500;&#x4FEE;&#x6539;" class="anchor-navigation-ex-anchor" href="#&#x64A4;&#x9500;&#x4FEE;&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x64A4;&#x9500;&#x4FEE;&#x6539;</h2>
+<pre><code class="lang-sh">git checkout -- &lt;file&gt;      &#x64A4;&#x9500;&#x4FEE;&#x6539;&#xFF1A;&#x8BEF;&#x4FEE;&#x6539;&#x5DE5;&#x4F5C;&#x533A;&#x6587;&#x4EF6;&#xFF0C;&#x672A; git add/commit
+git restore &lt;file&gt;          &#x64A4;&#x9500;&#x4FEE;&#x6539;&#xFF1A;&#x8BEF;&#x4FEE;&#x6539;&#x5DE5;&#x4F5C;&#x533A;&#x6587;&#x4EF6;&#xFF0C;&#x672A; git add/commit
+git reset HEAD &lt;file&gt;       &#x64A4;&#x9500; git add&#xFF1A;&#x8BEF;&#x5C06;&#x6587;&#x4EF6;&#x52A0;&#x5165;&#x6682;&#x5B58;&#x533A;&#xFF08;git add&#xFF09;&#xFF0C;&#x672A; git commit
+git reset --hard HEAD^      &#x64A4;&#x9500; git commit&#xFF1A;&#x8BEF;&#x5C06;&#x6587;&#x4EF6;&#x63D0;&#x4EA4;&#xFF08;&#x4E00;&#x65E6;&#x63D0;&#x4EA4;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x7248;&#x672C;&#x56DE;&#x9000;&#x8FDB;&#x884C;&#x64A4;&#x9500;&#xFF09;
+</code></pre>
+<h2 id="&#x5220;&#x9664;&#x4E0E;&#x6062;&#x590D;"><a name="&#x5220;&#x9664;&#x4E0E;&#x6062;&#x590D;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x4E0E;&#x6062;&#x590D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x5220;&#x9664;&#x4E0E;&#x6062;&#x590D;</h2>
+<pre><code class="lang-sh">git rm/add &lt;file&gt;
+git commit -m <span class="hljs-string">&quot;remove &lt;file&gt;&quot;</span>   &#x5220;&#x9664;&#x7248;&#x672C;&#x5E93;&#x4E2D;&#x7684; &lt;file&gt;&#xFF1A;&#x5220;&#x9664;&#x5DE5;&#x4F5C;&#x533A;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x7EE7;&#x7EED;&#x5220;&#x9664;&#x7248;&#x672C;&#x5E93;&#x4E2D;&#x76F8;&#x5E94;&#x7684;&#x6587;&#x4EF6;
+git checkout -- &lt;file&gt;          &#x6839;&#x636E;&#x7248;&#x672C;&#x5E93;&#x4E2D;&#x7684; &lt;file&gt; &#x6062;&#x590D;&#x5DE5;&#x4F5C;&#x533A; &lt;file&gt;
+</code></pre>
+<h2 id="&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x533A;&#x672A;track&#x4E5F;&#x672A;ignore&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;&#x5982;&#x5404;&#x79CD;&#x4E34;&#x65F6;swp-patch&#x6587;&#x4EF6;&#x7B49;"><a name="&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x533A;&#x672A;track&#x4E5F;&#x672A;ignore&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;&#x5982;&#x5404;&#x79CD;&#x4E34;&#x65F6;swp-patch&#x6587;&#x4EF6;&#x7B49;" class="anchor-navigation-ex-anchor" href="#&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x533A;&#x672A;track&#x4E5F;&#x672A;ignore&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;&#x5982;&#x5404;&#x79CD;&#x4E34;&#x65F6;swp-patch&#x6587;&#x4EF6;&#x7B49;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. &#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x533A;&#x672A;track&#x4E5F;&#x672A;ignore&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;(&#x5982;&#x5404;&#x79CD;&#x4E34;&#x65F6;.swp, .patch&#x6587;&#x4EF6;&#x7B49;)</h2>
+<pre><code class="lang-sh">git clean -i    <span class="hljs-comment">#&#x4EA4;&#x4E92;&#x5F0F;&#x6E05;&#x7406;, &#x4E0D;&#x5E38;&#x7528;</span>
+git clean -n    <span class="hljs-comment">#&#x67E5;&#x770B;&#x6E05;&#x7406;&#x6587;&#x4EF6;&#x5217;&#x8868;(&#x4E0D;&#x5305;&#x62EC;&#x6587;&#x4EF6;&#x5939;), &#x4E0D;&#x6267;&#x884C;&#x5B9E;&#x9645;&#x6E05;&#x7406;&#x52A8;&#x4F5C;</span>
+git clean -n <span class="hljs-_">-d</span> <span class="hljs-comment">#&#x67E5;&#x770B;&#x6E05;&#x7406;&#x6587;&#x4EF6;&#x5217;&#x8868;(&#x5305;&#x62EC;&#x6587;&#x4EF6;&#x5939;), &#x4E0D;&#x6267;&#x884C;&#x5B9E;&#x9645;&#x6E05;&#x7406;&#x52A8;&#x4F5C;</span>
+git clean <span class="hljs-_">-f</span>    <span class="hljs-comment">#&#x6E05;&#x7406;&#x6240;&#x6709;&#x672A; track &#x6587;&#x4EF6;</span>
+git clean -df   <span class="hljs-comment">#&#x6E05;&#x7406;&#x6240;&#x6709;&#x672A; track &#x6587;&#x4EF6;&#x548C;&#x6587;&#x4EF6;&#x5939;, &#x5E38;&#x7528;, &#x4F46;&#x4F7F;&#x7528;&#x524D;&#x786E;&#x4FDD;&#x65B0;&#x589E;&#x52A0;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6587;&#x4EF6;&#x5939;&#x5DF2; add, &#x5426;&#x5219;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x5939;&#x4E5F;&#x4F1A;&#x88AB;&#x5F3A;&#x5236;&#x5220;&#x9664;</span>
+</code></pre>
+<h2 id="&#x5173;&#x8054;github&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x672C;&#x5730;&#x5230;&#x8FDC;&#x7A0B;&#xFF09;"><a name="&#x5173;&#x8054;github&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x672C;&#x5730;&#x5230;&#x8FDC;&#x7A0B;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x8054;github&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x672C;&#x5730;&#x5230;&#x8FDC;&#x7A0B;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. &#x5173;&#x8054;GitHub&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x672C;&#x5730;&#x5230;&#x8FDC;&#x7A0B;&#xFF09;</h2>
+<pre><code class="lang-sh">git remote add origin &lt;remote address&gt;    &#x5728;&#x672C;&#x5730;&#x5DE5;&#x4F5C;&#x533A;&#x76EE;&#x5F55;&#x4E0B;&#x6309;&#x7167; GitHub &#x63D0;&#x793A;&#x8FDB;&#x884C;&#x5173;&#x8054;
+git remote rm origin                      &#x89E3;&#x9664;&#x9519;&#x8BEF;&#x5173;&#x8054;
+git push -u origin master                 &#x7B2C;&#x4E00;&#x6B21;&#x5C06;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x63A8;&#x9001;&#x81F3;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x6BCF;&#x6B21;&#x5728;&#x672C;&#x5730;&#x63D0;&#x4EA4;&#x540E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF09;
+git push origin master                    &#x4EE5;&#x540E;&#x6BCF;&#x6B21;&#x5C06;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x63A8;&#x9001;&#x81F3;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x6BCF;&#x6B21;&#x5728;&#x672C;&#x5730;&#x63D0;&#x4EA4;&#x540E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF09;
+&lt;remote address&gt;:
+    git@github.com:&lt;username&gt;/&lt;repository&gt;.git
+    https://github.com/&lt;username&gt;/&lt;repository&gt;.git
+</code></pre>
+<h2 id="&#x514B;&#x9686;github&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x8FDC;&#x7A0B;&#x5230;&#x672C;&#x5730;&#xFF09;"><a name="&#x514B;&#x9686;github&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x8FDC;&#x7A0B;&#x5230;&#x672C;&#x5730;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x514B;&#x9686;github&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x8FDC;&#x7A0B;&#x5230;&#x672C;&#x5730;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. &#x514B;&#x9686;GitHub&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#xFF08;&#x8FDC;&#x7A0B;&#x5230;&#x672C;&#x5730;&#xFF09;</h2>
+<pre><code class="lang-sh">git <span class="hljs-built_in">clone</span> &lt;remote address&gt;    git&#x534F;&#x8BAE;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;&#x4F46;&#x901A;&#x5E38;&#x516C;&#x53F8;&#x5185;&#x7F51;&#x4E0D;&#x5141;&#x8BB8;&#xFF0C;https&#x534F;&#x8BAE;&#x901F;&#x5EA6;&#x6162;
+</code></pre>
+<h2 id="&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x521B;&#x5EFA;&#x3001;&#x5207;&#x6362;&#x3001;&#x67E5;&#x770B;&#x3001;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;"><a name="&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x521B;&#x5EFA;&#x3001;&#x5207;&#x6362;&#x3001;&#x67E5;&#x770B;&#x3001;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x521B;&#x5EFA;&#x3001;&#x5207;&#x6362;&#x3001;&#x67E5;&#x770B;&#x3001;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. &#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x521B;&#x5EFA;&#x3001;&#x5207;&#x6362;&#x3001;&#x67E5;&#x770B;&#x3001;&#x5408;&#x5E76;&#x3001;&#x5220;&#x9664;</h2>
+<pre><code class="lang-sh">git branch &lt;branch name&gt;            &#x521B;&#x5EFA;&lt;branch name&gt;&#x5206;&#x652F;
+git checkout &lt;branch name&gt;          &#x5207;&#x6362;&#x81F3;&lt;branch name&gt;&#x5206;&#x652F;
+git switch &lt;branch name&gt;            &#x5207;&#x6362;&#x81F3;&lt;branch name&gt;&#x5206;&#x652F;
+git checkout -b &lt;branch name&gt;       &#x521B;&#x5EFA;&#x5E76;&#x5207;&#x6362;&#x81F3;&lt;branch name&gt;&#x5206;&#x652F;
+git switch -c &lt;branch name&gt;         &#x521B;&#x5EFA;&#x5E76;&#x5207;&#x6362;&#x81F3;&lt;branch name&gt;&#x5206;&#x652F;
+git branch                          &#x67E5;&#x770B;&#x5DF2;&#x6709;&#x5206;&#x652F;&#xFF08;* &#x8868;&#x793A;&#x5F53;&#x524D;&#x5206;&#x652F;&#xFF09;
+git merge &lt;branch name&gt;             &#x5408;&#x5E76;&lt;branch name&gt;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#xFF08;&#x901A;&#x5E38;&#x5728;master&#x5206;&#x652F;&#x4E0B;&#x64CD;&#x4F5C;&#xFF09;
+git branch <span class="hljs-_">-d</span> &lt;branch name&gt;         &#x5220;&#x9664;&#x5206;&#x652F;
+git branch -m oldbranchname newname &#x5220;&#x9664;&#x5206;&#x652F;
+</code></pre>
+<h2 id="&#x89E3;&#x51B3;&#x5408;&#x5E76;&#x51B2;&#x7A81;"><a name="&#x89E3;&#x51B3;&#x5408;&#x5E76;&#x51B2;&#x7A81;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x51B3;&#x5408;&#x5E76;&#x51B2;&#x7A81;"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. &#x89E3;&#x51B3;&#x5408;&#x5E76;&#x51B2;&#x7A81;</h2>
+<pre><code class="lang-sh">&#x5408;&#x5E76;&#x65F6;&#x62A5;&#x9519;&#x201C;&#x5206;&#x652F;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#x201D;&#xFF0C;&#x9996;&#x5148;vim&#x76F8;&#x5E94;&#x6587;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;&#x51B2;&#x7A81;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x6309;&#x7167;git add/commit&#x91CD;&#x65B0;&#x63D0;&#x4EA4;&#xFF0C;&#x6700;&#x540E;&#x5220;&#x9664;&#x591A;&#x4F59;&#x5206;&#x652F;&#x5373;&#x53EF;&#x3002;
+git <span class="hljs-built_in">log</span> --graph --pretty=oneline --abbrev-commit
+git <span class="hljs-built_in">log</span> --graph
+</code></pre>
+<h2 id="&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x5408;&#x5E76;&#x540E;&#x5220;&#x9664;&#x5206;&#x652F;&#x4E5F;&#x5728;-log-&#x4E2D;&#x4FDD;&#x7559;&#x5206;&#x652F;&#x8BB0;&#x5F55;"><a name="&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x5408;&#x5E76;&#x540E;&#x5220;&#x9664;&#x5206;&#x652F;&#x4E5F;&#x5728;-log-&#x4E2D;&#x4FDD;&#x7559;&#x5206;&#x652F;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x5408;&#x5E76;&#x540E;&#x5220;&#x9664;&#x5206;&#x652F;&#x4E5F;&#x5728;-log-&#x4E2D;&#x4FDD;&#x7559;&#x5206;&#x652F;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.14. &#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF1A;&#x5408;&#x5E76;&#x540E;&#x5220;&#x9664;&#x5206;&#x652F;&#x4E5F;&#x5728; log &#x4E2D;&#x4FDD;&#x7559;&#x5206;&#x652F;&#x8BB0;&#x5F55;</h2>
+<pre><code class="lang-sh">git merge --no-ff -m <span class="hljs-string">&quot;descriptions&quot;</span> &lt;branch name&gt;
+</code></pre>
+<h2 id="&#x5F00;&#x53D1;&#x6D41;&#x7A0B;"><a name="&#x5F00;&#x53D1;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x53D1;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.15. &#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h2>
+<pre><code class="lang-sh">master &#x5206;&#x652F;              &#x53D1;&#x5E03;&#x7A33;&#x5B9A;&#x7248;&#x672C;
+dev &#x5206;&#x652F;                 &#x53D1;&#x5E03;&#x5F00;&#x53D1;&#x7248;&#x672C;
+&lt;developer name&gt; &#x5206;&#x652F;    &#x4E2A;&#x4EBA;&#x5F00;&#x53D1;&#x5206;&#x652F;&#xFF08;&#x4E2A;&#x4EBA;&#x5F00;&#x53D1;&#x5B8C;&#x6210;&#x5C06;&#x8BE5;&#x5206;&#x652F;&#x5E76;&#x5165; dev&#xFF0C;&#x540C;&#x65F6;&#x4FDD;&#x7559;&#x8BE5;&#x5206;&#x652F;&#xFF0C;&#x7EE7;&#x7EED;&#x5F00;&#x53D1;&#xFF09;
+</code></pre>
+<h2 id="bug-&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x8FDB;&#x884C;-bug-&#x4FEE;&#x590D;&#xFF09;"><a name="bug-&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x8FDB;&#x884C;-bug-&#x4FEE;&#x590D;&#xFF09;" class="anchor-navigation-ex-anchor" href="#bug-&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x8FDB;&#x884C;-bug-&#x4FEE;&#x590D;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.16. Bug &#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x8FDB;&#x884C; bug &#x4FEE;&#x590D;&#xFF09;</h2>
+<pre><code class="lang-shell">&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;bug &#x5C31;&#x50CF;&#x5BB6;&#x5E38;&#x4FBF;&#x996D;&#x4E00;&#x6837;&#x3002;&#x6709;&#x4E86; bug &#x5C31;&#x9700;&#x8981;&#x4FEE;&#x590D;&#xFF0C;&#x5728; Git &#x4E2D;&#xFF0C;&#x7531;&#x4E8E;&#x5206;&#x652F;&#x662F;&#x5982;&#x6B64;&#x7684;&#x5F3A;&#x5927;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6BCF;&#x4E2A; bug &#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4E34;&#x65F6;&#x5206;&#x652F;&#x6765;&#x4FEE;&#x590D;&#xFF0C;&#x4FEE;&#x590D;&#x540E;&#xFF0C;&#x5408;&#x5E76;&#x5206;&#x652F;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x4E34;&#x65F6;&#x5206;&#x652F;&#x5220;&#x9664;&#x3002;
+git stash                   &#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;&#xFF08;&#x5728; dev &#x672A;&#x5B8C;&#x6210;&#x5F00;&#x53D1;&#xFF0C;&#x4F46; master &#x6709; bug &#x9700;&#x8981;&#x4FEE;&#x590D;&#xFF09;
+git stash pop               &#x56DE;&#x5230; dev &#x5206;&#x652F;&#x540E;&#x6062;&#x590D;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;&#xFF08;list&#x4E2D;&#x7684;&#x73B0;&#x573A;&#x4F1A;&#x540C;&#x65F6;&#x88AB;&#x5220;&#x9664;&#xFF09;
+git stash list              &#x67E5;&#x770B;&#x5F53;&#x524D;&#x5B58;&#x50A8;&#x7684;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;
+git stash apply stash@{#}   &#x56DE;&#x5230;&#x6307;&#x5B9A;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;&#xFF08;list &#x4E2D;&#x7684;&#x73B0;&#x573A;&#x4E0D;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x9700;&#x8981;&#x7528; git stash drop&#xFF09;
+git stash drop stash@{#}    &#x5220;&#x9664;&#x6307;&#x5B9A;&#x5DE5;&#x4F5C;&#x73B0;&#x573A;
+git cherry-pick &lt;id&gt;        &#x5728; master &#x4FEE;&#x590D;&#x597D; bug &#x540E;&#xFF0C;&#x5728; dev &#x590D;&#x5236;&#x4E00;&#x904D; bug &#x4FEE;&#x590D;&#x6D41;&#x7A0B;
+</code></pre>
+<h2 id="feature-&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;&#xFF09;"><a name="feature-&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;&#xFF09;" class="anchor-navigation-ex-anchor" href="#feature-&#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.17. Feature &#x5206;&#x652F;&#x7BA1;&#x7406;&#xFF08;&#x5EFA;&#x7ACB;&#x5355;&#x72EC;&#x5206;&#x652F;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;&#xFF09;</h2>
+<pre><code class="lang-sh">&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x603B;&#x6709;&#x65E0;&#x7A77;&#x65E0;&#x5C3D;&#x7684;&#x65B0;&#x7684;&#x529F;&#x80FD;&#x8981;&#x4E0D;&#x65AD;&#x6DFB;&#x52A0;&#x8FDB;&#x6765;&#x3002;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x529F;&#x80FD;&#x65F6;&#xFF0C;&#x4F60;&#x80AF;&#x5B9A;&#x4E0D;&#x5E0C;&#x671B;&#x56E0;&#x4E3A;&#x4E00;&#x4E9B;&#x5B9E;&#x9A8C;&#x6027;&#x8D28;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x628A;&#x4E3B;&#x5206;&#x652F;&#x641E;&#x4E71;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6BCF;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x6700;&#x597D;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; feature &#x5206;&#x652F;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x5F00;&#x53D1;&#xFF0C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5408;&#x5E76;&#xFF0C;&#x6700;&#x540E;&#xFF0C;&#x5220;&#x9664;&#x8BE5; feature &#x5206;&#x652F;&#x3002;
+git branch -D &lt;branch name&gt;    &#x5F3A;&#x5236;&#x5220;&#x9664;&#x5206;&#x652F;&#xFF08;&#x4E22;&#x5F03;&#x672A;&#x5408;&#x5E76;&#x5206;&#x652F;&#xFF09;
+</code></pre>
+<h2 id="&#x534F;&#x4F5C;&#x4E0E;&#x5206;&#x652F;&#x63A8;&#x9001;"><a name="&#x534F;&#x4F5C;&#x4E0E;&#x5206;&#x652F;&#x63A8;&#x9001;" class="anchor-navigation-ex-anchor" href="#&#x534F;&#x4F5C;&#x4E0E;&#x5206;&#x652F;&#x63A8;&#x9001;"><i class="fa fa-link" aria-hidden="true"></i></a>1.18. &#x534F;&#x4F5C;&#x4E0E;&#x5206;&#x652F;&#x63A8;&#x9001;</h2>
+<p>User 1:</p>
+<pre><code class="lang-sh">git remote [-v]                        &#x67E5;&#x770B;&#x8FDC;&#x7A0B;&#x5E93;&#x4FE1;&#x606F;&#xFF08;-v &#x67E5;&#x770B;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF09;
+git remote update origin --prune       &#x66F4;&#x65B0;&#x5206;&#x652F;&#x5217;&#x8868;(&#x66F4;&#x65B0;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x5217;&#x8868;)
+git remote update origin -p            &#x66F4;&#x65B0;&#x5206;&#x652F;&#x5217;&#x8868;(&#x66F4;&#x65B0;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x5217;&#x8868;)
+git push origin [master/dev/...]       &#x63A8;&#x9001;&#x6307;&#x5B9A;&#x5206;&#x652F;&#x5230;&#x8FDC;&#x7A0B;
+</code></pre>
+<p>User 2:</p>
+<pre><code class="lang-sh">git <span class="hljs-built_in">clone</span> &lt;remote address&gt;             &#x514B;&#x9686;&#x5230;&#x672C;&#x5730;&#xFF08;&#x53EA;&#x80FD;&#x514B;&#x9686; master&#xFF09;
+git checkout -b dev origin/dev         &#x672C;&#x5730;&#x65B0;&#x5EFA;&#x5206;&#x652F;&#x5E76;&#x5173;&#x8054;&#x8FDC;&#x7A0B;
+git add/commit/push                    &#x6DFB;&#x52A0;&#x3001;&#x63D0;&#x4EA4;&#x3001;&#x63A8;&#x9001;&#x66F4;&#x65B0;
+</code></pre>
+<p>User 1:</p>
+<pre><code class="lang-sh">git add/commit/push                    &#x63A8;&#x9001;&#x65F6;&#x62A5;&#x9519;&#xFF08;&#x4E0E; user2 &#x63A8;&#x9001;&#x7684;&#x66F4;&#x65B0;&#x51B2;&#x7A81;&#xFF09;
+git pull &lt;remote&gt; &lt;branch&gt;
+git branch --set-upstream-to=origin/&lt;branch&gt; &lt;branch&gt;    &#x672C;&#x5730;&#x4E0E;&#x8FDC;&#x7A0B;&#x5173;&#x8054;
+git pull                               &#x62C9;&#x53D6;&#x8FDC;&#x7A0B;&#x6587;&#x4EF6;&#xFF08;&#x5E76;&#x89E3;&#x51B3;&#x51B2;&#x7A81;&#xFF09;
+git commit/push                        &#x91CD;&#x65B0;&#x63D0;&#x4EA4;&#x5E76;&#x63A8;&#x9001;
+</code></pre>
+<h2 id="&#x6807;&#x7B7E;&#x7BA1;&#x7406;&#xFF08;&#x5E38;&#x7528;&#x4E8E;&#x7248;&#x672C;&#x7BA1;&#x7406;&#xFF09;&#xFF1A;&#x67E5;&#x770B;&#x3001;&#x521B;&#x5EFA;&#x3001;&#x64CD;&#x4F5C;"><a name="&#x6807;&#x7B7E;&#x7BA1;&#x7406;&#xFF08;&#x5E38;&#x7528;&#x4E8E;&#x7248;&#x672C;&#x7BA1;&#x7406;&#xFF09;&#xFF1A;&#x67E5;&#x770B;&#x3001;&#x521B;&#x5EFA;&#x3001;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6807;&#x7B7E;&#x7BA1;&#x7406;&#xFF08;&#x5E38;&#x7528;&#x4E8E;&#x7248;&#x672C;&#x7BA1;&#x7406;&#xFF09;&#xFF1A;&#x67E5;&#x770B;&#x3001;&#x521B;&#x5EFA;&#x3001;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.19. &#x6807;&#x7B7E;&#x7BA1;&#x7406;&#xFF08;&#x5E38;&#x7528;&#x4E8E;&#x7248;&#x672C;&#x7BA1;&#x7406;&#xFF09;&#xFF1A;&#x67E5;&#x770B;&#x3001;&#x521B;&#x5EFA;&#x3001;&#x64CD;&#x4F5C;</h2>
+<pre><code class="lang-sh">git tag                                                     &#x67E5;&#x770B;&#x6807;&#x7B7E;
+git show &lt;tag name&gt;                                         &#x67E5;&#x770B;&#x6307;&#x5B9A;&#x6807;&#x7B7E;
+git <span class="hljs-built_in">log</span> --pretty=oneline --abbrev-commit --decorate=full    &#x5728; <span class="hljs-built_in">log</span> &#x4E2D;&#x663E;&#x793A;&#x6807;&#x7B7E;
+git tag &lt;tag name&gt;                                          &#x4E3A;&#x4E0A;&#x6B21; commit &#x4F4D;&#x7F6E;&#x6253;&#x6807;&#x7B7E;
+git tag &lt;tag name&gt; &lt;commit id&gt;                              &#x4E3A;&#x6307;&#x5B9A; commit &#x4F4D;&#x7F6E;&#x6253;&#x6807;&#x7B7E;
+git tag <span class="hljs-_">-a</span> &lt;tag name&gt; -m <span class="hljs-string">&quot;descriptions&quot;</span> &lt;commit id&gt;         &#x4E3A;&#x6307;&#x5B9A; commit &#x6253;&#x6807;&#x5E76;&#x6DFB;&#x52A0;&#x63CF;&#x8FF0;
+git tag <span class="hljs-_">-d</span> &lt;tag name&gt;                                       &#x5220;&#x9664;&#x672C;&#x5730;&#x6807;&#x7B7E;
+git push origin &lt;tag name&gt;                                  &#x63A8;&#x9001;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x5230;&#x8FDC;&#x7A0B;
+git push origin --tags                                      &#x63A8;&#x9001;&#x6240;&#x6709;&#x672C;&#x5730;&#x6807;&#x7B7E;&#x5230;&#x8FDC;&#x7A0B;
+git push origin :refs/tags/&lt;tag name&gt;                       &#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x6807;&#x7B7E;&#xFF08;&#x5148;&#x5220;&#x9664;&#x672C;&#x5730;&#x6807;&#x7B7E;&#xFF09;
+</code></pre>
+<h2 id="rebase-&#x6362;&#x57FA;"><a name="rebase-&#x6362;&#x57FA;" class="anchor-navigation-ex-anchor" href="#rebase-&#x6362;&#x57FA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.20. rebase (&#x6362;&#x57FA;)</h2>
+<p>rebase &#x5728;&#x65E5;&#x5E38;&#x4E2D;&#x5E38;&#x7528;&#x529F;&#x80FD;&#x4E3B;&#x8981;&#x662F;&#x4E24;&#x4E2A;, &#x591A;&#x4EBA;&#x534F;&#x540C;&#x5F00;&#x53D1;&#x5B9A;&#x671F; rebase master &#x4EE5;&#x53CA;&#x538B;&#x7F29;&#x67D0;&#x5206;&#x652F;&#x591A;&#x4E2A;commit
+git rebase master &#x5E38;&#x89C1;&#x4E8E;&#x591A;&#x4EBA;&#x5F00;&#x53D1;, &#x6BCF;&#x4E2A;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4ECE; master checkout &#x51FA;&#x81EA;&#x5DF1;&#x7684;&#x5206;&#x652F;, &#x5F00;&#x53D1;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#x63D0;&#x4EA4;&#x81F3; master &#x4E4B;&#x524D;&#x6700;&#x597D; rebase &#x4E00;&#x4E0B;, &#x9632;&#x6B62;&#x51B2;&#x7A81;,
+&#x5C31;&#x7B97;&#x771F;&#x6709;&#x51B2;&#x7A81;&#x5728;&#x672C;&#x5730;&#x89E3;&#x51B3;&#x597D;&#x8FC7;&#x5F3A;&#x5236;&#x63D0;&#x4EA4;, &#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#x4E2D;&#x5C3D;&#x91CF;&#x4FDD;&#x8BC1; master &#x7684;&#x5E72;&#x51C0;&#x6574;&#x6D01;</p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;:
+master &#x5206;&#x652F;&#x4E0A;&#x6709;&#x4E09;&#x4E2A;&#x63D0;&#x4EA4;C1, C2, C3
+&#x67D0;&#x4E00;&#x65F6;&#x523B; usr1 &#x5728; C3 &#x7684; master &#x5206;&#x652F;&#x4E0A; checkout &#x51FA;&#x65B0;&#x7684;&#x5206;&#x652F;, &#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x7AEF;&#x652F;&#x6301; ipv6 &#x65B0;&#x7279;&#x6027;, &#x5E76;&#x63D0;&#x4EA4;&#x4E86; C4, C5</p>
+<pre><code class="lang-sh">git checkout -b ipv6_support
+......
+git commit -m C4
+......
+git commit -m C5
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x63D0;&#x4EA4;&#x72B6;&#x6001;&#x5982;&#x4E0B;&#x6240;&#x793A;</p>
+<pre><code>      (origin/master branch)
+             |
+C1 &lt;- C2 &lt;- C3
+             \
+              \
+               \
+                C4 &lt;- C5
+                       |
+                (ipv6_support branch)
+</code></pre><p>&#x67D0;&#x540C;&#x4E8B; usr2 &#x4FEE;&#x6539;&#x4E86; master &#x4E0A;&#x7684;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x9519;&#x8BEF;, &#x5E76;&#x63D0;&#x4EA4;&#x4E86; C6, C7, C8 &#x4E09;&#x4E2A; commit, &#x7136;&#x540E;&#x76F4;&#x63A5;&#x63A8;&#x9001; origin/master (&#x5047;&#x8BBE;&#x8FD9;&#x4E2A;&#x671F;&#x95F4;&#x65E0;&#x5176;&#x4ED6;&#x4EBA;&#x63A8;&#x65B0;&#x5185;&#x5BB9;&#x5230; master)
+&#x6B64;&#x65F6;&#x63D0;&#x4EA4;&#x72B6;&#x6001;&#x5982;&#x4E0B;&#x6240;&#x793A;</p>
+<pre><code>                    (origin/usr2/fix_mem_leak branch)
+                               |
+C1 &lt;- C2 &lt;- C3 &lt;- C6 &lt;- C7 &lt;- C8
+             \                 |
+              \         (origin/master branch)
+               \
+                C4 &lt;- C5
+                       |
+                (ipv6_support branch)
+</code></pre><p>&#x5982;&#x679C;&#x6B64;&#x65F6; usr1 &#x5E0C;&#x671B;&#x5C06; ipv6 &#x7684;&#x65B0;&#x7279;&#x6027;&#x63D0;&#x4EA4;&#x81F3; master, &#x90A3;&#x4E48;&#x5728;&#x5176;&#x76F4;&#x63A5; push origin master &#x65F6;&#x4F1A;&#x63D0;&#x793A; master &#x9700;&#x8981;&#x5408;&#x5E76;&#x5206;&#x652F; ipv6_support
+&#x867D;&#x7136; C4, C5 &#x7684;&#x6539;&#x52A8;&#x5185;&#x5BB9;&#x5B8C;&#x5168;&#x72EC;&#x7ACB;&#x4E8E; C6, C7, C8 &#x7684;&#x6539;&#x52A8;
+&#x4F46; git &#x4ECD;&#x4F1A;&#x6293;&#x53D6; C5 &#x548C; C8 &#x7684;&#x63D0;&#x4EA4;&#x5E76;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684; C9 commit (&#x56E0;&#x4E24;&#x8005;&#x5206;&#x652F;&#x7684; base &#x4E0D;&#x540C;), &#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;</p>
+<pre><code>C1 &lt;- C2 &lt;- C3 &lt;- C6 &lt;- C7 &lt;- C8
+             \                 \
+              \                 \
+               \                 \
+                C4 &lt;- C5 &lt;------ C9
+</code></pre><p>&#x5982;&#x679C;&#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1; master &#x63D0;&#x4EA4;&#x8BB0;&#x5F55;&#x7684;&quot;&#x5E72;&#x51C0;&#x5B8C;&#x6574;&quot;
+&#x6216;&#x8005;&#x662F;&#x67D0;&#x5206;&#x652F;&#x4E0D;&#x7740;&#x6025;&#x63D0;&#x4EA4;, &#x4ECD;&#x9700;&#x8981;&#x66F4;&#x591A;&#x7684;&#x6D4B;&#x8BD5;&#x4E0E;&#x5F00;&#x53D1;, &#x4F46;&#x53C8;&#x4E0D;&#x60F3;&#x5206;&#x652F;&#x5F00;&#x53D1;&#x5468;&#x671F;&#x7ED3;&#x675F;&#x540E;&quot;&#x504F;&#x79BB;&quot;&#x5F53;&#x521D; checkout &#x7684; master &#x5206;&#x652F;&#x592A;&#x4E45;&#x8FDC;(&#x5BB9;&#x6613;&#x9020;&#x6210;&#x66F4;&#x591A;&#x7684;&#x51B2;&#x7A81;)
+&#x53EF;&#x4EE5;&#x8003;&#x8651;(&#x5B9A;&#x671F;)&#x5229;&#x7528; rebase &#x6765;&#x8FDB;&#x884C;&#x53D8;&#x57FA;
+&#x5373;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x8FC7;&#x7684;&#x591A;&#x4EBA;&#x534F;&#x540C;&#x5F00;&#x53D1;, &#x5B9A;&#x671F; rebase master &#x662F;&#x4E2A;&#x597D;&#x4E60;&#x60EF;</p>
+<pre><code class="lang-sh">git checkout ipv6_support
+git rebase master
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x63D0;&#x4EA4;&#x72B6;&#x6001;&#x5982;&#x4E0B;&#x6240;&#x793A;</p>
+<pre><code>            (origin/master origin/usr2/fix_mem_leak branch)
+                               |
+C1 &lt;- C2 &lt;- C3 &lt;- C6 &lt;- C7 &lt;- C8
+                                \
+                                 \
+                                  \
+                                   C4&apos; &lt;- C5&apos;
+                                           |
+                                    (ipv6_support branch)
+</code></pre><p>&#x8FD9;&#x79CD; rebase &#x5728;&#x529F;&#x80FD;&#x4E0A;&#x7C7B;&#x4F3C;&#x5C06;&#x67D0;&#x5206;&#x652F;&#x6240;&#x6709;&#x7684;&#x6539;&#x52A8;&#x505A;&#x6210;&#x591A;&#x4E2A; patch &#x5E76;&#x4F9D;&#x6B21;&#x6253;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x65B0; base &#x4E0A;
+&#x6B64;&#x65F6;&#x518D;&#x63D0;&#x4EA4; master &#x5C31;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x6293;&#x53D6;&#x6548;&#x679C;, &#x4F1A;&#x5C06; C4&apos; &#x548C; C5&apos; &#x76F4;&#x63A5;&#x63D0;&#x4EA4;&#x81F3; master, &#x5373; <code>can be fast-forwarded</code>, &#x540C;&#x65F6;&#x4E5F;&#x4FDD;&#x8BC1;&#x4E86; master &#x63D0;&#x4EA4;&#x8BB0;&#x5F55;&#x7684;&#x6574;&#x6D01;&#x6027;
+(&#x6CE8;: &#x867D;&#x7136; C4&apos; &#x548C; C5&apos; &#x7684;&#x5185;&#x5BB9;&#x548C; C4, C5 &#x5B8C;&#x5168;&#x4E00;&#x81F4;, &#x4F46;&#x4E24;&#x8005; base &#x4E0D;&#x540C;, <code>commit hash code</code> &#x4E5F;&#x5B8C;&#x5168;&#x4E0D;&#x540C;)</p>
+<pre><code class="lang-shell">git rebase --noto &lt;branch_lhs&gt; &lt;branch_rhs&gt; #&#x91CD;&#x653E;, &#x7528;&#x4E8E;&#x53D8;&#x57FA;&#x5728;&#x5206;&#x652F;branch_lhs&#x4E2D;&#x800C;&#x4E0D;&#x5728;branch_rhs&#x4E2D;&#x7684;commit
+</code></pre>
+<p>&#x67D0;&#x9879;&#x76EE;&#x72B6;&#x6001;&#x5206;&#x652F;&#x5982;&#x4E0B;&#x6240;&#x793A;, &#x5176;&#x4E2D; Cn &#x7684;&#x6570;&#x5B57;&#x4EE3;&#x8868;&#x63D0;&#x4EA4;&#x65F6;&#x95F4;&#x987A;&#x5E8F;</p>
+<ul>
+<li>T1 &#x67D0;&#x5458;&#x5DE5; urs1 &#x4ECE; C2 (master &#x5206;&#x652F;) checkout &#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5206;&#x652F;&#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x67D0;&#x57FA;&#x7840;&#x516C;&#x5171;&#x7EC4;&#x4EF6;&#x529F;&#x80FD;</li>
+<li>T2 &#x5458;&#x5DE5; usr1 &#x5F00;&#x53D1;&#x5B8C;&#x6BD5;&#x63D0;&#x4EA4; C3, &#x7136;&#x540E;&#x7EE7;&#x7EED;&#x5728;&#x8BE5;&#x5206;&#x652F;&#x4E0A;(&#x6216; <code>checkout -b server</code>) &#x5F00;&#x53D1;&#x670D;&#x52A1;&#x7AEF;&#x76F8;&#x5173;&#x529F;&#x80FD;, &#x5E76;&#x63D0;&#x4EA4; C4</li>
+<li>T3 master &#x5206;&#x652F;&#x6709;&#x66F4;&#x65B0;, &#x5176;&#x4ED6;&#x540C;&#x4E8B; usr2 &#x63D0;&#x4EA4;&#x4E86; C5, C6 &#x5E76;&#x63A8;&#x9001;&#x5230;&#x4E86; origin master</li>
+<li>T4 &#x5458;&#x5DE5; usr1 &#x4ECE; server &#x5206;&#x652F;&#x5207;&#x56DE;&#x5230; C3 &#x516C;&#x5171;&#x57FA;&#x7840;&#x7684;&#x63D0;&#x4EA4;, &#x5E76;&#x521B;&#x5EFA;&#x65B0;&#x5206;&#x652F; client, &#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x5BA2;&#x6237;&#x7AEF;&#x529F;&#x80FD;, &#x5E76;&#x63D0;&#x4EA4; C8, C9</li>
+<li>T5 &#x5458;&#x5DE5; usr1 &#x4ECE; client &#x5206;&#x652F;&#x5207;&#x56DE;&#x5230; server &#x5206;&#x652F;&#x7EE7;&#x7EED;&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x7AEF;&#x529F;&#x80FD;, &#x5E76;&#x63D0;&#x4EA4; C10</li>
+</ul>
+<pre><code>            (master branch)
+                   |
+C1 &lt;- C2 &lt;- C5 &lt;- C6
+         \
+          \
+           \
+            C3 &lt;- C4 &lt;- C10
+               \         |
+                \ (server branch)
+                 \
+                  C8 &lt;- C9
+                         |
+                  (client branch)
+</code></pre><p>&#x6B64;&#x65F6;&#x8BE5;&#x5458;&#x5DE5;&#x5E0C;&#x671B;&#x5C06;&#x5BA2;&#x6237;&#x7AEF;&#x76F8;&#x5173;&#x7684;&#x529F;&#x80FD;&#x5408;&#x5E76;&#x5230;&#x4E3B;&#x5206;&#x652F;&#x5E76;&#x53D1;&#x5E03;&#xFF0C;&#x4F46;&#x6682;&#x65F6;&#x5E76;&#x4E0D;&#x60F3;&#x5408;&#x5E76; server &#x4E2D;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x7ECF;
+&#x8FC7;&#x66F4;&#x5168;&#x9762;&#x7684;&#x6D4B;&#x8BD5;&#x3002; &#x8FD9;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>git rebase</code> &#x547D;&#x4EE4;&#x7684; <strong>--onto</strong> &#x9009;&#x9879;&#xFF0C;&#x9009;&#x4E2D;&#x5728; client &#x5206;&#x652F;&#x91CC;&#x4F46;&#x4E0D;&#x5728;
+server &#x5206;&#x652F;&#x91CC;&#x7684;&#x4FEE;&#x6539;&#xFF08;&#x5373; C8 &#x548C; C9&#xFF09;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x5728; master &#x5206;&#x652F;&#x4E0A;&#x91CD;&#x653E;&#xFF1A;</p>
+<pre><code class="lang-sh">git rebase --noto client server
+</code></pre>
+<p>&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x7684;&#x63D0;&#x4EA4;&#x72B6;&#x6001;
+&#x6CE8;: &#x5176;&#x4E2D; C3&apos;, C8&apos;, C9&apos; &#x4E0E; C3, C8, C9 &#x7684;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;&#x5B8C;&#x5168;&#x4E00;&#x6837;, &#x4F46;&#x662F; hash id &#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;</p>
+<pre><code>            (master branch)(client branch)
+                   |            |
+C1 &lt;- C2 &lt;- C5 &lt;- C6 &lt;- C8&apos; &lt;- C9&apos;
+         \
+          \
+           \
+            C3 &lt;- C4 &lt;- C10
+               \         |
+                \ (server branch)
+                 \
+               [#####disable######]
+               [  C8 &lt;- C9        ]
+               [         |        ]
+               [  (client branch) ]
+</code></pre><p>can be fast-forwarded</p>
+<pre><code class="lang-sh">git checkout master
+git merge client
+</code></pre>
+<p>&#x63D0;&#x4EA4;&#x540E;&#x5206;&#x652F;&#x72B6;&#x6001;&#x5982;&#x4E0B;</p>
+<pre><code>                                (client branch)
+                                       |
+C1 &lt;- C2 &lt;- C5 &lt;- C6 &lt;- C3&apos; &lt;- C8&apos; &lt;- C9&apos;
+         \                             |
+          \                     (master branch)
+           \
+            C3 &lt;- C4 &lt;- C10
+                         |
+                  (server branch)
+</code></pre><pre><code class="lang-sh">git rebase -i HEAD~n   <span class="hljs-comment"># &#x538B;&#x7F29;&#x5F53;&#x524D;&#x5206;&#x652F;&#x7684; n &#x4E2A; commit &#x5E76;&#x5408;&#x5E76;&#x4E3A; 1 &#x4E2A; commit, &#x5E38;&#x89C1;&#x7B2C;&#x4E00;&#x884C;&#x4E3A; pick, &#x5269;&#x4E0B;&#x7684; n-1 &#x884C;&#x4E3A; squash</span>
+
+git rebase --abort     <span class="hljs-comment"># rebase &#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x751F;&#x9519;&#x8BEF;, &#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x7EC8;&#x6B62;&#x6574;&#x4E2A; rebase &#x8FC7;&#x7A0B;</span>
+git rebase --continue  <span class="hljs-comment"># rebase &#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x751F;&#x51B2;&#x7A81;, &#x5728;&#x89E3;&#x51B3;&#x51B2;&#x7A81;&#x540E;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<h3 id="&#x6253;-patch-&#x8865;&#x4E01;"><a name="&#x6253;-patch-&#x8865;&#x4E01;" class="anchor-navigation-ex-anchor" href="#&#x6253;-patch-&#x8865;&#x4E01;"><i class="fa fa-link" aria-hidden="true"></i></a>1.20.1. &#x6253; patch (&#x8865;&#x4E01;)</h3>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x751F;&#x6210; diff patch &#x6587;&#x4EF6;(git &#x53EF;&#x4EE5;&#x8BC6;&#x522B; diff &#x6587;&#x4EF6;)</span>
+git &lt;branch&gt; <span class="hljs-built_in">log</span> -n -p &gt; diff.patch  <span class="hljs-comment"># &#x751F;&#x6210;&#x67D0;&#x5206;&#x652F;&#x8FC7;&#x53BB; n &#x4E2A; commit &#x7684;&#x6587;&#x4EF6; diff &#x4FE1;&#x606F;&#x81F3;&#x5355;&#x4E2A; diff &#x6587;&#x4EF6;</span>
+git diff &lt;--cached&gt; diff.patch       <span class="hljs-comment"># &#x9488;&#x5BF9;&#x5F53;&#x524D;&#x7F13;&#x5B58;&#x533A;&#x7684;&#x5185;&#x5BB9;&#x751F;&#x6210; diff &#x6587;&#x4EF6;</span>
+
+<span class="hljs-comment"># &#x5229;&#x7528; apply &#x6253; patch</span>
+git apply --check diff.patch    <span class="hljs-comment"># &#x68C0;&#x67E5;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x5E94;&#x7528;, &#x65E0;&#x56DE;&#x663E;&#x8BC1;&#x660E;&#x65E0;&#x51B2;&#x7A81;</span>
+git apply --stat diff.patch     <span class="hljs-comment"># &#x67E5;&#x770B;&#x5E94;&#x7528; diff &#x6587;&#x4EF6;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x53D8;&#x5316;</span>
+git apply diff.patch            <span class="hljs-comment"># &#x6253; patch, &#x4EC5;&#x4EC5;&#x6539;&#x53D8;&#x6587;&#x4EF6;&#x4FE1;&#x606F;, &#x65E0; commit &#x4FE1;&#x606F;, &#x4ECD;&#x7136;&#x9700;&#x8981;add, commit</span>
+
+<span class="hljs-comment"># &#x5229;&#x7528; --format-patch &#x751F;&#x6210; patch, &#x5E26; commit &#x4FE1;&#x606F;</span>
+git format-patch &lt;branch&gt; -n &#x3000; <span class="hljs-comment"># &#x751F;&#x6210;&#x5206;&#x652F; &lt;branch&gt; &#x6700;&#x8FD1;&#x7684; n &#x6B21; commit &#x7684; patch</span>
+git format-patch &lt;r1&gt;..&lt;r2&gt;     <span class="hljs-comment"># &#x751F;&#x6210;&#x4E24;&#x4E2A; commit &#x95F4;&#x7684;&#x4FEE;&#x6539;&#x7684; patch&#xFF08;&#x5305;&#x542B;&#x4E24;&#x4E2A; commit. &lt;r1&gt; &#x548C; &lt;r2&gt; &#x90FD;&#x662F;&#x5177;&#x4F53;&#x7684; commit &#x53F7;)</span>
+git format-patch -1 &lt;r1&gt;        <span class="hljs-comment"># &#x751F;&#x6210;&#x5355;&#x4E2A; commit &#x7684; patch</span>
+git format-patch &lt;r1&gt;           <span class="hljs-comment"># &#x751F;&#x6210;&#x67D0; commit &#x4EE5;&#x6765;&#x7684;&#x4FEE;&#x6539; patch&#xFF08;&#x4E0D;&#x5305;&#x542B;&#x8BE5;commit&#xFF09;</span>
+git format-patch --root &lt;r1&gt;&#x3000;&#x3000;<span class="hljs-comment"># &#x751F;&#x6210;&#x4ECE;&#x6839;&#x5230; r1 &#x63D0;&#x4EA4;&#x7684;&#x6240;&#x6709; patch</span>
+
+<span class="hljs-comment"># &#x5229;&#x7528; am &#x6253; patch</span>
+git apply --check 0001-update-bash.sh.patch  <span class="hljs-comment"># &#x68C0;&#x67E5; patch &#x662F;&#x5426;&#x51B2;&#x7A81;&#x53EF;&#x7528;</span>
+git apply --stat 0001-update-bash.sh.patch   <span class="hljs-comment"># &#x68C0;&#x67E5; patch &#x6587;&#x4EF6;&#x53D8;&#x66F4;&#x60C5;&#x51B5;, &#x65E0;&#x56DE;&#x663E;&#x8BC1;&#x660E;&#x65E0;&#x51B2;&#x7A81;</span>
+git am 0001-update-bash.sh.patch             <span class="hljs-comment"># &#x5C06;&#x8BE5; patch &#x6253;&#x4E0A;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;, &#x5E26; commit &#x4FE1;&#x606F;</span>
+git am ./*.patch                             <span class="hljs-comment"># &#x5C06;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x6240;&#x6709; patch &#x6309;&#x7167;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x6253;&#x4E0A;</span>
+git am --abort                               <span class="hljs-comment"># &#x7EC8;&#x6B62;&#x6574;&#x4E2A;&#x6253; patch &#x7684;&#x8FC7;&#x7A0B;, &#x7C7B;&#x4F3C; rebase --abort</span>
+git am --resolved                            <span class="hljs-comment"># &#x89E3;&#x51B3;&#x51B2;&#x7A81;&#x540E;, &#x53EF;&#x4EE5;&#x6267;&#x884C;&#x8BE5;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x7684; patch, &#x7C7B;&#x4F3C; rebase --continue</span>
+</code></pre>
+<h2 id="bundle-&#x6253;&#x5305;"><a name="bundle-&#x6253;&#x5305;" class="anchor-navigation-ex-anchor" href="#bundle-&#x6253;&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>1.21. bundle (&#x6253;&#x5305;)</h2>
+<p>&#x8BE5;&#x547D;&#x4EE4;&#x4F1A;&#x5C06; git &#x5DE5;&#x7A0B;&#x6253;&#x5305;, &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x6253;&#x5305;&#x6240;&#x6709; commit &#x8BB0;&#x5F55;&#x548C; track &#x7684;&#x6587;&#x4EF6;
+&#x4E0D;&#x540C;&#x4E8E;&#x7B80;&#x5355;&#x7C97;&#x66B4; <code>tar.gz</code> &#x6253;&#x5305;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x5939;, bundle &#x53EA;&#x6253;&#x5305;&#x90A3;&#x4E9B; push &#x8FC7;&#x7684;&#x8BB0;&#x5F55;
+&#x5982;&#x67D0; git &#x5DE5;&#x7A0B;&#x4E0B;&#x5B58;&#x5728; <code>.build</code> &#x6784;&#x5EFA;&#x540E;&#x7684;&#x76EE;&#x5F55;, &#x800C; <code>.gitignore</code> &#x53C8;&#x5FFD;&#x7565;&#x4E86;&#x8BE5;&#x6587;&#x4EF6;&#x5939;
+&#x5982;&#x679C;&#x5229;&#x7528; <code>tar.gz</code> &#x6253;&#x5305;&#x5219;&#x4F1A;&#x5C06;&#x90A3;&#x4E9B;&#x5FFD;&#x7565;&#x7684;&#x6587;&#x4EF6;&#x6587;&#x4EF6;&#x5939;&#x4E00;&#x5E76;&#x6253;&#x5305;, &#x53EF;&#x80FD;&#x4F1A;&#x9020;&#x6210;&#x538B;&#x7F29;&#x5305;&#x6781;&#x5927;&#x7684;&#x81C3;&#x80BF;
+&#x800C;&#x53C8;&#x4E0D;&#x60F3;&#x4EC5;&#x4EC5;&#x4E3A;&#x4E86;&#x6253;&#x4E2A;&#x5305;&#x5C31;&#x5220;&#x9664;&#x6574;&#x4E2A; build &#x76EE;&#x5F55;(&#x5982;&#x91CD;&#x65B0; build &#x65F6;&#x95F4;&#x6210;&#x672C;&#x592A;&#x5927;)
+&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; bundle &#x8FDB;&#x884C;&#x6253;&#x5305;, &#x8BE5;&#x547D;&#x4EE4;&#x53EA;&#x6253;&#x5305; track &#x8FC7;&#x7684;&#x6587;&#x4EF6;
+&#x5E76;&#x4E14;&#x50CF; url &#x90A3;&#x6837;&#x76F4;&#x63A5;&#x8C03;&#x7528; <code>git clone</code> &#x6765;&#x91CD;&#x5EFA;</p>
+<pre><code class="lang-sh">git bundle create awesome-cheatsheets.bundle HEAD master <span class="hljs-comment">#&#x6253;&#x5305;&#x91CD;&#x5EFA;master&#x5206;&#x652F;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;</span>
+git <span class="hljs-built_in">clone</span> awesome-cheatsheets.bundle <span class="hljs-comment"># &#x91CD;&#x5EFA;&#x5DE5;&#x7A0B;</span>
+</code></pre>
+<p>bundle &#x4E5F;&#x53EF;&#x4EE5;&#x6253;&#x5305;&#x6307;&#x5B9A;&#x7684;&#x533A;&#x95F4;, &#x81F3;&#x4E8E;&#x63D0;&#x4EA4;&#x533A;&#x95F4;&#x6709;&#x591A;&#x79CD;&#x8868;&#x793A;&#x65B9;&#x5F0F;</p>
+<pre><code class="lang-sh">git bundle create awesome-cheatsheets.bundle HEAD~10
+git bundle create awesome-cheatsheets.bundle HEAD~10..HEAD
+git bundle create awesome-cheatsheets.bundle lhs_commit_md5..rhs_commit_md5
+git bundle create awesome-cheatsheets.bundle origin/master..master
+git bundle create awesome-cheatsheets.bundle master ^origin/master
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;-github"><a name="&#x4F7F;&#x7528;-github" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-github"><i class="fa fa-link" aria-hidden="true"></i></a>1.22. &#x4F7F;&#x7528; GitHub</h2>
+<pre><code class="lang-sh">fork --&gt; <span class="hljs-built_in">clone</span> --&gt; add/commit/push --&gt; pull request
+</code></pre>
+<h2 id="&#x5176;&#x4ED6;&#x914D;&#x7F6E;"><a name="&#x5176;&#x4ED6;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5176;&#x4ED6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.23. &#x5176;&#x4ED6;&#x914D;&#x7F6E;</h2>
+<pre><code class="lang-sh">git config --global color.ui <span class="hljs-literal">true</span>    &#x663E;&#x793A;&#x989C;&#x8272;
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;-gitignore-&#x6587;&#x4EF6;"><a name="&#x914D;&#x7F6E;-gitignore-&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;-gitignore-&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.24. &#x914D;&#x7F6E; .gitignore &#x6587;&#x4EF6;</h2>
+<pre><code>/&lt;dir name&gt;/                    &#x5FFD;&#x7565;&#x6587;&#x4EF6;&#x5939;
+*.zip                           &#x5FFD;&#x7565; .zip &#x6587;&#x4EF6;
+/&lt;dir name&gt;/&lt;file name&gt;         &#x5FFD;&#x7565;&#x6307;&#x5B9A;&#x6587;&#x4EF6;
+</code></pre><h2 id="&#x6587;&#x4EF6;-gitignore-&#x751F;&#x6548;&#x540E;"><a name="&#x6587;&#x4EF6;-gitignore-&#x751F;&#x6548;&#x540E;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;-gitignore-&#x751F;&#x6548;&#x540E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.25. &#x6587;&#x4EF6; .gitignore &#x751F;&#x6548;&#x540E;</h2>
+<pre><code class="lang-sh">git add <span class="hljs-_">-f</span> &lt;file&gt;               &#x5F3A;&#x5236;&#x6DFB;&#x52A0;
+git check-ignore -v &lt;file&gt;      &#x67E5;&#x770B;&#x751F;&#x6548;&#x89C4;&#x5219;
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;&#x522B;&#x540D;"><a name="&#x914D;&#x7F6E;&#x522B;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x522B;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.26. &#x914D;&#x7F6E;&#x522B;&#x540D;</h2>
+<pre><code class="lang-sh">git config [--global] alias.&lt;<span class="hljs-built_in">alias</span>&gt; <span class="hljs-string">&apos;&lt;original command&gt;&apos;</span>    &#x4E3A;&#x6240;&#x6709;&#x5DE5;&#x4F5C;&#x533A;/&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x914D;&#x7F6E;&#x522B;&#x540D;
+.git/config             &#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+~/.gitconfig            &#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+</code></pre>
+<h2 id="references"><a name="references" class="anchor-navigation-ex-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>1.27. References</h2>
+<ul>
+<li><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank">https://www.liaoxuefeng.com/wiki/896043488029600</a></li>
+<li><a href="https://git-scm.com/book/en/v2" target="_blank">https://git-scm.com/book/en/v2</a></li>
+</ul>
+<h2 id="&#x5B50;&#x6A21;&#x5757;"><a name="&#x5B50;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1.28. &#x5B50;&#x6A21;&#x5757;</h2>
+<pre><code class="lang-sh">git submodule foreach git pull    &#x5B50;&#x6A21;&#x5757;&#x66F4;&#x65B0;
+</code></pre>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> Copyright &#xA9; xjliang 2021 all right reserved&#xFF0C;powered by Gitbook </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 2021-01-31 02:13:48 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Gdb.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Gdb">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Git","level":"1.4.3.2","depth":3,"previous":{"title":"Gdb","level":"1.4.3.1","depth":3,"path":"PART III/Tools/Gdb.md","ref":"PART III/Tools/Gdb.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ace","page-footer-ex","anchor-navigation-ex","github-buttons","-lunr","-search","search-pro"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ace":{},"page-footer-ex":{"copyright":"Copyright © xjliang 2021 all right reserved，powered by Gitbook","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"该文件修订时间："},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"xjliang","repo":"auto-export-gitbook","type":"star","count":true,"size":"small"},{"user":"xjliang","type":"follow","width":"120","count":false,"size":"small"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"xjliang","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"xjliang 的技术专栏","language":"zh-hans","links":{"sidebar":{"Home":"https://gnulxj.netlify.app"}},"gitbook":"*","description":"CS 学习笔记"},"file":{"path":"PART III/Tools/Git.md","mtime":"2021-01-31T02:13:48.750Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-31T02:14:46.752Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
