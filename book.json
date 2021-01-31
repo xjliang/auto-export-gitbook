@@ -9,29 +9,23 @@
     },
 	"author":"xjliang",
 	"plugins" : [
-		"expandable-chapters",
 		"copy-code-button",
 		"page-footer-ex",
 		"anchor-navigation-ex",
-		"expandable-chapters-small",
 		"prism",
 		"-highlight",
 		"-lunr", 
-		"-search", 
+		"-search",
 		"search-pro",
 		"splitter"
 	],
 	"pluginsConfig": {	
 		"page-footer-ex": {
-            "copyright": "使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
+            "copyright": "Copyright © xjliang 2021 all right reserved，powered by Gitbook",
             "markdown": true,
-            "update_label": "该文件上次修订时间：",
+            "update_label": "该文件修订时间：",
             "update_format": "YYYY-MM-DD HH:mm:ss"
-		},	
-		"prism": {
-			"css": ["prismjs/themes/prism-solarizedlight.css"],
-			"lang": {"flow": "typescript"}
-		}
+		}	
 	},
 	"ignores" : ["_book", "node_modules"]
 }
