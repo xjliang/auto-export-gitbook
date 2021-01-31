@@ -9,15 +9,11 @@
     },
 	"author":"xjliang",
 	"plugins" : [
-		"copy-code-button",
 		"page-footer-ex",
 		"anchor-navigation-ex",
-		"prism",
-		"-highlight",
-		"-lunr", 
+		"-lunr",
 		"-search",
-		"search-pro",
-		"splitter"
+		"search-pro"
 	],
 	"pluginsConfig": {	
 		"page-footer-ex": {
@@ -25,7 +21,7 @@
             "markdown": true,
             "update_label": "该文件修订时间：",
             "update_format": "YYYY-MM-DD HH:mm:ss"
-		}	
+		}
 	},
 	"ignores" : ["_book", "node_modules"]
 }
