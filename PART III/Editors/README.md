@@ -1,1 +1,1 @@
-- [Vim](./vim.md)
+- Vim

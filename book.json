@@ -1,14 +1,14 @@
 {
 	"title": "xjliang 的技术专栏",
-    "description": "CS 学习笔记",
-    "language": "zh-hans",
+	"description": "CS 学习笔记",
+	"language": "zh-hans",
 	"links": {
-        "sidebar": {
-            "Home": "https://gnulxj.netlify.app"
-        }
-    },
-	"author":"xjliang",
-	"plugins" : [
+		"sidebar": {
+			"Home": "https://gnulxj.netlify.app"
+		}
+	},
+	"author": "xjliang",
+	"plugins": [
 		"ace",
 		"page-footer-ex",
 		"anchor-navigation-ex",
@@ -19,19 +19,22 @@
 	],
 	"pluginsConfig": {
 		"github-buttons": {
-            "repo": "xjliang/auto-export-gitbook",
-            "types": [
-                "star",
-                "fork"
-            ],
-            "size": "small"
-        },
+			"repo": "xjliang/auto-export-gitbook",
+			"types": [
+				"star",
+				"fork"
+			],
+			"size": "small"
+		},
 		"page-footer-ex": {
-            "copyright": "Copyright © xjliang 2021 all right reserved，powered by Gitbook",
-            "markdown": true,
-            "update_label": "该文件修订时间：",
-            "update_format": "YYYY-MM-DD HH:mm:ss"
+			"copyright": "Copyright © xjliang 2021 all right reserved，powered by Gitbook",
+			"markdown": true,
+			"update_label": "该文件修订时间：",
+			"update_format": "YYYY-MM-DD HH:mm:ss"
 		}
 	},
-	"ignores" : ["_book", "node_modules"]
+	"ignores": [
+		"_book",
+		"node_modules"
+	]
 }

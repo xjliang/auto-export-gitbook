@@ -1,5 +1,4 @@
-Python 速查表中文版
-===
+# Python 速查表中文版
 
 - 本手册是 [Python cheat sheet](http://datasciencefree.com/python.pdf) 的中文翻译版。原作者：Arianne Colton and Sean Chen(data.scientist.info@gmail.com)
 - 编译：[ucasFL](https://github.com/ucasFL)

@@ -1,2 +1,2 @@
-- [Bash](./bash.md)
-- [Python](./python.md)
+- Bash：Linux 下的脚本语言，包含常用的效率工具
+- Python：脚本语言，经常用于编写爬虫

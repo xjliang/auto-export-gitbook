@@ -1,2 +1,2 @@
-- [GDB](./gdb.md)
-- [Git](./git.md)
+- GDB：代码跟踪调试工具
+- Git：版本控制工具
