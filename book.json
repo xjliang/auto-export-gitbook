@@ -9,13 +9,23 @@
     },
 	"author":"xjliang",
 	"plugins" : [
+		"ace",
 		"page-footer-ex",
 		"anchor-navigation-ex",
+		"github-buttons",
 		"-lunr",
 		"-search",
 		"search-pro"
 	],
-	"pluginsConfig": {	
+	"pluginsConfig": {
+		"github-buttons": {
+            "repo": "xjliang/auto-export-gitbook",
+            "types": [
+                "star",
+                "fork"
+            ],
+            "size": "small"
+        },
 		"page-footer-ex": {
             "copyright": "Copyright © xjliang 2021 all right reserved，powered by Gitbook",
             "markdown": true,
