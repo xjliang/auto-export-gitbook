@@ -19,12 +19,22 @@
 	],
 	"pluginsConfig": {
 		"github-buttons": {
-			"repo": "xjliang/auto-export-gitbook",
-			"types": [
-				"star",
-				"fork"
-			],
-			"size": "small"
+			"buttons": [
+				{
+					"user": "xjliang",
+					"repo": "auto-export-gitbook",
+					"type": "star",
+					"count": true,
+					"size": "small"
+				},
+				{
+					"user": "xjliang",
+					"type": "follow",
+					"width": "120",
+					"count": false,
+					"size": "small"
+				}
+			]
 		},
 		"page-footer-ex": {
 			"copyright": "Copyright © xjliang 2021 all right reserved，powered by Gitbook",
